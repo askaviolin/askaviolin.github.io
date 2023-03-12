@@ -1,0 +1,26 @@
+Starting Nmap 7.31 ( https://nmap.org ) at 2016-11-12 22:41 EST
+Nmap scan report for kitsune.dyndns-ip.com (73.53.7.67)
+Host is up (0.098s latency).
+rDNS record for 73.53.7.67: c-73-53-7-67.hsd1.wa.comcast.net
+Not shown: 997 filtered ports
+PORT    STATE  SERVICE VERSION
+22/tcp  open   ssh     OpenSSH 6.7p1 Debian 5+deb8u3 (protocol 2.0)
+80/tcp  open   http    Apache httpd 2.4.10 ((Debian))
+443/tcp closed https
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+ssh -vvv -o StrictHostChecking=no gcd@kitsune.dyndns-ip.com
+
+pkill-KILL -u gcd
+
+www.dnsdynamic.org
+
+harmoniehall.dnsd.info
+
+gcd
+H@rmoni3
+
+/mnt/data
+
+www = where webstuff lives, subfolder
+scp to upload
