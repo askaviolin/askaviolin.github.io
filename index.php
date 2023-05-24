@@ -108,6 +108,7 @@ border: 15px solid #100010;
 </head>
 <body>
 	<!--#include virtual="/header.html" -->
+	<?php include 'includes/menu.php'; ?>
 	<div class="header">
 	<ul><a href=""><img class="resize" src="hh.png" alt="Harmonie Hall Home"></a>
 		<a href="index.html" class="header">Home</a>
