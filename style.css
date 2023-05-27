@@ -1,0 +1,105 @@
+.hero-image {
+  background: url(stone.jpg) no-repeat center; 
+  background-size: cover;
+  height: 500px;
+  //position: relative;
+}
+body {
+  max-width: 40em;
+  margin: 0 auto;
+  padding: 5px;
+  font-family: Bogart, serif;
+  font-size: 16px;
+  line-height: 1.2em;
+  color: black;
+  background-color: #E7D3B6;
+ 
+  
+}
+h1, h2, h3 {
+  font-family: san-serif;
+  font-weight: normal;
+  text-align: left;
+}
+
+/* unvisited link */
+a:link {
+  color: #4C9FAC;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: #4C9FAC;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: #4C9FAC;
+  text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+  color: #4C9FAC;
+  text-decoration: underline;
+}
+
+
+.header a:active,
+.header a:link,
+.header a:visited
+{
+  color: black;
+
+}
+.header a:hover {
+  color: #4C9FAC;
+}
+.header {
+  padding: 1em;
+  width:100%;
+  text-align: center;
+  background-color: white;
+  color:black;
+  font-weight:bold;
+
+}
+.event {
+  background-color: white;
+  color: black;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: .5em;
+  border-left: 2px solid black;
+}
+.event a:hover,
+.event a:active,
+.event a:link,
+.event a:visited
+{
+  color: black;
+  text-decoration: underline;
+}
+.about {
+  font-style: none;
+  font-weight: normal;
+  //font-size: small;
+
+}
+
+.date {
+  font-weight: normal;
+  font-size: 14px;
+  color: black;
+  font-family: times;
+  padding: 0px;
+  border-style: hidden;
+
+}
+
+.title {
+  font-weight: bold;
+  padding:;
+}
