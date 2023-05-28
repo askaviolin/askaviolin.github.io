@@ -13,9 +13,9 @@
     <i>for one and all!</i>
   <p>
 <a href="index.html">Home</a> | 
-<a href="events.html">Events</a> | 
-<a href="donate.html">Donate</a> | 
-<a href="map.html" style="text-decoration: underline;">Map</a>
+<a href="events">Events</a> | 
+<a href="donate">Donate</a> | 
+<a href="map" style="text-decoration: underline;">Map</a>
 </div>
 <hr>
 

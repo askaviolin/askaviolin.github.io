@@ -14,8 +14,8 @@
   <p> 
 <a href="index.html">Home</a> | 
 <a href="events">Events</a> | 
-<a href="donate.html" style="text-decoration: underline;">Donate</a> | 
-<a href="map.html">Map</a>
+<a href="donate" style="text-decoration: underline;">Donate</a> | 
+<a href="map">Map</a>
 </div>
 <hr>
 <div style="background-color: white; padding: 1em;">
