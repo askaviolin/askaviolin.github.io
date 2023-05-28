@@ -76,6 +76,7 @@ a:active {
   padding-bottom: 1em;
   padding-left: .5em;
   border: 2px solid black;
+  margin: 1em;
 
 }
 .event a:hover,
