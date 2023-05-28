@@ -2,7 +2,7 @@
   background: url(stone.jpg) no-repeat center; 
   background-size: cover;
   height: 500px;
-  //position: relative;
+  position: relative;
 }
 body {
   max-width: 40em;
@@ -88,8 +88,6 @@ a:active {
 .about {
   font-style: none;
   font-weight: normal;
-  //font-size: small;
-
 }
 
 .date {
@@ -104,5 +102,5 @@ a:active {
 
 .title {
   font-weight: bold;
-  padding:;
+  
 }
