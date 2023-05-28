@@ -82,8 +82,8 @@ a:active {
 .event a:link,
 .event a:visited
 {
-  color: black;
-  text-decoration: underline;
+  color: rgb(3, 41, 57);
+
 }
 .about {
   font-style: none;
