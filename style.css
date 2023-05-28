@@ -105,6 +105,7 @@ a:active {
 
 .title {
   font-weight: bold;
+  width: max-content;
   border-bottom: 2px solid black;
   
 }
