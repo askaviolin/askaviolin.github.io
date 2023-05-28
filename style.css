@@ -77,7 +77,8 @@ a:active {
   padding-left: .5em;
   border-left: 2px solid black;
   border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  border-bottom: 2px dotted black;
+  border-right: 2px solid black;
 }
 .event a:hover,
 .event a:active,
