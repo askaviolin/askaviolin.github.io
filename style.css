@@ -1,18 +1,13 @@
-.hero-image {
-  background: url(stone.jpg) no-repeat center; 
-  background-size: cover;
-  height: 500px;
-  position: relative;
-}
+
 body {
   max-width: 40em;
   margin: 0 auto;
-  padding: 5px;
+  padding: 0px;
   font-family: Bogart, serif;
   font-size: 16px;
   line-height: 1.2em;
   color: black;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
  
   
 }
@@ -58,17 +53,42 @@ a:active {
   color: #4C9FAC;
 }
 .header {
-  padding-top: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-bottom: 0px;
-  width:100%;
+  //padding-top: 1em;
+  //padding-left: 1em;
+  //padding-right: 1em;
+  //padding-bottom: 0px;
+  //width:400px;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   background-color: white;
   color:black;
   font-weight:bold;
 
 }
+.links{
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0px;
+  width:100%;
+  text-align: center;
+  background-color:;
+  color:black;
+  font-weight:bold;
+}
+
+.links a:active,
+.links a:link,
+.links a:visited
+{
+  color: black;
+
+}
+.links a:hover {
+  color: #4C9FAC;
+}
+
 .event {
   background-color: white;
   color: black;
@@ -108,4 +128,60 @@ a:active {
   width: max-content;
   border-bottom: 2px solid black;
   
+}
+
+
+.hero {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.hero::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: url(photos/tonight.jpg);
+   background-repeat: no-repeat;
+   //background-size: cover;
+   background-position: top center;
+   filter: brightness(70%);
+}
+.hero-content {
+   position: relative;
+   width:500px;
+   font-family: "Monserrat", sans-serif;
+   color: white;
+   text-align: left;
+   margin: 0.625rem;
+}
+.hero-title {
+   font-size: 3rem;
+   font-weight: 600;
+   margin-bottom: 0;
+}
+.hero-subtitle {
+   font-size: 2rem;
+   font-weight: 200;
+   margin-top: 1rem;
+}
+.hero-button {
+   background-color: #ae2d59;
+   color: white;
+   border: 1px solid #cb376a;
+   margin-top: 5rem;
+   padding: 0.9375rem1.875rem;
+   font-family: "Monserrat", sans-serif;
+   font-size: 1.125rem;
+   font-weight: 200;
+   cursor: pointer;
+}
+.hero-button:hover {
+   background-color: #cb376a;
+   border: 1px solid #db7598;
 }
