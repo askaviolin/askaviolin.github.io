@@ -996,14 +996,17 @@ a:active {
 }
 
 .event {
-  background-color: white;
-  color: black;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  padding-left: .5em;
-  border: 2px solid black;
-  margin: 1em;
-
+	max-width: 600px;
+	background-color: white;
+	color: black;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: .5em;
+	padding-right: .5em;
+	border: 2px solid black;
+	margin: 20px auto;
+	border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .event a:hover,
 .event a:active,
@@ -1021,7 +1024,7 @@ a:active {
 
 .date {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
   color: black;
   font-family: times;
   padding: 5px;
@@ -1031,6 +1034,7 @@ a:active {
 
 .title {
   font-weight: bold;
+  font-size: 36px;
   width: max-content;
   border-bottom: 2px solid black;
   
