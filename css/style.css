@@ -997,7 +997,7 @@ a:active {
 
 .event {
 	max-width: 600px;
-	background-color: white;
+	background-color: gray;
 	color: black;
 	padding-top: 1em;
 	padding-bottom: 1em;
