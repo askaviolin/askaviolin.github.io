@@ -90,10 +90,11 @@ a:active {
 }
 
 .event {
+	position:relative;
 	max-width: 600px;
 	background-color: white;
 	color: black;
-	padding-top: 1em;
+	padding-top: .5em;
 	padding-bottom: 1em;
 	padding-left: .5em;
 	padding-right: .5em;
@@ -106,15 +107,45 @@ a:active {
 .event a:link,
 .event a:visited
 {
-  color: #4C9FAC;
+
 
 }
 .about {
   font-style: none;
   font-weight: normal;
   padding-top: 1em;
+  margin-left:5px;
 }
-
+.event-heading {
+	position:relative;
+	padding-top:5px;
+	padding-bottom:0px;
+	text-align:center;
+	margin-left:50px;
+	background-color:;
+	}
+.date-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:55px;
+        height:55px;
+        text-align:center;
+        background-color: #555;
+        border:0px solid black;
+        color: white;
+        padding: 5px;
+        border-radius: 8px 0 8px 0;
+    }
+.title {
+	height:;
+	width: max-width;
+	font-weight: bold;
+	text-align: left;
+	<!--border-bottom:2px solid #dbb446;-->
+	background-color:white;
+  
+}
 .date {
   font-weight: normal;
   font-size: 14px;
@@ -125,12 +156,7 @@ a:active {
 
 }
 
-.title {
-  font-weight: bold;
-  width: max-content;
-  border-bottom: 2px solid black;
-  
-}
+
 
 
 .hero {
