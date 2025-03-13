@@ -1,0 +1,215 @@
+
+body {
+  max-width: 40em;
+  margin: 0 auto;
+  padding: 0px;
+  font-family: Bogart, serif;
+  font-size: 16px;
+  line-height: 1.2em;
+  color: black;
+  background-color: white;
+ 
+  
+}
+h1, h2, h3 {
+  font-family: san-serif;
+  font-weight: normal;
+  text-align: left;
+}
+
+/* unvisited link */
+a:link {
+  color: #4C9FAC;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: #4C9FAC;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: #4C9FAC;
+  text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+  color: #4C9FAC;
+  text-decoration: underline;
+}
+
+
+.header a:active,
+.header a:link,
+.header a:visited
+{
+  color: black;
+
+}
+.header a:hover {
+  color: #4C9FAC;
+}
+.header {
+  //padding-top: 1em;
+  //padding-left: 1em;
+  //padding-right: 1em;
+  //padding-bottom: 0px;
+  //width:400px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  color:black;
+  font-weight:bold;
+
+}
+.links{
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0px;
+  width:100%;
+  text-align: center;
+  background-color:;
+  color:black;
+  font-weight:bold;
+}
+
+.links a:active,
+.links a:link,
+.links a:visited
+{
+  color: black;
+
+}
+.links a:hover {
+  color: #4C9FAC;
+}
+
+.event {
+	position:relative;
+	max-width: 600px;
+	background-color: white;
+	color: black;
+	padding-top: .5em;
+	padding-bottom: 1em;
+	padding-left: .5em;
+	padding-right: .5em;
+	margin: 20px auto;
+	border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.event a:hover,
+.event a:active,
+.event a:link,
+.event a:visited
+{
+
+
+}
+.about {
+  font-style: none;
+  font-weight: normal;
+  padding-top: 1em;
+  margin-left:5px;
+}
+.event-heading {
+	position:relative;
+	padding-top:5px;
+	padding-bottom:0px;
+	text-align:center;
+	margin-left:50px;
+	background-color:;
+	}
+.date-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:55px;
+        height:55px;
+        text-align:center;
+        background-color: #555;
+        border:0px solid black;
+        color: white;
+        padding: 5px;
+        border-radius: 8px 0 8px 0;
+    }
+.title {
+	height:;
+	width: max-width;
+	font-weight: bold;
+	text-align: left;
+	<!--border-bottom:2px solid #dbb446;-->
+	background-color:white;
+  
+}
+.date {
+  font-weight: normal;
+  font-size: 14px;
+  color: black;
+  font-family: times;
+  padding: 0px;
+  border-style: hidden;
+
+}
+
+
+
+
+.hero {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.hero::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: url(photos/tonight.jpg);
+   background-repeat: no-repeat;
+   //background-size: cover;
+   background-position: top center;
+   filter: brightness(70%);
+}
+.hero-content {
+   position: relative;
+   width:500px;
+   font-family: "Monserrat", sans-serif;
+   color: white;
+   text-align: left;
+   margin: 0.625rem;
+}
+.hero-title {
+   font-size: 3rem;
+   font-weight: 600;
+   margin-bottom: 0;
+}
+.hero-subtitle {
+   font-size: 2rem;
+   font-weight: 200;
+   margin-top: 1rem;
+}
+.hero-button {
+   background-color: #ae2d59;
+   color: white;
+   border: 1px solid #cb376a;
+   margin-top: 5rem;
+   padding: 0.9375rem1.875rem;
+   font-family: "Monserrat", sans-serif;
+   font-size: 1.125rem;
+   font-weight: 200;
+   cursor: pointer;
+}
+.hero-button:hover {
+   background-color: #cb376a;
+   border: 1px solid #db7598;
+}
