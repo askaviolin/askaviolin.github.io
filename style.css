@@ -74,7 +74,7 @@ a:active {
   width:100%;
   text-align: center;
   background-color:;
-  color:white;
+  color:black;
   font-weight:bold;
 }
 
@@ -82,7 +82,7 @@ a:active {
 .links a:link,
 .links a:visited
 {
-  color: white;
+  color: black;
 
 }
 .links a:hover {
@@ -92,14 +92,14 @@ a:active {
 .event {
 	position:relative;
 	max-width: 600px;
-	background-color: black;
-	color: white;
+	background-color: white;
+	color: black;
 	padding-top: .5em;
 	padding-bottom: 1em;
 	padding-left: .5em;
 	padding-right: .5em;
 	margin: 20px auto;
-	border-radius: 15px;
+	border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .event a:hover,
@@ -110,31 +110,33 @@ a:active {
 
 
 }
-
-.date-box {
-        position: absolute;
-        top: 1;
-        left: 1;
-        width:55px;
-        height:35px;
-        text-align:center;
-        background-color: #eee;
-        border:0px solid black;
-        color: black;
-        padding: 5px;
-        border-radius: 8px;
-    }
-    
+.about {
+  font-style: none;
+  font-weight: normal;
+  padding-top: 1em;
+  margin-left:5px;
+}
 .event-heading {
 	position:relative;
 	padding-top:5px;
-	padding-left:30px;
 	padding-bottom:0px;
-	text-align:left;
+	text-align:center;
 	margin-left:50px;
 	background-color:;
 	}
-
+.date-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:55px;
+        height:55px;
+        text-align:center;
+        background-color: #555;
+        border:0px solid black;
+        color: white;
+        padding: 5px;
+        border-radius: 8px 0 8px 0;
+    }
 .title {
 	height:;
 	width: max-width;
@@ -142,24 +144,19 @@ a:active {
 	text-align: left;
 	<!--border-bottom:2px solid #dbb446;-->
 	background-color:white;
+  
 }
-
 .date {
   font-weight: normal;
   font-size: 14px;
-  color: white;
+  color: black;
   font-family: times;
   padding: 0px;
   border-style: hidden;
+
 }
 
-.about {
-  font-style: none;
-  color:gray;
-  font-weight: normal;
-  padding-top: 2em;
-  margin-left:5px;
-}
+
 
 
 .hero {
