@@ -5,8 +5,35 @@
 <title>Events | Harmonie Hall</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
+<style>
+  .about {
+    display: none;
+    margin-left: 70px;
+  }
+  .toggle-button {
+    display: inline-block;
+    margin-top: 0.5em;
+    margin-left: 70px;
+    background-color: #555;
+    color: white;
+    padding: 0.3em 0.6em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+</style>
+<script>
+  function toggleAbout(button) {
+    const about = button.nextElementSibling;
+    const isVisible = about.style.display === "block";
+    about.style.display = isVisible ? "none" : "block";
+    button.textContent = isVisible ? "Show Details" : "Hide Details";
+  }
+</script>
 </head>
 <body>
+
 
 <div class="header">
 	<a href="index.html"><img src="logo.png" style="height:160px;"></a><p>
@@ -19,20 +46,24 @@
 	<a href="map.html">Map</a>
 </div>
 <hr>
+
+<div class="events-grid">
+	<div class="recurring-events">
 <h2 style="font-weight:bold;">Recurring Events</h2>
 <div class="event"> 
-	<div class="date-box" id="date">Wed<br>
+	<div class="date-box" id="date">bi-weekly<br>Wed
 	</div>
 	<div class="event-heading">
 		<span class="title">Yoga with Aleena</span>
 		<br>
 		<span class="date">6:30-7:30pm | Doors 6pm | $15
 		</div>
+		 <button class="toggle-button" onclick="toggleAbout(this)">Show Details</button>
 	<div class="about">Every other Wednesday! All level hatha flow. Arrive early and bring your own mat. Check schedule at <a href="https://www.promethia.design/event-list">www.promethia.design</a></div>
 </div>
 
 <div class="event"> 
-	<div class="date-box" id="date">Sat<br>Apr 19
+	<div class="date-box" id="date">Sat<br>Monthly
 	</div>
 	<div class="event-heading">
 		<span class="title">Sing A Secret: A Mindbody Approach to Voice and Song</span>
@@ -41,6 +72,9 @@
 		</div>
 	<div class="about">Free workshop, open to all! Monthly, on a Saturday 11am-1:30pm. Check schedule and register at <a href="https://www.eventbrite.com/e/sing-a-secret-a-mindbody-approach-to-voice-and-song-free-philadelphia-tickets-1098243639289?aff=ebdssbdestsearch">eventbrite</a></div>
 </div>
+</div>
+
+<div class="upcoming-events">
 
 <h2 style="font-weight:bold;">Upcoming Events</h2>
 <p>
@@ -133,9 +167,9 @@ When adding an event, copy and paste the following and replace the capitalized t
 	<div class="date-box" id="date">Sat<br>May 24
 	</div>
 	<div class="event-heading">
-		<span class="title">Erisy Watt, other acts TBA</span>
+		<span class="title">Karl Blau and Erisy Watt</span>
 		<br>
-		<span class="date">More info coming soon. Check for link on <a href="https://linktr.ee/harmoniehall">linktree</a></span>
+		<span class="date">More info -- <a href="https://linktr.ee/harmoniehall">linktree</a></span>
 		</div>
 	<div class="about"></div>
 </div>
@@ -146,10 +180,12 @@ When adding an event, copy and paste the following and replace the capitalized t
 	<div class="event-heading">
 		<span class="title">Julian Hartwell and Evolvlove</span>
 		<br>
-		<span class="date">Album release show! More info coming soon. Check for link on <a href="https://linktr.ee/harmoniehall">linktree</a></span>
+		<span class="date">Album release show! More info on <a href="https://linktr.ee/harmoniehall">linktree</a></span>
 		</div>
 	<div class="about"></div>
 </div>
+
+
 
 <div class="event"> 
 	<div class="date-box" id="date">Sat<br>Nov 15
@@ -976,7 +1012,7 @@ Lloyd is a West Virginia native and proud of it. Raised by a musician and a publ
 	<br>
 	<span class="about"></span>
 </div>
-
+</div>
 <p>
 Is there a band you really want to see here? <a href="mailto:harmoniehallmail@gmail.com">Let us know!</a>
 If you're interested in hosting a house concert, art show, film showing, etc. at Harmonie Hall, please <a href="mailto:harmoniehallmail@gmail.com">reach out!</a>
