@@ -22,6 +22,55 @@
     cursor: pointer;
     font-size: 0.9em;
   }
+    .about {
+    display: none;
+    margin-left: 1em;
+  }
+  .toggle-button {
+    display: inline-block;
+    margin-top: 0.5em;
+    background-color: #dbb446;
+    color: white;
+    padding: 0.3em 0.6em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  .event {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 1em;
+    margin-bottom: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  .event-header {
+    display: flex;
+    align-items: flex-start;
+  }
+  .date-box {
+    min-width: 60px;
+    text-align: center;
+    background-color: #dbb446;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 0.5em;
+    margin-right: 1em;
+  }
+  .event-heading {
+    flex: 1;
+  }
+  .event-heading .title {
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  .event-heading .date {
+    font-size: 0.95em;
+    color: #555;
+  }
 </style>
 <script>
   function toggleAbout(button) {
@@ -48,31 +97,32 @@
 <hr>
 
 <div class="events-grid">
-	<div class="recurring-events">
-<h2 style="font-weight:bold;">Recurring Events</h2>
-<div class="event"> 
-	<div class="date-box" id="date">bi-weekly<br>Wed
-	</div>
-	<div class="event-heading">
-		<span class="title">Yoga with Aleena</span>
-		<br>
-		<span class="date">6:30-7:30pm | Doors 6pm | $15
-		</div>
-		 <button class="toggle-button" onclick="toggleAbout(this)">Show Details</button>
-	<div class="about">Every other Wednesday! All level hatha flow. Arrive early and bring your own mat. Check schedule at <a href="https://www.promethia.design/event-list">www.promethia.design</a></div>
-</div>
 
-<div class="event"> 
-	<div class="date-box" id="date">Sat<br>Monthly
-	</div>
-	<div class="event-heading">
-		<span class="title">Sing A Secret: A Mindbody Approach to Voice and Song</span>
-		<br>
-		<span class="date">
-		</div>
-	<div class="about">Free workshop, open to all! Monthly, on a Saturday 11am-1:30pm. Check schedule and register at <a href="https://www.eventbrite.com/e/sing-a-secret-a-mindbody-approach-to-voice-and-song-free-philadelphia-tickets-1098243639289?aff=ebdssbdestsearch">eventbrite</a></div>
-</div>
-</div>
+  <div class="recurring-events">
+    <h2>Recurring Events</h2>
+    <section class="event">
+      <div class="event-header">
+      
+        <div class="event-heading">
+          <div class="title">Yoga with Aleena</div>
+          <div class="date">6:30-7:30pm | Doors 6pm | $15</div>
+        </div>
+      </div>
+      <button class="toggle-button" onclick="toggleAbout(this)">Show Details</button>
+      <div class="about">Every other Wednesday! All level hatha flow. Arrive early and bring your own mat. Check schedule at <a href="https://www.promethia.design/event-list">www.promethia.design</a></div>
+    </section>
+
+    <section class="event">
+      <div class="event-header">
+      
+        <div class="event-heading">
+          <div class="title">Sing A Secret: A Mindbody Approach to Voice and Song</div>
+        </div>
+      </div>
+      <button class="toggle-button" onclick="toggleAbout(this)">Show Details</button>
+      <div class="about">Free workshop, open to all! Monthly, on a Saturday 11am-1:30pm. Check schedule and register at <a href="https://www.eventbrite.com/e/sing-a-secret-a-mindbody-approach-to-voice-and-song-free-philadelphia-tickets-1098243639289?aff=ebdssbdestsearch">eventbrite</a></div>
+    </section>
+  </div>
 
 <div class="upcoming-events">
 
@@ -117,6 +167,7 @@ When adding an event, copy and paste the following and replace the capitalized t
 		<br>
 		<span class="date">7:30pm | Doors 7pm | $5-10 Suggested donation | BYOB</span>
 		</div>
+		 <button class="toggle-button" onclick="toggleAbout(this)">Show Details</button>
 	<div class="about">We will be drawing quick 4-minute portraits of everyone in attendance! Paper provided. BYOB and snacks. RSVP with 2 songs you'd like on the playlist (before 12pm Tuesday April 22) to harmoniehallmail@gmail.com.</div>
 </div>
 
