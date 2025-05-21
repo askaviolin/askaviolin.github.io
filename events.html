@@ -6,72 +6,70 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 <style>
-  .about {
-    display: none;
-    margin-left: 70px;
-  }
-  .toggle-button {
-    display: inline-block;
-    margin-top: 0.5em;
-    margin-left: 70px;
-    background-color: #555;
-    color: white;
-    padding: 0.3em 0.6em;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9em;
-  }
+ .date-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 55px;
+      height: 55px;
+      text-align: center;
+      background-color: #555;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px 0 8px 0;
+      padding: 5px;
+    }
+    .event-header {
+      position: relative;
+      padding-left: 65px;
+    }
+    .event {
+      background: #fff;
+      padding: 1em;
+      margin-bottom: 2em;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .event-heading {
+      flex: 1;
+    }
+    .event-heading .title {
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+    .event-heading .date {
+      font-size: 0.95em;
+      color: #555;
+    }
+    .toggle-button {
+      display: inline-block;
+      margin-top: 0.5em;
+      background-color: #dbb446;
+      color: white;
+      padding: 0.3em 0.6em;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9em;
+    }
     .about {
-    display: none;
-    margin-left: 1em;
-  }
-  .toggle-button {
-    display: inline-block;
-    margin-top: 0.5em;
-    background-color: #dbb446;
-    color: white;
-    padding: 0.3em 0.6em;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9em;
-  }
-  .event {
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    padding: 1em;
-    margin-bottom: 2em;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  .event-header {
-    display: flex;
-    align-items: flex-start;
-  }
-  .date-box {
-    min-width: 60px;
-    text-align: center;
-    background-color: #dbb446;
-    color: white;
-    font-weight: bold;
-    border-radius: 8px;
-    padding: 0.5em;
-    margin-right: 1em;
-  }
-  .event-heading {
-    flex: 1;
-  }
-  .event-heading .title {
-    font-size: 1.1em;
-    font-weight: bold;
-  }
-  .event-heading .date {
-    font-size: 0.95em;
-    color: #555;
-  }
-</style>
+      display: none;
+      margin-top: 0.5em;
+    }
+    #form-container {
+      margin: 2em;
+      padding: 1em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      max-width: 500px;
+    }
+    #generated-output {
+      white-space: pre-wrap;
+      background: #f9f9f9;
+      padding: 1em;
+      margin-top: 1em;
+      border: 1px solid #ddd;
+      </style>
 <script>
   function toggleAbout(button) {
     const about = button.nextElementSibling;
@@ -167,7 +165,7 @@ When adding an event, copy and paste the following and replace the capitalized t
 		<br>
 		<span class="date">7:30pm | Doors 7pm | $5-10 Suggested donation | BYOB</span>
 		</div>
-		 <button class="toggle-button" onclick="toggleAbout(this)">Show Details</button>
+		
 	<div class="about">We will be drawing quick 4-minute portraits of everyone in attendance! Paper provided. BYOB and snacks. RSVP with 2 songs you'd like on the playlist (before 12pm Tuesday April 22) to harmoniehallmail@gmail.com.</div>
 </div>
 
