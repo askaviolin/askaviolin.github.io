@@ -213,3 +213,179 @@ a:active {
    background-color: #cb376a;
    border: 1px solid #db7598;
 }
+
+body {
+  max-width: 42em;
+  margin: 0 auto;
+  padding: 1em;
+  font-family: 'Bogart', serif;
+  background-color: #fdfdfd;
+  color: #222;
+  line-height: 1.5;
+}
+
+.header {
+  text-align: center;
+  padding: 1.5em 0;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+.header img {
+  max-height: 120px;
+}
+.header a {
+  margin: 0 0.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.75em;
+  border-bottom: 2px solid #dbb446;
+  padding-bottom: 0.25em;
+  margin-top: 2em;
+}
+
+.event {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  margin: 2em 0;
+  padding: 1em 1em 1.5em 1em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.date-box {
+  background-color: #dbb446;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Arial Black', sans-serif;
+  position: absolute;
+  top: -1em;
+  left: -1em;
+  width: 60px;
+  height: 60px;
+  padding-top: 5px;
+  text-align: center;
+  font-size: 0.9em;
+  border-radius: 8px 0 8px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.event-heading {
+  margin-left: 70px;
+  padding-bottom: 0.5em;
+}
+
+.event-heading .title {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.event-heading .date {
+  font-size: 0.95em;
+  color: #555;
+}
+
+.about {
+  margin-left: 70px;
+  font-size: 0.95em;
+  color: #333;
+  margin-top: 0.5em;
+}
+
+a {
+  color: #4C9FAC;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.events-grid {
+  display: flex;
+  gap: 2em;
+  margin-top: 2em;
+  flex-wrap: wrap; /* so it stacks on smaller screens */
+}
+
+.recurring-events,
+.upcoming-events {
+  flex: 1 1 45%;
+  min-width: 300px;
+  background: #fafafa;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 768px) {
+  .events-grid {
+    flex-direction: column;
+  }
+}
+
+ .about {
+    display: none;
+    margin-left: 70px;
+  }
+  .toggle-button {
+    display: inline-block;
+    margin-top: 0.5em;
+    margin-left: 70px;
+    background-color: #555;
+    color: white;
+    padding: 0.3em 0.6em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+    .about {
+    display: none;
+    margin-left: 1em;
+  }
+  .toggle-button {
+    display: inline-block;
+    margin-top: 0.5em;
+    background-color: #dbb446;
+    color: white;
+    padding: 0.3em 0.6em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  .event {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 1em;
+    margin-bottom: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  .event-header {
+    display: flex;
+    align-items: flex-start;
+  }
+  .date-box {
+    min-width: 60px;
+    text-align: center;
+    background-color: #dbb446;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 0.5em;
+    margin-right: 1em;
+  }
+  .event-heading {
+    flex: 1;
+  }
+  .event-heading .title {
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  .event-heading .date {
+    font-size: 0.95em;
+    color: #555;
