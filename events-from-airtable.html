@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Events | Harmonie Hall</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<style>
+css /* Container Styles */ .upcoming-events { max-width: 800px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; background-color: #f9f9f9; }
+
+/* Header Styles */ .upcoming-events h2 { text-align: center; color: #333; margin-bottom: 30px; font-size: 2em; padding-bottom: 10px; border-bottom: 2px solid #e74c3c; }
+
+/* Event Card Styles */ .event { border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin-bottom: 20px; background-color: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+
+.event:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); }
+
+/* Event Title Styles */ .event h3 { color: #2c3e50; margin: 0 0 15px 0; font-size: 1.4em; line-height: 1.3; }
+
+/* Event Information Styles */ .event p { margin: 8px 0; line-height: 1.5; font-size: 1em; }
+
+/* Date Styles */ .event .date { font-weight: bold; color: #e74c3c; font-size: 1.1em; }
+
+/* Time Styles */ .event .time { color: #7f8c8d; }
+
+/* Location Styles */ .event .location { color: #3498db; font-weight: 500; }
+
+/* Event Type Styles */ .event .event-type { color: #27ae60; font-style: italic; display: inline-block; padding: 3px 8px; background-color: #f1f9f1; border-radius: 4px; margin-top: 5px; }
+
+/* Ticket Link Styles */ .event .ticket-link { margin-top: 15px; }
+
+.event .ticket-link a { display: inline-block; background-color: #e74c3c; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background-color 0.3s ease; }
+
+.event .ticket-link a:hover { background-color: #c0392b; }
+
+/* Responsive Design */ @media screen and (max-width: 600px) { .upcoming-events { padding: 15px; }
+
+.event {
+    padding: 15px;
+}
+
+.event h3 {
+    font-size: 1.2em;
+}
+
+.event p {
+    font-size: 0.9em;
+}
+
+.upcoming-events h2 {
+    font-size: 1.6em;
+}
+}
+
+/* Print Styles */ @media print { .upcoming-events { max-width: 100%; padding: 0; }
+
+.event {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #000;
+}
+
+.event .ticket-link a {
+    border: 1px solid #000;
+    color: #000;
+    background: none;
+}
+}
+ </style>
+<script>
+  function toggleAbout(button) {
+    const about = button.nextElementSibling;
+    const isVisible = about.style.display === "block";
+    about.style.display = isVisible ? "none" : "block";
+    button.textContent = isVisible ? "Show Details" : "Hide Details";
+  }
+</script>
+</head>
+<body>
+
+<div class="event">
+    <h3>Damien McGinty</h3>
+    <p class="date">July 18, 2025</p>
+    <p class="time">12:00 AM EDT</p>
+    <p class="location">Harmonie Hall</p>
+</div>
+
+<div class="event">
+    <h3>Voices in Communitie with Tyler Hathaway</h3>
+    <p class="date">July 30, 2025</p>
+    <p class="time">7:00 PM EDT</p>
+    <p class="location">Harmonie Hall</p>
+</div>
+
+<div class="event">
+    <h3>Voices in Communitie with Tyler Hathaway</h3>
+    <p class="date">August 13, 2025</p>
+    <p class="time">7:00 PM EDT</p>
+    <p class="location">Harmonie Hall</p>
+</div>
+
+<div class="event">
+    <h3>C'mon Now!</h3>
+    <p class="date">August 20, 2025</p>
+    <p class="location">Harmonie Hall</p>
+</div>
+
+<div class="event">
+    <h3>Reade McCardell</h3>
+    <p class="date">August 22, 2025</p>
+    <p class="time">Doors: 7:00 PM EDT | Show: 7:30 PM EDT</p>
+    <p class="location">Harmonie Hall</p>
+    <p class="event-type">Concert</p>
+</div>
+
+<div class="event">
+    <h3>Voices in Communitie with Tyler Hathaway</h3>
+    <p class="date">August 27, 2025</p>
+    <p class="time">7:00 PM EDT</p>
+    <p class="location">Harmonie Hall</p>
+</div>
+
+<div class="event">
+    <h3>cheeseballs in cowtown</h3>
+    <p class="date">August 30, 2025</p>
+    <p class="location">Harmonie Hall</p>
+</div>
+
+<div class="event">
+    <h3>Ilndrk</h3>
+    <p class="date">September 1, 2025</p>
+    <p class="location">Harmonie Hall</p>
+</div>
+
+<div class="event">
+    <h3>Voices in Communitie with Tyler Hathaway</h3>
+    <p class="date">September 10, 2025</p>
+    <p class="time">7:00 PM EDT</p>
+    <p class="location">Harmonie Hall</p>
+</div>
+
+<div class="event">
+    <h3>Voices in Communitie with Tyler Hathaway</h3>
+    <p class="date">September 24, 2025</p>
+    <p class="time">7:00 PM EDT</p>
+    <p class="location">Harmonie Hall</p>
+</div>
+
+<div class="event">
+    <h3>Voices in Communitie with Tyler Hathaway</h3>
+    <p class="date">October 8, 2025</p>
+    <p class="time">7:00 PM EDT</p>
+    <p class="location">Harmonie Hall</p>
+</div>
+
+<div class="event">
+    <h3>Voices in Communitie with Tyler Hathaway</h3>
+    <p class="date">October 22, 2025</p>
+    <p class="time">7:00 PM EDT</p>
+    <p class="location">Harmonie Hall</p>
+</div>
+
+<div class="event">
+    <h3>Joan Shelley</h3>
+    <p class="date">October 23, 2025</p>
+    <p class="time">Doors: 7:00 PM EDT | Show: 7:00 PM EDT</p>
+    <p class="location">Harmonie Hall</p>
+    <p class="event-type">Concert</p>
+</div>
+
+<div class="event">
+    <h3>Voices in Communitie with Tyler Hathaway</h3>
+    <p class="date">November 5, 2025</p>
+    <p class="time">7:00 PM EST</p>
+    <p class="location">Harmonie Hall</p>
+</div>
+
+<div class="event">
+    <h3>Brittany Ann Tranbaugh, Cloudbelly, Remi Goode</h3>
+    <p class="date">November 15, 2025</p>
+    <p class="time">Doors: 7:00 PM EST | Show: 7:30 PM EST</p>
+    <p class="location">Harmonie Hall</p>
+    <p class="event-type">Concert</p>
+    <p class="ticket-link"><a href="https://buytickets.at/harmoniehall/1785406" target="_blank">Buy Tickets</a></p>
+</div>
+
+<div class="event">
+    <h3>Voices in Communitie with Tyler Hathaway</h3>
+    <p class="date">November 19, 2025</p>
+    <p class="time">7:00 PM EST</p>
+    <p class="location">Harmonie Hall</p>
+</div>
+
+<div class="event">
+    <h3>Voices in Communitie with Tyler Hathaway</h3>
+    <p class="date">December 3, 2025</p>
+    <p class="time">7:00 PM EST</p>
+    <p class="location">Harmonie Hall</p>
+</div>
+
+<div class="event">
+    <h3>Voices in Communitie with Tyler Hathaway</h3>
+    <p class="date">December 17, 2025</p>
+    <p class="time">7:00 PM EST</p>
+    <p class="location">Harmonie Hall</p>
+</div>
+
+<div class="event">
+    <h3>Voices in Communitie with Tyler Hathaway</h3>
+    <p class="date">December 31, 2025</p>
+    <p class="time">7:00 PM EST</p>
+    <p class="location">Harmonie Hall</p>
+</div>
