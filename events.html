@@ -1,1162 +1,1 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Events | Harmonie Hall</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<style>
- .date-box {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 55px;
-      height: 55px;
-      text-align: center;
-      background-color: #555;
-      color: white;
-      font-weight: bold;
-      border-radius: 8px 0 8px 0;
-      padding: 5px;
-    }
-    .event-header {
-      position: relative;
-      padding-left: 65px;
-    }
-    .event {
-      background: #fff;
-      padding: 1em;
-      margin-bottom: 2em;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-    .event-heading {
-      flex: 1;
-    }
-    .event-heading .title {
-      font-size: 1.1em;
-      font-weight: bold;
-    }
-    .event-heading .date {
-      font-size: 0.95em;
-      color: #555;
-    }
-    .toggle-button {
-      display: inline-block;
-      margin-top: 0.5em;
-      background-color: #dbb446;
-      color: white;
-      padding: 0.3em 0.6em;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 0.9em;
-    }
-    .about {
-      display: none;
-      margin-top: 0.5em;
-    }
-    #form-container {
-      margin: 2em;
-      padding: 1em;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      max-width: 500px;
-    }
-    #generated-output {
-      white-space: pre-wrap;
-      background: #f9f9f9;
-      padding: 1em;
-      margin-top: 1em;
-      border: 1px solid #ddd;
-      </style>
-<script>
-  function toggleAbout(button) {
-    const about = button.nextElementSibling;
-    const isVisible = about.style.display === "block";
-    about.style.display = isVisible ? "none" : "block";
-    button.textContent = isVisible ? "Show Details" : "Hide Details";
-  }
-</script>
-</head>
-<body>
-
-
-<div class="header">
-	<a href="index.html"><img src="logo.png" style="height:160px;" alt="HH logo"></a><p>
-	<i>for one and all!</i>
-	<p>
-	<a href="index.html">Home</a> | 
-	<a href="events.html" style="text-decoration: underline;">Events</a> | 
-	<a href="donate.html">Donate</a> | 
-  <a href="photos.html">Photos</a> | 
-	<a href="map.html">Map</a>
-</div>
-<hr>
-
-<div class="events-grid">
-
-  <div class="recurring-events">
-    <h2>Recurring Events</h2>
-<!-- 
-<section class="event">
-      <div class="event-header">
-      
-        <div class="event-heading">
-          <div class="title">Yoga with Aleena</div>
-          <div class="date">6:30-7:30pm | Doors 6pm | $15</div>
-        </div>
-      </div>
-      <button class="toggle-button" onclick="toggleAbout(this)">Show Details</button>
-      <div class="about">Every other Wednesday! All level hatha flow. Arrive early and bring your own mat. Check schedule at <a href="https://www.promethia.design/event-list">www.promethia.design</a></div>
-    </section>
--->
-
-    <section class="event">
-      <div class="event-header">
-      
-        <div class="event-heading">
-          <div class="title">Sing A Secret: A Mindbody Approach to Voice and Song</div>
-        </div>
-      </div>
-      <button class="toggle-button" onclick="toggleAbout(this)">Show Details</button>
-      <div class="about">Free workshop, open to all! Monthly, on a Saturday 11am-1:30pm. Check schedule and register at <a href="https://www.eventbrite.com/e/sing-a-secret-a-mindbody-approach-to-voice-and-song-free-philadelphia-tickets-1098243639289?aff=ebdssbdestsearch">eventbrite</a></div>
-    </section>
-  </div>
-
-<div class="upcoming-events">
-
-<h2 style="font-weight:bold;">Upcoming Events</h2>
-<p>
-<p>
-You can find tickets to most upcoming events at our <a href="https://linktr.ee/harmoniehall">linktree</a>. <br>Harmonie Hall is<strong> an upstairs venue.</strong>
-<p>
-<!--
-When adding an event, copy and paste the following and replace the capitalized text: 
-<div class="event"> 
-	<div class="date-box" id="date">DAY<br>DATE
-	</div>
-	<div class="event-heading">
-		<span class="title">TITLE-OF-EVENT</span>
-		<br>
-		<span class="date">TIME | Doors TIME | $PRICE | BYOB | <a href="">TICKETS</a></span>
-		</div>
-	<div class="about">BIO-OR-DESCRIPTION-OF-EVENT</div>
-</div>
--->
-
-
-
-<div class="event"> 
-	<div class="date-box" id="date">Sat<br>Sep 27
-	</div>
-	<div class="event-heading">
-		<span class="title">Shadow Basket and Jeremy James Meyer</span>
-		<br>
-		<span class="date">7pm | Doors 6:30 | Donation at the door | BYOB | <a href="https://buytickets.at/harmoniehall/1864565">RSVP</a></span>
-		</div>
-	<button class="toggle-button" onclick="toggleAbout(this)">Show Details</button>
-	<div class="about">Shadow Basket is a dog rock/indie folk band from San Juan Island, WA. The band is co-led by Jacey LaManna and Kyle Lutz, whose harmonies and songwriting shape the heart of the project. 
-<p>
-Rooted in lyrical storytelling, Shadow Basket blends elements of folk Americana with driving, grunge tinted soundscapes. Their music drifts between the ethereal and the grounded- at times light and whimsical, and at others loud and intense. Their sophomore record, Frog Swan Song was released in August 2025 on Den Tapes, a Seattle based DIY label. </div>
-</div>
-</div>
-<div class="event"> 
-	<div class="date-box" id="date">Tue<br>Sep 30
-	</div>
-	<div class="event-heading">
-		<span class="title">We Wiggle Dolls Puppet Cabaret</span>
-		<br>
-		<span class="date">8pm | Doors 7pm | sliding scale $12-20 | BYOB | <a href="https://buytickets.at/harmoniehall/1814207">info & tickets</a></span>
-		</div>
-		<button class="toggle-button" onclick="toggleAbout(this)">Show Details</button>
-	<div class="about">We Wiggle Dolls is touring YET AGAIN! On September 30th, the New-York centered but diasporic puppet show collective "We Wiggle Dolls” will perform a new adult-aimed and eclectic puppet cabaret set at Harmonie Hall! There, the cast will be joined by Philadelphia puppet artists Maisie O’Brien and Olli Goss.
-
-<p>We Wiggle Dolls is a diasporic puppet show collective spun out of a popular Brooklyn Puppet Slam. Since October 2023, We Wiggle Dolls has produced 10 puppet slams, a 6-day festival, immersive experiences, long form productions, a light and shadow rock music spectacle, three national tours, and has published several puppet-themed zines! We Wiggle Dolls’ mission is to bring as wide a variety of puppetry as possible to audiences, to showcase new talent alongside seasoned veterans, and to make historical puppet culture more readily accessible as well.</div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Wed<br>Oct 15
-	</div>
-	<div class="event-heading">
-		<span class="title">Ordinary Elephant</span>
-		<br>
-		<span class="date">7:30pm | Doors 7pm | $20 | BYOB | <a href="https://buytickets.at/harmoniehall/1837127">info & tickets</a>
-		</div>
-	<button class="toggle-button" onclick="toggleAbout(this)">Show Details</button>
-	<div class="about">Mesmerizing folk duo Ordinary Elephant (<a href="https://www.ordinaryelephant.net/">web</a> | <a href="https://ordinaryelephant.bandcamp.com/">bandcamp</a> | <a href="http://instagram.com/ordinaryelephant/">insta</a> ) has spent the better part of the last decade on a never-ending tour that’s earned married couple Crystal and Pete Damore widespread critical acclaim and made fans of luminaries like Tom Paxton and Mary Gauthier. In 2017, the pair took home the International Folk Music Award for Artist of the Year on the strength of their breakout album, Before I Go, and two years later, they returned with the similarly lauded Honest, which the Associated Press hailed as “one of the best Americana albums of the year.”
-
-<p> The band’s new stripped-down, self-titled collection is the purest distillation of their sound yet, showcasing the arresting power of the couple’s gorgeous harmonies and intricate fretwork. The songs are timeless, rooted in rich, character-driven storytelling, and the performances are similarly transportive, fueled by delicately intertwined banjo, guitar, and octave mandolin. Though the songs were born out of a period of deep uncertainty, the record itself is a work of profound self-assurance, one delivered by a duo whose personal and professional lives embody the limitless possibility of honest, organic collaboration. Press play on Ordinary Elephant and you’ll hear more than just a husband and wife; you’ll hear the sound of sincerity and commitment, of patience and gratitude, of learning to let go of expectation and revel in the simple beauty of the moment.
-	
-	 </div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Thu<br>Oct 23
-	</div>
-	<div class="event-heading">
-		<span class="title">Joan Shelley</span>
-		<br>
-		<span class="date">7:30pm | Doors 7pm | $20 | BYOB | <a href="https://buytickets.at/harmoniehall/1806892">info & tickets</a></span>
-		</div>
-		<button class="toggle-button" onclick="toggleAbout(this)">Show Details</button>
-	<div class="about">
-Joan Shelley is a songwriter and singer who draws inspiration from traditional and traditionally-minded performers from her native Kentucky, as well as those from Ireland, Scotland, and England, but she’s not a folksinger. Her disposition aligns more closely with that of, say, Roger Miller, Dolly Parton, or Tom T. Hall, who once explained—simply, succinctly, in a song—“I Witness Life.” Her 7th album Real Warmth will be released in September. It was recorded in Toronto with producer Ben Whiteley (The Weather Station), and the 13-tracks feature many guests from the city's fertile music scene.</div>
-</div>
-
-<div class="event">  
-	<div class="date-box" id="date">Sat<br>Nov 8
-	</div> 
-	<div class="event-heading"> 
-		<span class="title">Reed Foehl</span> 
-		<br> 
-		<span class="date">More info coming soon. Check for link on <a href="https://linktr.ee/harmoniehall">linktree</a></span>
-	</div> 
-	<div class="about">“One of the classic functions of a singer/songwriter is to exhort us to pay attention—to tune in, to look around. Reed Foehl does the job as good as it can be done, with an unassumingly sweet voice that is as conversational as it is tuneful … unexpected and relevatory.”
--Mark Erelli</div> </div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Sat<br>Nov 15
-	</div>
-	<div class="event-heading">
-		<span class="title">Brittany Ann Tranbaugh, Cloudbelly, Remi Goode</span>
-		<br>
-		<span class="date">7:30pm | Doors 7pm | $20 Suggested Donation | <a href="https://www.tickettailor.com/events/harmoniehall/1785406">info & rsvp</a></span>
-		</div>
-		<button class="toggle-button" onclick="toggleAbout(this)">Show Details</button>
-	<div class="about">
-	Brittany Ann Tranbaugh (trio)
-
-<p>Brittany Ann Tranbaugh (pronounced TRAN-baw) is a Philadelphia-based songwriter whose queer Americana heartbreaker “Kiss You” won Song of the Year in the 2021 John Lennon Songwriting Contest. Tranbaugh has been writing songs and playing shows as a side gig since she was a teenager, but in February 2023, at 31 years old, she finally quit her office job to pursue a full-time career in music. She has since played over 300 shows, received a standing ovation at the XPoNential Music Festival, won first place in the Songwriter Serenade contest in Texas, and toured extensively supporting Carsie Blanton. Her next big plan is to record a full-length album (made possible by 400+ fans who backed her $25k album crowdfunding campaign) in the fall, which listeners can expect in late 2026.
-
-
-<p>Cloudbelly (trio)
-
-<p>Cloudbelly is an indie-folk band from Western Massachusetts known for blending poetic lyricism, lush harmonies, and ambient textures into songs that feel both intimate and expansive. Their 2024 album i know i know i know was named a Top 10 Album of the Year by The Boston Globe and praised for its emotional depth and genre-blurring sound. Currently back in the studio, the band is working on their much-anticipated sophomore album, due out in early 2026.
-
-<p>Special guest Remi Goode (duo)
-
-<p>Remi Goode is a trained classical guitarist and choral singer turned alternative folk singer-songwriter. In a continual search for the truth, her lyrics are filled with paradoxes, puzzles, and multiple perspectives, with Remi attempting to rid herself of black-and-white thinking and, instead, embrace the grey areas in her life. Things I've Said Before, the debut album from Remi Goode due September 26, is an introduction to the indie-folk artist who straddles the borders between different worlds. A nylon-string guitarist nodding to the classical training and contemporary influences of her past while pushing toward a wider sound, she creates her own version of modern-day American roots music: one that's intimate one minute and cinematic the next, making room for folky bedroom recordings, full-band studio performances, and all points in between.
-
-</div>
-</div>
-<p>
-Is there a band you really want to see here? <a href="mailto:harmoniehallmail@gmail.com">Let us know!</a>
-If you're interested in hosting a house concert, art show, film showing, etc. at Harmonie Hall, please <a href="mailto:harmoniehallmail@gmail.com">reach out!</a>
-<p>
-If you'd like to hear about our events directly you can sign up for our <a href="https://view.flodesk.com/pages/64318d7d15209fc178e09453">email list</a> 
-or follow us on <a href="https://www.instagram.com/harmoniehall_1891/">instagram</a> 
-or <a href="https://www.facebook.com/harmoniehallshows">facebook</a>
-<p>
-
-
-
-
-<h2 style="font-weight:bold;">Past Events</h2>
-
-<div class="event"> 
-	<div class="date-box" id="date">Fri<br>Sep 26
-	</div>
-	<div class="event-heading">
-		<span class="title">Syl Fisher (EP Release!) with Wherever You Are</span>
-		<br>
-		<span class="date"> Pay what you wish, but please <a href="https://buytickets.at/harmoniehall/1854619">RSVP</a></span>
-		</div>
-		<div class="about">
-	</div>
-</div>
-<div class="event"> 
-	<div class="date-box" id="date">Tue<br>Aug 26
-	</div>
-	<div class="event-heading">
-		<span class="title">VHS Night: Men in Black (1997)</span>
-		<br>
-		<span class="date">7:45 | Doors 7:30 | Free/Donation | BYOB | Snacks provided | <a href="https://www.eventbrite.com/e/men-in-black-vhs-movie-night-at-harmonie-hall-tickets-1602603342739?aff=ebdssbdestsearch">RSVP</a></span>
-		</div>
-	<div class="about">Join us for a free screening of "Men in Black" (1997) played on a VCR. </div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Sun<br>May 25
-	</div>
-	<div class="event-heading">
-		<span class="title">Julian Hartwell and Evolvlove</span>
-		<br>
-		<span class="date">Album release show! More info and reserve tickets <a href="https://www.tickettailor.com/events/harmoniehall/1684301">here</a></span>
-		</div>
-	<div class="about"></div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Sat<br>May 24
-	</div>
-	<div class="event-heading">
-		<span class="title">Karl Blau and Erisy Watt</span>
-		<br>
-		<span class="date">More info and reserve tickets <a href="https://www.tickettailor.com/events/harmoniehall/1679927">here</a></span>
-		</div>
-	<div class="about"></div>
-</div>
-
-
-<div class="event"> 
-	<div class="date-box" id="date">Fri<br>Jun 6
-	</div>
-	<div class="event-heading">
-		<span class="title">Anya Van Rose, Sarah Winston, Bel</span>
-		<br>
-		<span class="date">More info coming soon. Check for link on <a href="https://linktr.ee/harmoniehall">linktree</a></span>
-		</div>
-	<div class="about"></div>
-</div>
-
-
-
-
-<div class="event"> 
-	<div class="date-box" id="date">Thu<br>May 15
-	</div>
-	<div class="event-heading">
-		<span class="title">Silversmith, w/ High Fiction</span>
-		<br>
-		<span class="date">More info coming soon. Check for link on <a href="https://linktr.ee/harmoniehall">linktree</a></span>
-		</div>
-	<div class="about"></div>
-</div>
-<div class="event"> 
-	<div class="date-box" id="date">Fri<br>May 9
-	</div>
-	<div class="event-heading">
-		<span class="title">José Luiz Martins and Nicole Saphos</span>
-		<br>
-		<span class="date">7:30 | Doors 7pm | $10 advance/$15 day of show | BYOB | More info coming soon. Check for link on <a href="https://linktr.ee/harmoniehall">linktree</a></span>
-		</div>
-	<div class="about"></div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Sat<br>May 3
-	</div>
-	<div class="event-heading">
-		<span class="title">Adam Monaco, Mark Dignam, and Grainne Hunt: Songwriters in the Round</span>
-		<br>
-		<span class="date">7:30pm | Doors 7pm | $20 | BYOB | <a href="https://buytickets.at/harmoniehall/1619565">TICKETS</a></span>
-		</div>
-	<div class="about"></div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Tue<br>Apr 29
-	</div>
-	<div class="event-heading">
-		<span class="title">VHS Night Double Feature: The Karate Kid parts 1 & 2</span>
-		<br>
-		<span class="date">6:30pm-10:30pm | Doors 6pm | Free/Donation | BYOB </span>
-		</div>
-	<div class="about">Free screening on our projector! Some drinks and snacks provided.</div>
-</div>
-<div class="event"> 
-	<div class="date-box" id="date">Tue<br>Apr 22
-	</div>
-	<div class="event-heading">
-		<span class="title">Portrait Night: Everyone Draws Everyone!</span>
-		<br>
-		<span class="date">7:30pm | Doors 7pm | $5-10 Suggested donation | BYOB</span>
-		</div>
-		
-	<div class="about">We will be drawing quick 4-minute portraits of everyone in attendance! Paper provided. BYOB and snacks. RSVP with 2 songs you'd like on the playlist (before 12pm Tuesday April 22) to harmoniehallmail@gmail.com.</div>
-</div>
-
-
-<div class="event"> 
-	<div class="date-box" id="date">Mon<br>Apr 14
-	</div>
-	<div class="event-heading">
-		<span class="title">Mindfulness Workshop with Brandon Everett</span>
-		<br>
-		<span class="date">7-8pm | Doors 6:30pm | pay what you can | <a href="https://www.eventbrite.com/e/mindfulness-meditation-tickets-1290515088369?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl">More info</a></span>
-		</div>
-	<div class="about"></div>
-</div>
-<div class="event"> 
-	<div class="date-box" id="date">Tue<br>Mar 25
-	</div>
-	<div class="event-heading">
-		<span class="title">VHS Movie Night: The Labyrinth</span>
-		<br>
-		<span class="date">8pm | Doors 7:30 | FREE | Snacks + drinks provided | <a href="https://www.eventbrite.com/e/labyrinth-vhs-movie-night-at-harmonie-hall-tickets-1291842729379?aff=ebdssbdestsearch">Please RSVP here</a></span>
-		</div>
-	<div class="about"></div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Mon<br>Mar 24
-	</div>
-	<div class="event-heading">
-		<span class="title">Circle Singing Workshop</span>
-		<br>
-		<span class="date">7-9pm | Doors 6:30 | $11-44 | <a href="https://www.eventcreate.com/e/vb-circlesinging-3-24">register</a></span>
-		</div>
-	<div class="about">Circle Singing - a facilitated improvisatory form of group singing; made popular in modern times by Bobby McFerrin. Two hours of creativity and connection through musical games and improvised musical flow, by you for you. Facilitated by Tracy LJ Robertson.</div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">MAR<br>14
-	</div>
-	<div class="event-heading">
-		<span class="title">Kristin Daelyn Record Release Show! with Reese Florence and Adeline Hotel</span>
-		<br>
-		<span class="date">8pm | Doors 7:30pm | $15 | BYOB | <a href="https://buytickets.at/harmoniehall/1529513">TICKETS</a></span>
-		</div>
-	<div class="about">Join us for Kristin Daelyn's record release show for Beyond the Break! With opening sets by Reese Florence and Adeline Hotel 
-<p>Beyond the Break, the second full-length album by Kristin Daelyn, is a statement of rare tranquility and wisdom, atmosphere and grace. In these eight compositions, the Philadelphia songwriter takes influence from solo guitarists like Leo Kottke and John Fahey as well as writers like Mary Oliver, whose poem “Patience” inspired the early single “Patience Comes to the Bones.” Through instrumental pieces that highlight her virtuosity as a player and elegant folk songs that showcase her gifts for tender pop melodies and emotionally incisive lyrics, Daelyn’s voice feels both urgent and timeless. Like a well-loved paperback passed between friends, her songs are open to reflection and personal annotation, designed to be of use. - Sam Sadomsky
-
-<p>Dan Knishkowy (Adeline Hotel) In the tender, surrealist world that Knishkowy has developed under the name Adeline Hotel, stories have been told through sprawling psych-rock epics (2020’s Solid Love), stark solo guitar performances (2021’s Good Timing), piano-led orchestral song cycles (2021’s The Cherries Are Speaking), and lush, jazzy compositions that felt like a genre unto themselves (2023’s Hot Fruit). Inspired by indie lifers and fellow world-builders like Jim O’Rourke and Phil Elverum, the Ruination Records co-founder has rewritten the rule book with each new project, inviting listeners to join as he discovers new channels for his singular voice. By now the sound of Adeline Hotel is equally identifiable through Knishkowy’s dextrous fingerpicking—the aural equivalent of tracing your fingers through cool sand at sunrise—as his low, whispered vocals and autumnal melodies.
-<p>
-Reese Florence is a Martinican American songwriter, vocalist, and guitarist based in Philadelphia. Combining stunning vocals and deft guitar playing, Florence's songs have a depth and power that will stay with you for a while after you've heard them.
-
-</div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Sat<br>Jan 25
-	</div>
-	<div class="event-heading">
-		<span class="title">Peter Mulvey, with Ross Bellenoit</span>
-		<br>
-		<span class="date">8pm | Doors 7:30 | $20/$25 Day of Show | BYOB | <a href="https://buytickets.at/harmoniehall/1495332">TICKETS</a></span>
-		</div>
-	<div class="about">
-	<strong>Peter Mulvey</strong> has been a songwriter, road-dog, raconteur, and almost-poet since before he can remember. In 1989 he spent a year in Ireland, busking on the streets of Dublin and hitchhiking to whatever gigs he could find. Back stateside, he spent a couple years gigging through the bars of his native Midwest before taking off for Boston, where he returned to subway busking and coffeehouses. Small shows led to larger shows, which eventually led to regional and then national touring. The wheels have not stopped since.
- 
-<p>Twenty albums, one illustrated book, thousands of live performances, a TEDx talk, a decades-long association with the National Youth Science Camp, opening tours and gigs for luminaries such as Ani DiFranco, Greg Brown, Emmylou Harris and Chuck Prophet, appearances on NPR, an annual autumn tour by bicycle, emceeing festivals, hosting his own Lamplighter Sessions for years in Boston and in Wisconsin... he has built his life's work on collaboration, on an instinct for the eclectic and the vital.
-<p>Check him out at <a href="http://petermulvey.com">petermulvey.com</a>
-<p>Singer, songwriter, guitarist, producer and bandleader, <strong>Ross Bellenoit</strong>’s latest full length offering, Where Does The Light Go? features eleven Americana tinged songs that were written and produced by Bellenoit. The album is a meditation on love, loss, secrets and the ways our interpersonal relationships affect our understanding of the world around us. It poses the question, what happens when you stay on a path when you feel that the odds are against you?
-<p>In March of 2020, Bellenoit embarked on a solo, acoustic fourteen-date tour of Germany to celebrate the release of Where Does The Light Go? However, his trip overseas was cut short at the onset of the COVID-19 global pandemic and he quickly decided to cancel the remaining dates in March to return to the United States rather than run the risk of being stuck in Europe and unable to fly home. “There was a harrowing moment when I had to cancel the last three dates of the solo tour, says Bellenoit. “I woke up in Dortmund at 6:00 AM on March 12th to the news that a travel ban was happening and I had to cancel the rest of tour and race back to Berlin to fly home.”
-<p>The eleven Americana tinged songs on Where Does The Light Go? were written and produced by Bellenoit and the album is a meditation on love, loss, secrets and the ways our interpersonal relationships affect our understanding of the world around us. It poses the question, what happens when you stay on a path when you feel that the odds are against you? The album was recorded at Bellenoit’s collective, Turtle Studios, where the artist has established himself as a vital component to the vibrant music community in Philadelphia. In addition to singing, playing guitar and producing, Bellenoit enlisted keyboardist Jaron Olevsky (Amos Lee), drummer Chuck Staab (Melody Gardot), upright bassist Charlie Muench (The Stray Birds), Jonathan Colman on electric bass and the aforementioned Sonja Sofya on backing vocals.
-<p>As a guitarist, he has toured with Amos Lee (supporting Bob Dylan and Elvis Costello in 2007), made an appearance on A Prairie Home Companion with The Sweetback Sisters, performs regularly with his funk fusion trio, Muscle Tough, and has collaborated with numerous singer-songwriters such as Brittany Ann, Birdie Busch, Lissa Schneckenburger, Chris Kasper, and many others. Bellenoit is an in demand producer via Turtle Studios and has produced albums for The Sweetback Sisters, Ginger Coyle, Eavesdrop, Sonja Sofya, and original content for the kids toy Toniebox.
-<p>“Ross Bellenoit's solo songs are full of tasteful pop melodies and solid guitar playing,” - Bill Frater, KRCB
-<p>“The softer, laid-back nature of his vocals creates a warm juxtaposition to his crisp string work” - Songwriter’s Monthly
-<p>“Sophisticated, poetic, sublime delivery” - Take Effect (8/23/2020)
-	</div>
-</div>
-<div class="event"> 
-	<div class="date-box" id="date">Tue<br>Dec 10
-	</div>
-	<div class="event-heading">
-		<span class="title">Mindfulness Workshop with Brandon Everett</span>
-		<br>
-		<span class="date">7-8pm | Doors 6:30pm | pay what you can | <a href="https://www.eventbrite.com/e/mindfulness-meditation-tickets-1089960454059?aff=erelexpmlt">More info</a></span>
-		</div>
-	<div class="about"></div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Mon<br>Dec 9
-	</div>
-	<div class="event-heading">
-		<span class="title">VHS Double Feature: The Muppet Christmas Carol & It's a Wonderful Life</span>
-		<br>
-		<span class="date">6pm doors | Movie at 6:30 | Free (donations appreciated)</span>
-		</div>
-	<div class="about">Snacks and beverages provided!</div>
-</div>
-
-
-<div class="event"> 
-	<div class="date-box" id="date">Sun<br>Nov 24
-	</div>
-	<div class="event-heading">
-		<span class="title">Will Reagan, Ivan Theva, Scott Apple</span>
-		<br>
-		<span class="date">8pm | Doors 7:30 | $25 | BYOB | <a href="https://www.eventbrite.com/e/will-reagan-ivan-theva-philadelphia-pa-tickets-1021921523787">TICKETS</a></span>
-		</div>
-	<div class="about">Join us for a contemplative, engaging set of old and new songs from Will and Ivan. <p> </div>
-</div>
-
-
-<div class="event"> 
-	<div class="date-box" id="date">Thu<br>Nov 21
-	</div>
-	<div class="event-heading">
-		<span class="title">Windborne</span>
-		<br>
-		<span class="date">8pm | Doors 7:30pm | $25 suggested | BYOB <br> <a href="https://buytickets.at/harmoniehall/1213992">TICKETS</a></span>
-		</div>
-	<div class="about">Windborne’s captivating show draws on the singers’ deep roots in traditions of vocal harmony, while the absolute uniqueness of their artistic approach brings old songs into the present. Known for the innovation of their arrangements, their harmonies are bold and anything but predictable. Instead of simply dazzling the audience with vocal fireworks; Windborne evokes a deep emotional response connecting their audience to the past, distant places and themselves, it's no wonder they have been crowd favorites since starting to tour in 2018.</div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Mon<br>Nov 18
-	</div>
-	<div class="event-heading">
-		<span class="title">VHS Double Feature: Jumanji & Hook</span>
-		<br>
-		<span class="date">6pm doors | Movie at 6:30 | Free/donation</span>
-		</div>
-	<div class="about">BYO floor cushion/blanket if you wish. (There will be folding chairs if you like). Snacks provided!</div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Fri<br>Nov 15
-	</div>
-	<div class="event-heading">
-		<span class="title">Evangeline Young with Prim</span>
-		<br>
-		<span class="date"> 8pm | Doors 7:30 | $12 adv/$15 dos | BYOB | <a href="https://buytickets.at/harmoniehall/1459434">TICKETS</a></span>
-		</div>
-	<div class="about">Evangeline Young (<a href="https://www.instagram.com/evangelinegraceyoung/">Instagram</a>) is a Brooklyn based indie singer-songwriter and actor originally from West Chester, PA (Go Birds). Growing up in a family of folk singers, Evangeline’s been singing and playing guitar since she was a kid. Her music moves between the bare, acoustic sounds of the folk songs she was raised on, and the harder edges of her indie-rock influences. Combined with lyrics that feature a kind of conversational poetry, her songs are aimed at personal revelation with a few laughs along the way. In 2022, Evangeline opened for Glen Hansard (The Swell Season) at the Beacon Theatre in New York City and The Anthem in Washington D.C. She is currently finishing her first full length record which will be released next year.
-	<p>Prim (<a href="https://www.instagram.com/priiimmrose/">Instagram<a/>) is the acoustic project of songwriter Prim Pettine. The Philadelphia native writes sprawling kaleidoscopic stories delivered through lilting melodies and gentle guitar accompaniment.
-	</div>
-</div>
-<div class="event"> 
-	<div class="date-box" id="date">Sun<br>Nov 3
-	</div>
-	<div class="event-heading">
-		<span class="title">Gryphon Quartet with Ernesto's Club</span>
-		<br>
-		<span class="date">4pm | Doors 3:30pm | <a href="https://linktr.ee/harmoniehall">Tickets & more info</a></span>
-		<p>Program:<br>Haydn String Quartet Op.74 no.4, "Sunrise" Quartet
-<br>Mendelssohn String Quartet in E Flat Major, Op. 12
-<br>and
-<br>Movement I from Shostakovich String Quartet no.3
-
-</div>
-	<div class="about"><p><strong>The Gryphon String Quartet</strong> is made up of Natasha Colkett, Hannah Nicholas, Tess Varley, and Justin Yoder. They have known each other since they were teenagers, and debuted as a quartet this summer at Hannah's old stomping ground, the Gryphon Cafe. 
-The four perform music from the baroque period to now - Justin is fresh off of Pig Iron Theatre’s “Poor Judge” and Hannah writes her own music. They play with a range of ensembles including the Philadelphia Orchestra, the Ballet, Opera, and Chamber Orchestra, and Grammy-winning singer-songwriters.
-<p><strong>Ernesto’s Club</strong> is a piano and percussion duo which explores the samba and choro traditions of Brazil. Their name is a tribute to Ernesto Nazareth, the turn-of-the-century Brazilian composer who combined Western classical and Afro-Brazilian music to create choro, the roots of samba, bossa nova and Musica Popular Brasileira. Their music is animated, joyful, syncopated, and bubbling with spontaneity. Both pianist Rob Curto and percussionist Gregg Mervine are Americans who learned their craft in Brazil, where they have lived off-and-on since the early 2000s. Rob and Gregg connected in 2023, and have already performed at the Kimmel Center, Johnny Brenda’s and the Perkins Center. Their first EP, entitled Nazareth was released in March, 2024.
-<p></div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Sat<br>Nov 2
-	</div>
-	<div class="event-heading">
-		<span class="title">Luke Francis, Kristin Daelyn, Your Jack</span>
-		<br>
-		<span class="date"> <a href="https://linktr.ee/harmoniehall">Tickets & more info</a></span>
-		</div>
-	<div class="about">About the artists:
-	<p><strong>Luke Francis</strong> is a Seattle-based singer-songwriter. Francis spent the years leading up to 2020 cutting his teeth with Americana band Fretland and living nomadically wherever allowed him to continue honing his songwriting craft – a tent on the Skykomish river, an 1800s log cabin, the spare bedrooms of benevolent lawyers. When Fretland’s touring schedule ground to a halt with the onset of the pandemic, the hiatus provided a silver lining, prompting Francis to begin work on the songs which would comprise a soul-searching solo project.<p>
-	Philadelphia-based indie folk artist <strong>Kristin Daelyn</strong> combines intricate fingerstyle guitar with poetic storytelling to create a world of nostalgia and introspection. Her music explores themes of love, longing, and nature through vivid sonic canvases and deep emotional exploration.  Grounded in the simplicity and warmth of folk tradition, her sound feels both familiar and unique, evoking quiet moments and a tender space for deep connection.
-	<p>“<strong>Your Jack</strong> won’t make you stomp your boots, which is good because he probably already personified the soles. When you let him drive he might take some risks you wouldn’t, but he won’t lose your trust. Just like how one candle doesn’t lose anything by lighting another, Jack has the kind of luck that’ll spread to you if you get close enough. The best parking spot at a funeral kind of luck.
-
-<p>Your Jack plays songs that will have you calling loved ones on the walk home and texting your old mushroom dealer soon after they hang up. Anything but numb is Your Jack.”
-
-<br>-Chase Leland</div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Fri<br>Nov 1
-	</div>
-	<div class="event-heading">
-		<span class="title">Hurricane Helene Honky Tonk Relief</span>
-		<br>
-		<span class="date">7pm | Doors 6:30 | $15 | BYOB | <a href="https://linktr.ee/harmoniehall">Tickets & more info</a></span>
-		</div>
-	<div class="about">Featuring Olivia Ellen Lloyd, Roberta Faceplant, Red McAdam, and dance lessons by Donkey. Proceeds to be distributed among Western North Carolina mutual aid funds.</div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Thu<br>Oct 31
-	</div>
-	<div class="event-heading">
-		<span class="title">Not-So-Silent Cinema presents: Nosferatu</span>
-		<br>
-		
-		<span class="date">8pm | Doors 7:30 | $15 adv/$20 day of show | BYOB | <a href="https://buytickets.at/harmoniehall/1415452">Tickets and more info</a></span>
-		</div>
-	<div class="about">It's Harmonie Hall-o-ween! <a href="https://www.notsosilentcinema.com/about">Not-So-Silent Cinema</a> is the project of Philadelphia composer Brendan Cooney. Cooney pulls together different groups for each of his film projects, creating diverse mash-ups of musical personalities from different music scenes to create lively new platforms for interaction and creativity. His scores are tightly composed, time-coded and thematic but also have plenty of room for improvisation and interaction between players.</div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Thu<br>Oct 28
-	</div>
-	<div class="event-heading">
-		<span class="title">VHS Movie Night: The Ring</span>
-		<br>
-		<span class="date">7pm | Movie at 7:30 | Free/donation</span>
-		</div>
-	<div class="about">BYO floor cushion/blanket if you wish. Snacks provided!</div>
-</div>
-
-
-<div class="event"> 
-	<div class="date-box" id="date">Sat<br>Oct 5
-	</div>
-	<div class="event-heading">
-		<span class="title">Covenhoven and Jake Klar</span>
-		<br>
-		<span class="date">7:30pm | Doors 7pm | cash/venmo donation | BYOB</span>
-		</div>
-	<div class="about"><a href="https://covenhoven.com">Covenhoven</a> is internationally recognized indie artist Joel Van Horne, a multi-instrumental singer-songwriter whose rich harmonies, reedy baritone and commanding falsetto have found a home with critics and fans since 2013. 
-<p>
-Through 4 full length albums and 2 EPs Covenhoven has forged a signature style; layered acoustic arrangements that roll with momentum into orchestral peaks, accompanied by lyrics that contrast hard-won wisdom with the inherent hope of the natural world—from Big Sur to his native Colorado.
-<p>
-Covenhoven’s latest album, IV (released in October 2021), is his most collaborative and rock forward to date—taking a producing partner in Ben Wysocki of the Fray, who also performs on the album. IV features over a dozen musicians including Grammy nominated singer-songwriter Gregory Alan Isakov, Luke Mossman of Nathaniel Rateliff & the Night Sweats, and Bluebook’s Julie Davis. 
-<p>
-Covenhoven’s live performances capture the spirit of his recordings—whether its conjuring cascading loops in his solo shows or backed by a full band—Covenhoven’s sound fills the breadth of outdoor spaces, auditoriums and club stages.
-<p>
-Regularly touring the United States and Canada, Covenhoven has shared the stage with Grammy winners and nominees S.Carey (Bon Iver), Jose Gonzalez, Gregory Alan Isakov, and John Paul White (Civil Wars). Covenhoven has also performed with genre bending artists Lord Huron, Leif Vollebekk, Joshua James, Blind Pilot, Esme Patterson, Rayland Baxter, John Craigie, Elephant Revival, Daniel Rodriguez, Shook Twins, Reed Foehl, Rainbow Girls, Courtney Marie Andrews, Joan Shelley and host of others. 
-<p>
-Jake Klar is an artist based in Turners Falls, MA. His songs showcase an ongoing collection of life’s lyric moments, both the eccentric and the daily. Klar rides on the Americana tradition of storytelling in his work, while bringing in the edge of modern folk/rock-inspired arrangements. Whether Jake is playing solo or with his band - you will leave his shows with his crooning voice and the poetry of his lyrics ringing through your head.
-<p>Klar is a veteran of Northeast Festivals such as Otis Mountain Get Down and FreshGrass. His latest release, Driving Home Through The Country,  is a follow-up to his acclaimed 2021 & 2020 collection of songs, Witness, and Masquerade.
-<p>
-<a href="https://www.jakeklar.com/">Website</a> | <a href="https://www.instagram.com/jakeklar_/">Instagram</a> | <a href="https://www.facebook.com/jakeklar/">Facebook</a> | <a href="https://www.youtube.com/channel/UCRfGM-ePCdvdDoSiCvKZg4A">YouTube</a> | <a href="https://cmdshft.ffm.to/dhttc">Driving Home Through the Country - New single</a>
-</div>
-</div>
-
-
-<div class="event"> 
-	<div class="date-box" id="date">Tue<br>Oct 1
-	</div>
-	<div class="event-heading">
-		<span class="title">Gemma Laurence, with Bren and Lars</span>
-		<br>
-		<span class="date">7pm | Doors 6:30pm | $10-20 cash/venmo | BYOB</span>
-		</div>
-	<div class="about"><a href="http://www.gemmalaurence.com/">Gemma Laurence</a> is a Brooklyn-based indie folk singer-songwriter from the coast of Maine. Categorizing herself as “Sapphic folk,” Laurence has been named an “up-and-comer” in the queer music scene by NPR Music and starred on The Tonight Show Starring Jimmy Fallon. Having grown up on the coast of Maine and the hills of Oxfordshire, Laurence’s time on both sides of the Atlantic influenced her unique sound: a fusion of foot-stomping Americana with a hint of English folk. Crafting a lush soundscape of rich acoustic textures, dreamy harmonies, and found sounds, Laurence’s timeless tracks call her listeners home to the people and places left behind for new beginnings. Her album <a href="https://open.spotify.com/album/7wsCQGR1NXmOR6isG6aiBE?si=aphl9fWZQwyz3Mbqumb_Ow">Lavender</a> is out now on Better Company Records. <a href="https://www.facebook.com/gemmalaurencemusic/">Facebook</a> | <a href="https://www.instagram.com/gemmalaurencemusic/">Instagram</a> | <a href="https://open.spotify.com/artist/2sNPTD3BelCCJaH18PmeKm?si=V_sqjrz5TTOCGvMn4O5nSQ">Spotify</a>
- 
-<p><a href="https://www.lars-music.com/">Lars</a> is a singer-songwriter and musician from Philadelphia. Their music is a deeply personal journey through the realms of self-discovery and acceptance. Lars weaves together melodic loops that serve as a backdrop for narratives exploring the intricacies of their experience as a black trans person. Through soulful compositions and genre-defying exploration, they invite listeners into a world where themes of identity, spirituality, and resilience intersect.  <a href="https://www.instagram.com/lars.is.me/">Instagram</a> | <a href="https://open.spotify.com/artist/5i3SkHEDbRPW57PFX8bzxG?si=JWRsS1N3TGi8BFeA6n5p1g">Spotify</a> 
- 
-<p><a href="https://linktr.ee/whatthebren">Bren</a> is a freshly Philly-based singer/songwriter writing cathartic pop tunes from a punk heart. Having moved over 10 times in her life, dropping out of college, ending and starting new relationships, Bren knows a thing or two about unexpected change. Breaking through self-doubt is a common theme throughout her writing. Distilling influences ranging from Elliott Smith to Mitski to the Pixies, Bren’s music shares familiar sentiments of vulnerability and introspection, serving as your companion for feelings you may not have even realized you had. <a href="https://www.facebook.com/whatthebren">Facebook</a> | <a href="https://www.instagram.com/whatthebren/?hl=en">Instagram</a> | <a href="https://open.spotify.com/artist/0vP6MqFLOjMIH7vJchTrRn">Spotify</a></div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Sat<br>Sept 21
-	</div>
-	<div class="event-heading">
-		<span class="title">Soulforce Book Launch Party</span>
-		<br>
-		<span class="date">7pm | Free | <a href="https://www.eventbrite.com/e/soulforce-book-launch-party-tickets-936541820797?aff=ebdssbdestsearch&keep_tld=1">Eventbrite info and RSVP</a></span>
-		</div>
-	<div class="about"><strong>SOULFORCE: How to Discover Your Artistic Purpose, Create More Freely, & Make Art That Matters</strong> with the author, Joseph Arnold. More info about Soulforce at <a href="https://soulforcearts.com/book/">Soul Force Arts</a>.</div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Thu<br>Sept 19
-	</div>
-	<div class="event-heading">
-		<span class="title">Eli Waltz and Zach Zaitlin</span>
-		<br>
-		<span class="date">8pm | Doors 7:30 | $10 advance/$12 day-of-show | BYOB | <a href="https://www.tickettailor.com/events/harmoniehall/1320541">TICKETS</a></span>
-		</div>
-	<div class="about"><strong>Eli Waltz</strong> (<a href="http://www.eliwaltz.com/">website</a>) is a world traveler and folk rock musician who focuses the sum of his experiences on the road into a soulful, singular sound. His music incorporates American Blues, rock ‘n’ roll, Chinese Guqin and European Baroque music; his lyrics draw upon the poetic traditions of the Beat Generation.
-
-<p>He is known for whimsical lyricism, unconventional chord progressions and gut-punching harmonica solos. He weaves in traditional Chinese music–inspired by months and years living in Beijing and Yunnan as a working musician–and classical music to create his signature folk rock sound.
-
-<p>He is influenced by and identifies with musicians ranging from Ray Lamontagne to Pink Floyd to Shakey Graves to Gregory Alan Isakov. He builds upon and honors the legacies of all-time favorites Townes Van Zandt, John Lee Hooker, John Fahey, Beethoven and Guan Pinghu.
-
-<p>Waltz has shared the stage with nationally-recognized artists including Willie Carlise and Andrew Combs; Sir Paul McCartney and other musical heroes have heard and praised his music.
-
-<p>Waltz is part of a new wave of up-and-coming American Blues and folk artists in Washington, D.C., home of historic folk label Takoma Records, Skip James and other local artists who inspire Waltz’ work.</div>
-</div>
-<div class="event"> 
-	<div class="date-box" id="date">Mon<br>Sept 16
-	</div>
-	<div class="event-heading">
-		<span class="title">Lonesome Heroes & Georgia Parker & Hunter Burgamy</span>
-		<br>
-		<span class="date">7:30pm | Doors 7 | $15 | BYOB <!-- | <a href="">TICKETS</a>--></span>
-		</div>
-	</div>
-<div class="event"> 
-	<div class="date-box" id="date">Fri<br>Sept 13
-	</div>
-	<div class="event-heading">
-		<span class="title">Dean Johnson</span>
-		<br>
-		<span class="date">8pm | Doors 7:30 | $25 | BYOB | <a href="https://www.tickettailor.com/events/harmoniehall/1316615">TICKETS</a></span>
-		</div>
-	<div class="about">Not long after crossing beyond the neon into Al’s Tavern, one might catch murmurs drifting up and down the bar during <strong>Dean Johnson</strong>’s bartending shifts – nudges and whispers that he might just be the best songwriter in town. “Wait ’til you hear him sing. Just don’t ask him to do it, because he won’t. He might do another show this year, but probably not.” Al’s regulars, howsoever biased, speak of his talent like a family secret – Seattle folklore. How many times, and for how many years, has Dean elusively replied to some variation of the question, “When will there be a record?”
-
-<p>The phrase “hidden gem” would seem appropriate here, but it’s a misnomer when talking about Dean Johnson. He shines bright, in plain sight, and it was only a matter of time before people stopped to take a look. Dean’s gentle and passionate approach to songwriting has inspired many, and his work provides the listener the opportunity to believe once more that a song can be more than the sum of its parts. If you catch even a phrase of his melodies or the sobering tone of his voice, it waltzes its way into your heart like a letter written, signed, sealed, and delivered just for you.
-
-<p>His debut album Nothing for Me, Please was recorded at Mashed Potato Records in New Orleans with the help of Sam Gelband and Charlie Meyer, Dean’s bandmates in The Sons of Rainier; as well as Mashed Potato regulars Sam Doores, Duff Thompson and Steph Green. The record is a hazy, relaxed daydream – anthems for those who know the sweetness and coldness of quiet moments, the power and the pain of love. Whether you’ve been waiting patiently these many for Dean to release these songs, or you’re just now coming across his work for the first time, the name Dean Johnson, much like his songs, won’t soon leave your mind.
-
-<p>Nothing for Me, Please is out now on Mama Bird Recording Co.
-
-<p><a href="https://www.deanjohnsongs.com/">Artist site</a> * <a href="https://www.instagram.com/deanjohnsongs/">Instagram</a> * <a href="https://deanjohnsongs.bandcamp.com/album/nothing-for-me-please">Bandcamp</a> * <a href="https://www.facebook.com/deanjohnsongs">Facebook</a> * <a href="https://open.spotify.com/artist/4EIdxKX5DkSd7DQhtmY5DN?si=fnXa5E93TY2Opo-FhFvmeg&nd=1&dlsi=8adf143b06684d20">Spotify</a>
-
-</div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Thu<br>Sept 12
-	</div>
-	<div class="event-heading">
-		<span class="title">Hayden Arp and Nicole Saphos Band</span>
-		<br>
-		<span class="date">8pm | Doors 7:30 | BYOB | <a href="https://buytickets.at/harmoniehall/1368299">TICKETS</a></span>
-		</div>
-	<div class="about"><strong>NICOLE SAPHOS BAND</strong>
-<a href="https://nicolesaphosband.com/">Website</a> | 
-<a href="https://www.instagram.com/nicolesaphosband/">Instagram</a> | 
-<a href="https://open.spotify.com/artist/0AArU8kQuAaBB1f1kpDClR?si=mD74XKFbTtmqVbwaaDe98w&nd=1&dlsi=f8ba2cab3c9e4396">Spotify</a>
-
-<p>Operating in the Fiona Apple / Dirty Projectors sphere of the alternative music spectrum, the Nicole Saphos Band is known for their harmonically bold and rhythmically driven original music. The LA-native, Philadelphia based artists' latest album ‘Figure Eights’ centers around Nicole's lifelong propensity for patterns. <a href="https://sinusoidalmusic.com/2023/01/13/nicole-saphos-band-keepin-eyes-shining-dials/">Sinusoidal Music</a> describes it as feeling "...much like a Wes Anderson movie, full of character, color, and charm rooted in bittersweet feelings.”
-
-<p><strong>HAYDEN ARP:</strong>
-<a href="https://www.instagram.com/haydenarpmusic/">Instagram</a> | 
-<a href="https://open.spotify.com/artist/71eMSu2sFmq5Q1wJ6H5WoG?si=4NuJEYz0RQKMmnuh0is1RQ">Spotify</a> | 
-<a href="https://www.youtube.com/watch?v=9YEhCiLnZLE">To Be Lost, To Be Found (Live Video, 2023)</a>
-
-<p>Hayden Arp is an American songwriter, living in Vienna, Austria. In 2022, he released his debut LP, <a href="https://distrokid.com/hyperfollow/haydenarp/with-eliza">With Eliza</a>, an album about road trips, writing, and Virginia in the summertime. It was called “Wide open like a night sky. A debut that is as enchanting as it is free-spirited” by <a href="https://www.maz-online.de/kultur/maz-musiktipp-neues-von-neil-young-nadine-khouri-und-torgeir-vassvik-IBWET2UBOOD2D4ZE25PIUTPB5Q.html">Märkische Allgemeine Zeitung</a>. Also in 2022, he released <a href="https://distrokid.com/hyperfollow/haydenarp/the-ones-who-took-it-away-2">The Ones Who Took it Away</a>, a single about the climate crisis and <a href="https://distrokid.com/hyperfollow/theworldallaroundhaydenarpgriffinjennings/the-eighties">The Eighties</a>, a collaboration with New York based songwriter Griffin Jennings. He has toured extensively, performing in cities such as Los Angeles, New York, Nashville, Washington DC, Toronto, Montreal, and Vienna, and his music has been written about in publications such as <a href="https://www.thefader.com/2016/07/20/hayden-arp-in-the-fading-light">The FADER</a>, <a href="https://kulturnews.de/with-eliza-von-hayden-arp-harmloses-gekritzel/">Kulturnews</a>, and <a href="https://rockandrollglobe.com/folk/listen-hayden-arp-shares-new-lp-with-eliza/">the Rock and Roll Globe</a>. He attended the Oberlin Conservatory of Music, where he studied electronic music composition.</div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Mon<br>Aug 19
-	</div>
-	<div class="event-heading">
-		<span class="title">Mindfulness Workshop with Brandon Everett</span>
-		<br>
-		<span class="date">7-8pm | Doors 6:30pm | pay what you can | <a href="https://www.facebook.com/share/kEibeZfG7XaBeHMw/">Event page on FB</a></span>
-		</div>
-	<div class="about"></div>
-</div>
-
-
-<div class="event"> 
-	<div class="date-box" id="date">Sat<br>August 10
-	</div>
-	<div class="event-heading">
-		<span class="title">Alek Barkats / Granddogs / Lizzy Dutton / Bright Kelly</span>
-		<br>
-		<span class="date">7pm | Doors 6:30 | $15 | BYOB
-		</div>
-		
-
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Sat<br>July 20
-	</div>
-	<div class="event-heading">
-		<span class="title">Maria Mirenzi Single Release party! with Anya Van Rose and Sarah Winston</span>
-		<br>
-		<span class="date">7pm | Doors 6:30pm | $10-20 at the door | BYOB</span>
-		</div>
-	<div class="about">About the artists: <p>An indie rock singer songwriter and multi-instrumentalist based in Philadelphia, <strong>Maria Mirenzi</strong> is coming on strong with her own band. Her debut single “Suburban Nightmare” is a song about resisting comfort and conformity akin to the suburban lifestyle. The song displays her unique songwriting, love for rich harmonies, and her indie rock influences, like Paramore and Madison Cunningham. After releasing music with her former band “Brother Martin” and being a side musician in many other Philly bands, her new self-titled project has been a long time coming. We hope you come to celebrate Maria Mirenzi’s debut single release at Harmonie Hall on July 20th! Did we mention it’s her birthday?</div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Fri<br>July 19
-	</div>
-	<div class="event-heading">
-		<span class="title">Vine Collective presents: Mose and friends / cuddledrug / Precious Little Life (duo)</span>
-		<br>
-		<span class="date">7:30-10:30pm | Doors 7pm | $10-20 at the door | BYOB</span>
-		</div>
-	<div class="about"></div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Thu<br>July 18
-	</div>
-	<div class="event-heading">
-		<span class="title">Chris Pureka with Special Guest Nicole Reynolds</span>
-		<br>
-		<span class="date">7:30-9:45pm | Doors 6:45pm | $25 Advance/$30 Day of show | BYOB <br><a href="https://buytickets.at/harmoniehall/1231304">TICKETS</a></span>
-		</div>
-	<div class="about"><strong>Chris Pureka</strong> (<a href="https://chrispureka.com/">Website</a>) is an internationally acclaimed singer-songwriter based in Portland, Oregon. Their elegant emotionality as a vocalist and flair as a lyricist have garnered them favorable comparisons to Chan Marshall, Bruce Springsteen, and Patty Griffin. Over many years of touring on both sides of the Atlantic, they have shared the stage with such diverse and esteemed artists as The Lumineers, Gregory Alan Isakov, The Cowboy Junkies, Haley Heynderickx, and Ani DiFranco. They have had their songs featured on such television shows as Brothers and Sisters and Shameless, as well as a song featured in the Sundance featured indie film, The Royal Road. The Longest Year is Pureka’s 8th release.
-	<p><strong>Nicole Reynolds</strong> (<a href="http://www.nicolereynoldsmusic.com">Website</a>) is a singer-songwriter originally from western PA, currently residing in Ithaca, NY. Their journey has been as diverse as their music, encompassing experiences from working on farms to building their own home, raising a couple of kids, and running a nonprofit providing community music programs. Inspired by artist-activists, poets, and the beauty of the natural world, Nicole’s music is a reflection of their varied life journey.With heartfelt melodies, introspective lyrics, and a uniquely captivating voice, their songs encompass universal truths in beautifully simple ways.
-	</p></div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Web<br>July 17
-	</div>
-	<div class="event-heading">
-		<span class="title">Live Channeling with Little Fawn</span>
-		<br>
-		<span class="date">7-9pm | Doors 6:30 | $30 | <a href="https://www.eventbrite.com/e/live-channeling-with-little-fawn-tickets-933210857797?aff=oddtdtcreator">More info and tickets</a></span>
-		</div>
-	<div class="about">Do you feel stuck, clouded, blocked? Fearful, worried, or overwhelmed?
-
-<p>Or maybe you are curious about what resources for guidance and clarity you can connect with?
-
-<p>If so, this evening is for you!
-
-<p>Little Fawn is a gifted channeler and intuitive healer (using Integrative Quantum Healing).
-
-<p>During this rare and positively transformative evening Little Fawn will share her ability to channel the wisdom of higher frequency light beings. These beings span space and time, consciousness and the cosmos! Their perspective and insights are subtle and profound.
-
-<p>During the channeling portion, attendees will have the opportunity to ask questions, even seek personal guidance, from the beings channeled. This portion of the evening will be moderated by Little Fawn's long time friend Brandon Everett.
-
-Bring your curiosity. Leave with clarity.<p>The evening will begin with a short meditation (no prior experience with meditation necessary). Little Fawn will begin by channeling whatever guidance/wisdom her own guides feel is appropriate/necessary for the group at hand. Following this, attendees will have the opportunity to seek personal guidance and clarity, asking questions of Little Fawn while she channels. The evening will close with a short meditation, inviting the energy and wisdom received to be integrated for the highest personal and collective good.<p>ABOUT LITTLE FAWN: Little Fawn is a channeler, intuitive healer (using Integrative Quantum Healing), and singer-songwriter. In the beginning, music was the gateway through and to that sacred flow of frequency, story, and sound. During a reading by another channeler, her true channeling gifts and capabilities awakened. In addition to channeling, LF integrates Light Language, Sacred Toning, and the using of medicinal plants and herbs to bring healing, insight, and guidance to the students she works with. Visit https://www.littlefawnmusic.com/little-fawn-energy to learn more.</div>
-</div>
-
-
-<div class="event"> 
-	<div class="date-box" id="date">Mon<br>July 15
-	</div>
-	<div class="event-heading">
-		<span class="title">Mindfulness Workshop with Brandon Everett</span>
-		<br>
-		<span class="date">7-8pm | Doors 6:30pm | pay what you can | <a href="https://www.facebook.com/events/680674497553109">Event page on FB</a></span>
-		</div>
-	<div class="about"></div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Tues<br>July 2
-	</div>
-	<div class="event-heading">
-		<span class="title">Bad Tiger, Syl Fisher, and Amelia Cry Til I Die</span>
-		<br>
-		<span class="date">7:30pm | Doors 7pm | $10-20 | BYOB | </span>
-		</div>
-	<div class="about">
-</div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Thu<br>June 27
-	</div>
-	<div class="event-heading">
-		<span class="title">Dustin Lowman, Adam Monaco, and Cecilia Ferneborg</span>
-		<br>
-		<span class="date">7:30pm | Doors 7pm | $10-20 at the door | BYOB</span>
-		</div>
-	<div class="about">
-	Dustin Lowman (<a href="https://dustinlowman.com/">website</a>) is a folksinger residing in the greater New York City area. Inspired by the totemic powers of enduring masters like Bob Dylan & Leonard Cohen, Lowman seeks to establish himself as one of his generation's finest original voices.
-	<p> Dustin's set will be preceded by two local artists: 
-	<p>Cecilia Ferneborg (<a href="https://ceciliaferneborg.com/bio">web</a> | <a href="https://www.instagram.com/cecilia_sings/">insta</a>) 
-	<p>Adam Monaco (<a href="https://www.adammonaco.com/">web</a> | <a href="https://www.instagram.com/adammonacomusic/?hl=en">insta</a> | <a href="https://open.spotify.com/artist/4rkA8qpXDkNx8spew0CN3a?si=9DVlIyVJQOqMbMNODjc-lw">insta</a>) . 
-</div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Wed<br>June 26
-	</div>
-	<div class="event-heading">
-		<span class="title">Elizabeth LaPrelle and the Family Band</span>
-		<br>
-		<span class="date">7:00pm | Doors 6:30pm | $15-30 Notaflof | BYOB | <a href="https://buytickets.at/harmoniehall/1285734">TICKETS</a></span>
-		</div>
-	<div class="about">Presenting a dual concert and square dance! 
-After the concert, we’ll push back the pews and the Family Band will play some good old dance tunes with Elizabeth teaching and calling square dances. 
-<p>Elizabeth LaPrelle and the Family Band have been performing and recording music together for over 20 years, sharing the music they love to make in their living rooms and kitchens. It’s a real family affair, consisting of Elizabeth LaPrelle as the frontwoman, sharing the stage with her mother, Sandy LaPrelle, uncle and aunt Jon Newlin and Amy Davis, their daughter Iris Newlin, and Elizabeth’s husband, Brian Dolphin. The group allows their eclectic tastes to be their guide through a repertoire of ancient mountain ballads, old-time tunes, novelty songs, and gospel harmonies.
-<p><a href="https://youtu.be/Lb4pwHZQ638?feature=shared">Video</a>
-</div>
-</div>
-
-
-<div class="event"> 
-	<div class="date-box" id="date">Sat<br>June 22
-	</div>
-	<div class="event-heading">
-		<span class="title">Haley Heynderickx</span>
-		<br>
-		<span class="date">8pm | Doors 7:30 | $30 | BYOB <br> <a href="https://buytickets.at/harmoniehall/1207008">TICKETS</a></span>
-		</div>
-	<div class="about"><p>It takes a mix of skill and luck to tend a garden well, but it’s impossible without a certain amount of kindness tended. While the cyclical nature of gardening seems inherent, in some ways, Heynderickx is just beginning. Her debut album, named I Need to Start a Garden out of a search for calm through these waves of uncertainty and upheaval, is out now via Mama Bird Recording Co.
-<p>For the empathetic singer/songwriter, the reasons for seeking such acceptance and understanding stem from a life of paradoxes. Heynderickx grew up in a religious household in Oregon, closely identifying with her Filipino roots, but also straddling multiple cultural identities. Now residing in Portland, her faith is not overt, but her introspection and continued struggle for self-actualization are easily accessible and relatable.
-<p>Likewise, the tracks on I Need to Start a Garden reflect these seemingly disparate elements. Through soft acoustic guitar picking and deftly accented trombone sighs, Heynderickx’s music immediately recalls folk music of the '60s and '70s mixed with a love of jazz radio. But Heynderickx’s singing—her vocals that range from sultry to operatic—belie a tenacity in her soul.
-<p>It’s a balance then, between exposing and protecting herself on I Need to Start a Garden. Heynderickx vacillates between powerlessness (opener “No Face”) and empowerment (lead single "Oom Sha La La"). But her generosity of spirit remains the constant throughout the whole album.
-<p>You can hear that exceptional care in “Jo”, as she whispers, “You tended your garden like heaven and hell / and you built the birds houses to see if it helped at all.” Aware of the birds, the garden, and anyone listening acutely, Heynderickx’s music serves as an invitation for all to join her. Because the beauty of a garden is that, while it’s often started for deeply personal reasons, its bounty is best consumed and shared with others.
-
-<p>I Need to Start a Garden was produced, engineered and mixed by Zak Kimball at Nomah Studios in Portland, Oregon. Haley Heynderickx co-produced the album. It was mastered by Timothy Stollenwerk at Stereophonic Mastering in Portland. The record features Lily Breshears (Bass, Keys, Backing Vocals), Denzel Mendoza (Trombone, Backing Vocals), Phillip Rogers (Drums, Percussion, Backing Vocals) and Tim Sweeney (Upright Bass).
-<p><a href="https://www.haley-heynderickx.com/">www.haley-heynderickx.com</a></div>
-</div>
-
-
-<div class="event"> 
-	<div class="date-box" id="date">Wed<br>June 19
-	</div>
-	<div class="event-heading">
-		<span class="title">Jon Langford & the Bright Shiners</span>
-		<br>
-		<span class="date">7-8:30pm | Doors 6:30pm | $20 <br> <a href="https://www.tickettailor.com/events/lowdramallc/1207374">TICKETS</a></span>
-		</div>
-	<div class="about">Jon Langford's been in more bands than you have digits - and that's true even if you were born with a few extras! From his early days in Mekons, Delta 5, Three Johns and even Sisters Of Mercy (booted for not wearing black) to a veritable explosion of one-off recordings and performances with more names than we could ever hope to list in full. A Wikipedia description for this group, The Bright Shiners (described therein as 'circa 2022 through at least 2023, in Northern California') provides some sense of the complex taxonomy needed just to keep track of Jon's massive oeuvre.
-
-<p>Happily, that's an understated description of a serious new outlet for his endless creativity, and The Bright Shiners' recording activities have produced a full album, Where It Really Starts, the first recording in a collaboration with Tamineh Gueramy, Alice Spencer, and Jon's frequent musical partner, John Szymanski.
-
-<p>Jon Langford & the Bright Shiners will tour mercilessly throughout 2024.</div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Sun<br>June 2</div>
-	<div class="event-heading"><span class="title">Experiments in Opera, NYC and Alter Ego Chamber Opera, PHL Present: Crystal's Channel and Souls Unscreened</span><br><span class="date">6pm | Doors 5:30pm | Sliding scale $10-$20<br> <a href="https://www.tickettailor.com/events/harmoniehall/1263711">TICKETS</a></span></div>
-
-	<div class="about">
-	Program
-<p><strong>Crystal’s Channel by Jason Cady</strong>
-<p>An opera featuring a solo singer with a ventriloquist doll and guitar. She portrays a songwriter who uploads a new, original song everyday to Youtube. The singer and dummy, together, tell the funny and painful story of how she mastered ventriloquism in her adolescence—and how that obsession ended when her mother took her and the doll to an exorcist.
-
-<p>Libretto and Composition: Jason Cady
-<br>Soprano and Electric Guitar: Sarah Daniels
-<br>Direction: Shannon Sindelar
-
-
-<p><strong>Souls Unscreened by Roger A. Martinez and Alize Francheska Rozsnyai</strong>
-<p>The first act of an installation opera about a computer scientist deepfaking herself during the Covid-19 pandemic and developing groundbreaking technology in AI and uploading her consciousness to the cloud.
-
-<p>Composition and Electronics: Roger A. Martinez
-<br>Libretto and Soprano: Alize Francheska Rozsnyai
-<br>Baritone: Tom Sitzler
-<br>Mezzo-Soprano: Kaitlyn Tierney
-<br>Conductor: Sepehr Pirasteh
-<br>Flute: Chelsea Meynig
-<br>Piano: Hannah Han
-<br>Violin: Rachel Segal
-<br>Viola: Veronica Jurkiewicz
-<br>Cello: Leigh Brown
-	</div>
-</div>
-<div class="event"> 
-	<div class="date-box" id="date">Fri<br>May 31</div>
-	<div class="event-heading"><span class="title">Agrol Agra Hungarian Folk Choir | Tanjo & Crow</span><br><span class="date">8pm | Doors 7:30pm | Sliding Scale $15-30 <br> <a href="https://www.tickettailor.com/events/harmoniehall/1240539">TICKETS</a></span></div>
-
-	<div class="about">Ágról ágra is a program of traditional Hungarian folk music, and compositions by Béla Bartók for unaccompanied female voices. Ágról ágra features new arrangements of the traditional songs by Marisa Michelson, Sara Serpa, Guillermo Klein, and Jeon Song Yi. Kinga Cserjési leads this exploration into the music of her native country 
-	<p> Tanjo & Crow is a no-holds-barred exploration of roots music through eclectic songwriting, Appalachian arrangements, and seemingly fearless improvisation. The project draws upon the diverse musical backgrounds of Tanner Bingaman (guitar, banjo, vocals) and Allan Combs II (guitar, vocals). </div>
-</div>
-<div class="event"> 
-	<div class="date-box" id="date">Tues<br>May 21
-	</div>
-	<div class="event-heading">
-		<span class="title">Portrait Night: Everyone Draws Everyone</span>
-		<br>
-		<span class="date">7:45 sharp! | Doors 7:15 | $5-10 donation/NOTAFLOF</span>
-		</div>
-	<div class="about">Portrait night at Harmonie Hall! Bring your favorite art supplies  and draw 4-minute,  4"x6" portraits of everyone in attendance, and go home with a stack of portraits of yourself! Open to all: RSVP required to harmoniehallmail@gmail.com </div></div>
-<div class="event"> 
-	<div class="date-box" id="date">Sat<br>May 11
-	</div>
-	<div class="event-heading">
-		<span class="title">Donnie Coco | Camp Saint Helene | Erik Kramer Philharmonic</span>
-		<br>
-		<span class="date">7:30-10pm | Doors 7pm | Sliding scale $10-20 | BYOB <br><a href="https://buytickets.at/harmoniehall/1236031">TICKETS</a></span>
-		</div>
-	<div class="about">
-We'll have music by Camp Saint Helene (Catskill, NY) and two local acts - Donnie CoCo and Erik Kramer Philharmonic
-<p>
-For <strong>Camp Saint Helene</strong>  (<a href="http://www.campsainthelene.com/">website</a> | <a href="https://www.instagram.com/campsainthelene/">Instagram</a> | <a href="https://campsainthelene.bandcamp.com/">Bandcamp</a> | <a href="https://open.spotify.com/artist/1vpfRUhCqIsLTZyGVf5Gkr?si=W66dlpFSS6iH2e8VGjZgVg">Spotify</a>), the concept of otherworldliness is neither strange nor complex, but alluring and holy. Created by Elizabeth Celeste Ibarra, Dylan Nowik, Wesley Harper and Alex P. Wernquest, they approach their craft akin to a ritual, leaning into the notion that art and expression are sacred experiences on an overstimulated planet. Often informed by the spirit of a defunct Christian-summer camp turned arts-colony deep within the mountains of New York, their music searches for shimmers of hope amidst hints of doom.
-</p>
-<p>“Farfisa Song”, off their debut record, Mother (2019), was named KEXP’s Song of the Day and added to KEXP Music that Matters Vol. 683 by Cheryl Waters. She describes Camp Saint Helene as “..call[ing] to mind the '60s California folk scene with their gentle, waltz-like pastoral sound”. Additionally, “Farfisa Song” was featured predominantly both in Amazon Prime’s teen horror drama, “I Know What You Did Last Summer” (2022) and Zoe Lister-Jones’ series SLIP on The Roku Channel (2023). Mother was named by Bandcamp as a New and Notable record of 2019, describing it as “Occult-folk in the 70’s U.K. tradition that further affirms the link between Appalachian and British folk songs”.</p>
-<p>
-In 2023, they were commissioned by NADA x Foreland to present a live performance and installation piece titled “Into the Garden” for Upstate Art Weekend in Catskill, NY.
-They recorded their first album almost entirely live to 8-track, ½” tape, at Basement Floods Records in Catskill, New York. Their second album is currently in production.</p>
-<p><strong>Erik Kramer</strong> is a multi-instrumentalist, songwriter, and producer best known for his bass playing as a sideman in a plethora of local and touring acts. His ever rotating ensemble features many of Philadelphia's most exciting instrumentalists and songwriters and weaves together psychedelia, rock, funk, folk, and everywhere in between through the improvisational lense of a jazz combo. He put out his debut record "Missed the Boat" in 2017 and will be putting out the follow up in 2024. This show will feature the Erik Kramer Philharmonic which will be a 10 piece psychedelic acoustic ensemble full of horns, strings, vocal harmonies, and intriguing arrangements.</p></div>
-</div>
-
-<div class="event"> 
-	<div class="date-box" id="date">Fri<br>May 3
-	</div>
-	<div class="event-heading">
-		<span class="title">Vine Collective presents: Tyler Sensenig * Ethan Cain * 		Anthony Baldini</span>
-		<br>
-		<span class="date">7-10pm | doors at 6pm | $10-20 cash or venmo at the door</span>
-		</div>
-	<div class="about">Line up:<br> Anthony Baldini 7 - 7:45<br>
-Ethan Cain 8 - 8:45<br>Tyler Sensenig 9 - 9:45</div>
-</div>
-
-<div class="event">
-	<span class="title"><a href="https://www.tickettailor.com/events/lowdramallc/1134509#">Sally Timms and Jon Langford (of the Mekons)</a> 
-	</span>
-	<br>
-	<span class="date">Friday, April 19, 2024 | 7pm | Doors at 6:30pm</span>
-	<br>
-	<span class="about">Sally Timms and Jon Langford of The Mekons with John Szymanski and Martin Blueshammer. Langford is a founding member of the British punk band The Mekons which formed in Leeds in 1977. He is also an acclaimed visual artist and DJ. Timms has the voice of an angel and is the laziest woman in rock. She was forced to join The Mekons in the 1980s and has been trying to find the exit ever since.
-	<br>Tickets are $25 each. All sales are final.
-
-Doors @ 6:30pm/Show starts @ 7pm</span>
-</div>
-
-<div class="event">
-	<span class="title"><a href="https://events.humanitix.com/brittany-ann-tranbaugh-blair-borax?c=eventspage">Brittany Ann Tranbaugh with Blair Borax</a> </span>
-	<br>
-	<span class="date">Thu Apr 4, 2024 | 8pm | Doors at 7:30 | Suggested $20</span>
-	<span class="about"><bold>Brittany Ann Tranbaugh</bold> (pronounced TRAN-baw) is a Philadelphia-based songwriter whose queer Americana heartbreaker “Kiss You” won Song of the Year in the 2021 John Lennon Songwriting Contest. Tranbaugh has been writing songs and playing shows as a side gig since she was a teenager, but in February 2023, at 31 years old, she finally quit her office job to pursue a full-time career in music. Her newest release is a self-titled EP produced by Grammy-winner Tyler Chester which showcases Tranbaugh in her new era: energetic, self-assured, surrounded by her beloved musical community, and more commanding as a vocalist and writer than ever before. <br>With vocal stylings reminiscent of jazz classics, <bold>Blair Borax</bold> delivers a unique blend of unapologetic songwriting that fearlessly tackles the taboo and irresistibly catchy pop melodies that stay with you for days. She conjures a vocal charm somewhere in between Regina Spektor and Cat Clyde, wordsmithing inspired by folk songwriting greats like John Prine and Paul Simon, and tender timely vulnerability akin to Haley Heynderickx and Big Thief’s Adrienne Lenker.
-	</span>
-</div>
-
-<div class="event">
-	<span class="title">Gaia Raga, ft Karsyn and Jane </span>
-	<br>
-	<span class="date">Feb 25, 2024 | 6:30 | arrival at 6pm</span>
-	<br>
-	<span class="about">
-Gaia Raga is an orchestra, a universe. The sound is multi-instrumental and intuitive, borrowing elements from folk, jazz and Indian classical music. Their original music has a sometimes timeless, ancient feeling, borrowing themes from poets and artists through the ages (lots of Rumi!).
-
-<p>Their songs are threaded with twin-voiced harmonies, through Niki Arrowsmith and Karsyn Wagner on vocals. Andy Dreamos and Chris Smith share percussion, with Andy also doing triple duty on sitar and saxophone. Matthew Trice handles bass, and sometimes, the other saxophone. And RJ Testa brings a certain bluegrass flavor with his mandolin.
-
-<p>Karsyn Wagner is a magical songstress passionate about social justice and the ecology of all life --- she is a part of Gaia Raga and will be enchanting us with a few original solo pieces as a pre-cursor to the full band. 
-
-<p>And to jumpstart the evening as a collective, we have Jane Wadsworth opening up the evening with a song circle. Jane is a catcher of songs  inspired by the lessons we can learn from nature and from our interconnectedness to all life forms on planet earth. They are excited to come together in community to create a circle singing experience that will be colored by the these themes -- and hope you will join them with an open heart and joyful spirit! No singing experience needed 3
-
-<p>ROUGH SCHEDULE
-
-<p>6pm arrival, open Jaya Kava bar offering vegan, organic food and drink, herbal elixirs, mocktails, and hand-squeezed kava tea to #getloosewithoutthebooze. 
-
-<p>6:30pm - song circle led by Jane
-
-<p>7:30pm - opening set by Karsyn
-
-<p>8:30pm - GAIA RAGA!!!</span>
-</div>
-<div class="event">
-	<span class="title"><a href="https://www.bemindphl.com/swyl-2024">The Open Circle presents: Share What You Love</a> </span>
-	<br>
-	<span class="date">Mon February 5, 2024 | 6:30pm-8:30pm | Suggested Donation</span>
-	<br>
-	<span class="about">In this two hour workshop/meet up you'll have the opportunity to reflect on and give voice to your deepest interests and loves -- and to share them with others.<br>One of our deepest needs is to be seen and heard. But it's so rare, nowadays, to be asked what really inspires you or interests you -- or what you love and why.<br>Be heard. Be seen. Be appreciated. And then experience what it's like to hold that supportive, witnessing space for others. <br>Register <a href="https://docs.google.com/forms/d/e/1FAIpQLScIVSC_2nJx3k6jHjAJv3k6rSWa4yhuiBMQmq7f5HyVB_iB5g/viewform"> here</a></span>
-</div>
-<div class="event">
-	<span class="title">Paul Arendt | Raji Malik </span>
-	<br>
-	<span class="date">Sat Feb 3, 2024// 8pm | Doors at 7:30  | Suggested donation $20</span>
-	<br>
-	<span class="about">Paul Arendt's album release show for "Forty Years in Babylon." Opening set by Raji Malik.</span>
-</div>
-<div class="event">
-	<span class="title">Everyone Draws Everyone</span>
-	<br>
-	<span class="date"> Tuesday January 23, 2024 | 7:30pm | Free/Donation</span>
-	<br>
-	<span class="about">Portrait night at Harmonie Hall! Bring your favorite art supplies  and draw 5 minute,  4"x6" portraits of everyone in attendance, and go home with a stack of portraits of yourself! Free and open to all: RSVP required to harmoniehallmail@gmail.com </span>
-	
-</div>
-<div class="event">
-	<span class="title"><a href="https://bethamisrael.org/learn-joyfully/lifelong-learning-for-adults/music-prayer-lab/">Music Prayer Lab</a> </span>
-	<br>
-	<span class="date">January 21, 2024 | 8pm-10pm | Free</span>
-	<br>
-	<span class="about">Beth Am presents Music Prayer Lab: An openhearted, participatory, improvisational, co-creational music & prayer space. <a href="https://bethamisrael.org/learn-joyfully/lifelong-learning-for-adults/music-prayer-lab/">More info</a> </span>
-</div>
-<div class="event">
-	<span class="title"><a href="https://www.eventbrite.com/e/745684842437?aff=oddtdtcreator">Driftwood Soldier and Olivia Ellen Lloyd</a> </span>
-	<br>
-	<span class="date">Sat, Dec 9, 2023 | Doors at 7pm | Music at 8pm | $20 Suggested</span>
-	<br>
-	<span class="about">Driftwood Soldier isn't your average mandolin-bass foot-stomping gutter-folk duo. Growling and crooning, muttering about lost love, brimstone, and the glorious view from the underside of a rusty world order, Owen holds the rhythm on mandolin and foot percussion. To his left, Bobby stretches bass notes into lyrical vines that vibrate somewhere north of your liver and flower unexpectedly at night. This is the kind of roots music that grows through the cracks in a West Philly sidewalk and drinks its rainwater laced with motor oil.<br>
-Their second full-length album, Stay Ahead of the Wolf, arrived late in 2019. It was produced with Erin McKeown and mixed by Grammy winner Ted Hutt. Unfazed by a world in disarray, Stay Ahead of the Wolf crawled up onto its four legs and went barrelling through the digital ether, carrying with it this strange beast’s howl.<br>
-Olivia Ellen Lloyd<br>
-After releasing her debut album Loose Cannon in February 2021, Olivia Ellen Lloyd has been on a steady diet of writing, touring and honing her bandleading chops at every honky tonk from Nashville to New York. <br>
-And it appears that hard work is paying off - her self-funded and independently released debut album Loose Cannon has been quietly winding its way into the hearts and minds of Country and Americana music lovers all over the world. Currently sitting pretty at over 1 million streams on Apple Music and Spotify,  Loose Cannon was featured on numerous best-of lists (Ear to the Ground notably named it their Album of the Year), received praise from Nashville Lifestyles, Rolling Stone Country, Holler Country,  and The Bluegrass Situation, and made it onto editorial playlists on Apple Music, Tidal, and Amazon Music. Her 2020 single “Shepherdstown'“ was named one of Tidal’s best songs of 2020 on their Rising Folk playlist. <br>
-She was a 2021 NewSong Music Finalist, earning a slot in the top 3 , which won her a free vinyl pressing of Loose Cannon, and was recently named a 2023 Kerrville Newfolk Winner at the legendary Kerrville Folk Festival. <br>
-Her 2022 release of a duo of Hazel Dickens songs received attention from Bluegrass Today, the Bluegrass Situation, and made Spotify’s GrassRoots  and Women of Bluegrass editorial playlists. Her sophomore album is currently in production, produced once again by her dear friend and creative collaborator, Mike Robinson.<br>
-Lloyd is a West Virginia native and proud of it. Raised by a musician and a public school educator in Shepherdstown, West Virginia, her sound is a combination of her deeply rooted past and her fly-by-the-seat-of-your-pants present. She's continuing to mine that divide as she tours the country full time in her 2010 Toyota Sienna. </span>
-</div>
-<div class="event">
-	<span class="title"><a href="https://www.eventbrite.com/e/songwriters-in-the-round-tickets-742139006747?aff=oddtdtcreator">Songwriters in the Round</a> </span>
-	<br>
-	<span class="date">November 18, 2023 | 8pm/doors at 7pm | $20 Suggested donation</span>
-	<br>
-	<span class="about">An intimate evening of original music featuring Tanner Bingaman, Julia Finegan, Ilan Isakov, and Mirabelle Skipworth.</span>
-</div>
-<div class="event">
-	<span class="title"><a href="https://www.eventbrite.com/e/peter-stampfel-and-song-people-tickets-732002117037?aff=HHevents">Peter Stampfel and Song People</a></span>
-	<br>
-	<span class="date">November 4, 2023 | 7pm/doors at 6pm | Suggested donation $15-25 </span>
-	<br>
-	<span class="about">Peter Stampfel, a luminary from the iconic psychedelic folk group The Holy Modal Rounders, will play two captivating sets that promise to be a melodious journey through time and space. Since the early 60’s, Peter has written genre-defying songs that encompass traditional folk and experimental music, with whimsical, thought-provoking lyrics. In addition to originals, his 6-person band (including his daughter, Zoe) will play semi-improvised tunes he lovingly calls "soul jingles,” and pre-rock pop songs from the early 20th century, reviving endangered songs teetering on the edge of obscurity. Music Critic Robert Christgau has asserted that “next to Bob Dylan, Stampfel is the closest thing to a genius" to come out of the New York folk revival scene of the 1960's. 
-<br>We'll start the night with a set from Philly dream-folk band Song People.</span>
-</div>
-<div class="event">
-	<span class="title"><a href="https://www.eventbrite.com/e/dance-party-feat-mojo-dojo-casa-house-band-and-soft-world-tickets-721720995927?aff=oddtdtcreator">Harmonie Halloween Dance Party! </a> </span>
-	<br>
-	<span class="date">October 28th, 2023// 8pm/doors at 7:15pm | Suggested donation $25</span>
-	<br>
-	<span class="about">Featuring 2 live-music sets of spooky hits by Mojo Dojo Casa House Band and a DJ set by Soft World.</span>
-</div>
-<div class="event">
-	<span class="title"><a href="https://www.eventbrite.com/e/731981726047?aff=oddtdtcreator">Kendra McKinley and Dani & Joe</a></span>
-	<br>
-	<span class="date">October 26, 2023 | 7pm/doors at 6pm | Suggested donation $15-25 | RSVP to harmoniehallmail@gmail.com </span>
-	<br>
-	<span class="about"><a href="https://www.youtube.com/watch?v=ieTX18rEHBc">Kendra McKinley</a> is a singer-songwriter whose music bursts with vibrance, sensuality and wit. Her lush blend of chamber pop, jazz, and soul draws from a deep well of inspiration. Whether she’s performing solo or dancing with her live band Kendra’s confident, honeyed voice indulges all who hear it. <br>
- Philadelphia-based <a href="https://linktr.ee/daniandjoe">Dani & Joe</a> are songwriting sweethearts who, after years as supporting members in other prominent Philly bands, hit the scene under their own names in 2021 with the release of 'All for You.' Their beginnings grew out of small intimate shows and the music carries that tradition compositionally. Joni-style folk collage storytelling meets experimental R&B with a Black Keys makeup. </span>
-</div>
-<div class="event">
-	<span class="title">Covenhoven</span>
-	<br>
-	<span class="date">September 23, 2023 | 8pm | $20 Suggested | <a href="https://covenhoven.com/house-concert-rsvp">RSVP</a></span>
-<br>
-<span class="about">Covenhoven is nationally recognized indie artist Joel Van Horne, a multi-instrumental singer-songwriter whose rich harmonies, reedy baritone and commanding falsetto have found a home with critics and fans since 2013. 
-<br>Through 4 full length albums and 2 EPs Covenhoven has forged a signature style; layered acoustic arrangements that roll with momentum into orchestral peaks, accompanied by lyrics that contrast hard-won wisdom with the inherent hope of the natural world—from Big Sur to his native Colorado.<br>Covenhoven’s latest album, IV (released in October 2021), is his most collaborative and rock forward to date—taking a producing partner in Ben Wysocki of the Fray, who also performs on the album. IV features over a dozen musicians including Grammy nominated singer-songwriter Gregory Alan Isakov, Luke Mossman of Nathaniel Rateliff & the Night Sweats, and Bluebook’s Julie Davis. <br>Covenhoven’s live performances capture the spirit of his recordings—whether its conjuring cascading loops in his solo shows or backed by a full band—Covenhoven’s sound fills the breadth of outdoor spaces, auditoriums and club stages.</span>
-
-</div>
-<div class="event">
-	<span class="title"><a href="https://fb.me/e/Te3lkHze">Jug Carver (Solo Show): Fundraiser for The Chordoma Foundation</a></span>
-	<br>
-	<span class="date">Sunday, August 27 | Doors: 2:30pm | Show: 3-5pm</span>
-	<br>	
-	<span class="about">This show is a fundraiser for The Chordoma Foundation, which funds clinical trials and cutting-edge research into chordoma, a type of spinal tumor.  To donate, go to www.chordomafoundation.org, and use the "give now" or "donate" buttons. Proof of your donation to The Chordoma Foundation dated anywhere between 7/25/23 and 8/27/23  is your ticket in (or you can pay cash at the door).  Please email a record of your donation to jugcarver@gmail.com to RSVP for the concert (feel free to redact your contact info on the receipt).  If your donation is meant to cover anyone other than yourself, please say so in the email.
-<br>Suggested donation is $10-20 per person to pre-register or $15-25 per person day-of-show. Feel free to be extra generous since 100% of ticket sales go to charity.</span>
-</div>
-<div class="event">
-	<span class="title"><a href="https://www.eventbrite.com/e/printmaking-workshop-with-bex-tickets-680321960297?aff=oddtdtcreator">Printmaking Workshop</a></span>
-	<br>
-	<span class="date">Sunday, August 6th, 2023 | 2:30-4:30pm | $20</span>
-	<br><span class="about">Join Bex to learn about relief printmaking! She will share her work with linoleum block printing and then we will carve prints together using styrofoam. Everyone will have the opportunity to create a booklet as a collection of the prints made to take with them. Tickets for this event are $20. As always, no one will be turned away for lack of funds- feel free to email us at harmoniehallmail@gmail.com for a ticket price reduction. Tickets will be available at the door, but advance is preferred so we can be sure to have enough materials for all folks attending!
-<br>Becky McIntyre (Bex) (<a href="https://www.instagram.com/sanaartista/">Instagram</a> | <a href="https://www.sanaartista.com/"> Website</a>) is a visual artist living in Philadelphia. She has practiced various art mediums for much of her life, traveling around from Philadelphia to Los Angeles, the Philippines, Nicaragua, and Peru, finding spaces to create and build community with others through the creative process. Her work is inspired by nature, community, her spirituality, and the cultures she has traveled to, seeking to bring awareness to sociopolitical issues, the transformative and healing nature of art, and to activate and inspire new ways of being. </span>
-</div>
-<div class="event">
-	<span class="title"><a href="https://www.eventbrite.com/e/sing-a-secret-a-mindbody-approach-to-voice-and-song-tickets-614360527877?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=escb">Sing A Secret: A Mindbody Approach to Voice and Song</a> </span>
-	<br>
-	<span class="date">June 3, 2023 | 1:30-4pm</span>
-	<br>
-	<span class="about">A free two-hour introduction into an ecstatic 5-octave mindbody approach to your voice, for singers, "non-singers," and everyone in between.</span>
-</div>
-<div class="event">
-	<span class="title"><a href="https://www.andrewlipke.com/albums">Andrew Lipke</a> w/ the Azrael String Quartet</span>
-	<br>
-	<span class="date">May 19, 2023 | 8:30pm</span>
-	<br>
-	<span class="about"> The Azrael Quartet is Dana Allaband (Violin) Ruth Kiang (Violin) Petula Perdikis (Viola) and Krista Umile (Cello).</span>
-</div>
-<div class="event">
-	<span class="title">112 Teeth: Songs in the Round </span>
-	<br>
-	<span class="date">April 28, 2023 | 8:00pm</span>
-	<br>
-	<span class="about">featuring <a href="https://linktr.ee/juliafinegan">Julia Finegan</a>, <a href="https://www.instagram.com/syl.fisher/">Syl Fisher</a>, <a href="https://www.adammonaco.com/">Adam Monaco</a>, and <a href="https://www.ilanisakov.com">Ilan Isakov</a></span>
-</div>
-<div class="event">
-<span class="title">Brave New Worm! feat. <a href="https://contentclown.bandcamp.com/album/brave-new-worm-part-live-part-death">Content Clown</a>
-	</span>
-	<br>
-	<span class="date">
-		April 20, 2023
-		</span><br>
-	<span class="about">with <a href="https://www.instagram.com/ohyouaremusic/">Ohyouare</a>
-	</span>
-</div>
-<div class="event">
-	<span class="title"><a href="https://www.ljova.com/trio-fadolin/">Trio Fadolín</a></span>
-	<br>
-	<span class="date">March 24, 2022 | 8pm</span>
-	<br>
-	<span class="about">with <a href="https://gmervine.bandcamp.com">Gregg Mervine</a>, <a href="https://www.cooneymusic.com/">Brendan Cooney</a>, and Jordan Berger</span>
-</div>
-<div class="event">
-	<span class="title"><a href="https://highfiction.com">High Fiction</a>, <a href="https://ilanisakov.com">Ilan Isakov</a>, <a href="https://silversmithmusic.com">Silversmith</a>, &amp; Erica Terpening-Romeo</span>
-	<br>	
-	<span class="date">November 19, 2022</span>
-	<br>
-	<span class="about"></span>
-</div>
-<div class="event">
-<span class="title">
-	<a href="https://www.covenhoven.com/home">Covenhoven</a>
-	</span>
-	<br>
-	<span class="date">September 17, 2022</span>
-	<br>
-	<span class="about"></span>
-</div>
-</div>
-</div>
-<p>
-Is there a band you really want to see here? <a href="mailto:harmoniehallmail@gmail.com">Let us know!</a>
-If you're interested in hosting a house concert, art show, film showing, etc. at Harmonie Hall, please <a href="mailto:harmoniehallmail@gmail.com">reach out!</a></p>
-<p>
-If you'd like to hear about our events directly you can sign up for our <a href="https://view.flodesk.com/pages/64318d7d15209fc178e09453">email list</a> 
-or follow us on <a href="https://www.instagram.com/harmoniehall_1891/">instagram</a> 
-or <a href="https://www.facebook.com/harmoniehallshows">facebook</a>
-</p>
-</body>
-</html>
+<!DOCTYPE html><html><head>	<meta http-equiv="content-type" content="text/html; charset=utf-8">	<title>Events | Harmonie Hall</title>	<meta name="viewport" content="width=device-width, initial-scale=1.0">	<link rel="stylesheet" href="style.css">	<style>		.date-box {		    position: absolute;		    top: 0;		    left: 0;		    width: 55px;		    height: 55px;		    text-align: center;		    background-color: #555;		    color: white;		    font-weight: bold;		    border-radius: 8px 0 8px 0;		    padding: 5px;		  }		  .event-header {		    position: relative;		    padding-left: 65px;		  }		  .event {		    background: #fff;		    padding: 1em;		    margin-bottom: 2em;		    border-radius: 8px;		    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);		  }		  .event-heading {		    flex: 1;		  }		  .event-heading .title {		    font-size: 1.1em;		    font-weight: bold;		  }		  .event-heading .date {		    font-size: 0.95em;		    color: #555;		  }		  .toggle-button {		    display: inline-block;		    margin-top: 0.5em;		    background-color: #dbb446;		    color: white;		    padding: 0.3em 0.6em;		    border: none;		    border-radius: 4px;		    cursor: pointer;		    font-size: 0.9em;		  }		  .about {		    display: none;		    margin-top: 0.5em;		  }		  #form-container {		    margin: 2em;		    padding: 1em;		    border: 1px solid #ccc;		    border-radius: 8px;		    max-width: 500px;		  }		  #generated-output {		    white-space: pre-wrap;		    background: #f9f9f9;		    padding: 1em;		    margin-top: 1em;		    border: 1px solid #ddd;</style>	<script>		function toggleAbout(button) {		  const about = button.nextElementSibling;		  const isVisible = about.style.display === "block";		  about.style.display = isVisible ? "none" : "block";		  button.textContent = isVisible ? "Show Details" : "Hide Details";		}</script></head><body><div class="header">	<a href="index.html"><img src="logo.png" style="height:160px;" alt="HH logo"></a> 	<p>		<em>for one and all!</em>	</p>	<p>		<a href="index.html">Home</a> | <a href="events.html" style="text-decoration: underline;">Events</a> | <a href="donate.html">Donate</a> | <a href="photos.html">Photos</a> | <a href="map.html">Map</a>	</p></div><hr><div class="events-grid">	<div class="recurring-events">		<h2>			Recurring Events		</h2><!-- <section class="event">      <div class="event-header">              <div class="event-heading">          <div class="title">Yoga with Aleena</div>          <div class="date">6:30-7:30pm | Doors 6pm | $15</div>        </div>      </div>      <button class="toggle-button" onclick="toggleAbout(this)">Show Details</button>      <div class="about">Every other Wednesday! All level hatha flow. Arrive early and bring your own mat. Check schedule at <a href="https://www.promethia.design/event-list">www.promethia.design</a></div>    </section>-->		<section class="event">			<div class="event-header">				<div class="event-heading">					<div class="title">						Sing A Secret: A Mindbody Approach to Voice and Song 					</div>				</div>			</div>			<button class="toggle-button" onclick="toggleAbout(this)">Show Details</button> 			<div class="about">				Free workshop, open to all! Monthly, on a Saturday 11am-1:30pm. Check schedule and register at <a href="https://www.eventbrite.com/e/sing-a-secret-a-mindbody-approach-to-voice-and-song-free-philadelphia-tickets-1098243639289?aff=ebdssbdestsearch">eventbrite</a> 			</div>		</section>	</div>	<div class="upcoming-events">		<h2 style="font-weight:bold;">			Upcoming Events		</h2>		<p>			You can find tickets to most upcoming events at our <a href="https://linktr.ee/harmoniehall">linktree</a>.<br>			Harmonie Hall is <strong>an upstairs venue.</strong>		</p>		<p><!--When adding an event, copy and paste the following and replace the capitalized text: <div class="event">         <div class="date-box" id="date">DAY<br>DATE        </div>        <div class="event-heading">                <span class="title">TITLE-OF-EVENT</span>                <br>                <span class="date">TIME | Doors TIME | $PRICE | BYOB | <a href="">TICKETS</a></span>                </div>        <div class="about">BIO-OR-DESCRIPTION-OF-EVENT</div></div>-->		</p>		<div class="event">			<div class="date-box" id="date">				Sat<br>				Sep 27 			</div>			<div class="event-heading">				<span class="title">Shadow Basket and Jeremy James Meyer</span><br>				<span class="date">7pm | Doors 6:30 | Donation at the door | BYOB | <a href="https://buytickets.at/harmoniehall/1864565">RSVP</a></span> 			</div>			<button class="toggle-button" onclick="toggleAbout(this)">Show Details</button> 			<div class="about">				Shadow Basket is a dog rock/indie folk band from San Juan Island, WA. The band is co-led by Jacey LaManna and Kyle Lutz, whose harmonies and songwriting shape the heart of the project. 				<p>					Rooted in lyrical storytelling, Shadow Basket blends elements of folk Americana with driving, grunge tinted soundscapes. Their music drifts between the ethereal and the grounded- at times light and whimsical, and at others loud and intense. Their sophomore record, Frog Swan Song was released in August 2025 on Den Tapes, a Seattle based DIY label.				</p>			</div>		</div>	<div class="event">		<div class="date-box" id="date">			Tue<br>			Sep 30 		</div>		<div class="event-heading">			<span class="title">We Wiggle Dolls Puppet Cabaret</span><br>			<span class="date">8pm | Doors 7pm | sliding scale $12-20 | BYOB | <a href="https://buytickets.at/harmoniehall/1814207">info & tickets</a></span> 		</div>		<button class="toggle-button" onclick="toggleAbout(this)">Show Details</button> 		<div class="about">			We Wiggle Dolls is touring YET AGAIN! On September 30th, the New-York centered but diasporic puppet show collective "We Wiggle Dolls” will perform a new adult-aimed and eclectic puppet cabaret set at Harmonie Hall! There, the cast will be joined by Philadelphia puppet artists Maisie O’Brien and Olli Goss. 			<p>				We Wiggle Dolls is a diasporic puppet show collective spun out of a popular Brooklyn Puppet Slam. Since October 2023, We Wiggle Dolls has produced 10 puppet slams, a 6-day festival, immersive experiences, long form productions, a light and shadow rock music spectacle, three national tours, and has published several puppet-themed zines! We Wiggle Dolls’ mission is to bring as wide a variety of puppetry as possible to audiences, to showcase new talent alongside seasoned veterans, and to make historical puppet culture more readily accessible as well.			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Wed<br>			Oct 15 		</div>		<div class="event-heading">			<span class="title">Ordinary Elephant</span><br>			<span class="date">7:30pm | Doors 7pm | $20 | BYOB | <a href="https://buytickets.at/harmoniehall/1837127">info & tickets</a></span> 		</div>		<span class="date"><button class="toggle-button" onclick="toggleAbout(this)">Show Details</button></span> 		<div class="about">			<span class="date">Mesmerizing folk duo Ordinary Elephant (<a href="https://www.ordinaryelephant.net/">web</a> | <a href="https://ordinaryelephant.bandcamp.com/">bandcamp</a> | <a href="http://instagram.com/ordinaryelephant/">insta</a> ) has spent the better part of the last decade on a never-ending tour that’s earned married couple Crystal and Pete Damore widespread critical acclaim and made fans of luminaries like Tom Paxton and Mary Gauthier. In 2017, the pair took home the International Folk Music Award for Artist of the Year on the strength of their breakout album, Before I Go, and two years later, they returned with the similarly lauded Honest, which the Associated Press hailed as “one of the best Americana albums of the year.”</span> 			<p>				<span class="date">The band’s new stripped-down, self-titled collection is the purest distillation of their sound yet, showcasing the arresting power of the couple’s gorgeous harmonies and intricate fretwork. The songs are timeless, rooted in rich, character-driven storytelling, and the performances are similarly transportive, fueled by delicately intertwined banjo, guitar, and octave mandolin. Though the songs were born out of a period of deep uncertainty, the record itself is a work of profound self-assurance, one delivered by a duo whose personal and professional lives embody the limitless possibility of honest, organic collaboration. Press play on Ordinary Elephant and you’ll hear more than just a husband and wife; you’ll hear the sound of sincerity and commitment, of patience and gratitude, of learning to let go of expectation and revel in the simple beauty of the moment.</span>			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			<span class="date">Thu<br>			Oct 23</span> 		</div>		<div class="event-heading">			<span class="date"><span class="title">Joan Shelley</span><br>			<span class="date">7:30pm | Doors 7pm | $20 | BYOB | <a href="https://buytickets.at/harmoniehall/1806892">info & tickets</a></span></span> 		</div>		<button class="toggle-button" onclick="toggleAbout(this)">Show Details</button> 		<div class="about">			Joan Shelley is a songwriter and singer who draws inspiration from traditional and traditionally-minded performers from her native Kentucky, as well as those from Ireland, Scotland, and England, but she’s not a folksinger. Her disposition aligns more closely with that of, say, Roger Miller, Dolly Parton, or Tom T. Hall, who once explained—simply, succinctly, in a song—“I Witness Life.” Her 7th album Real Warmth will be released in September. It was recorded in Toronto with producer Ben Whiteley (The Weather Station), and the 13-tracks feature many guests from the city's fertile music scene. 		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Sat<br>			Nov 8 		</div>		<div class="event-heading">			<span class="title">Reed Foehl</span><br>			<span class="date">More info coming soon. Check for link on <a href="https://linktr.ee/harmoniehall">linktree</a></span> 		</div>		<div class="about">			“One of the classic functions of a singer/songwriter is to exhort us to pay attention—to tune in, to look around. Reed Foehl does the job as good as it can be done, with an unassumingly sweet voice that is as conversational as it is tuneful … unexpected and relevatory.” -Mark Erelli 		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Sat<br>			Nov 15 		</div>		<div class="event-heading">			<span class="title">Brittany Ann Tranbaugh, Cloudbelly, Remi Goode</span><br>			<span class="date">7:30pm | Doors 7pm | $20 Suggested Donation | <a href="https://www.tickettailor.com/events/harmoniehall/1785406">info & rsvp</a></span> 		</div>		<button class="toggle-button" onclick="toggleAbout(this)">Show Details</button> 		<div class="about">			Brittany Ann Tranbaugh (trio) 			<p>				Brittany Ann Tranbaugh (pronounced TRAN-baw) is a Philadelphia-based songwriter whose queer Americana heartbreaker “Kiss You” won Song of the Year in the 2021 John Lennon Songwriting Contest. Tranbaugh has been writing songs and playing shows as a side gig since she was a teenager, but in February 2023, at 31 years old, she finally quit her office job to pursue a full-time career in music. She has since played over 300 shows, received a standing ovation at the XPoNential Music Festival, won first place in the Songwriter Serenade contest in Texas, and toured extensively supporting Carsie Blanton. Her next big plan is to record a full-length album (made possible by 400+ fans who backed her $25k album crowdfunding campaign) in the fall, which listeners can expect in late 2026.			</p>			<p>				Cloudbelly (trio)			</p>			<p>				Cloudbelly is an indie-folk band from Western Massachusetts known for blending poetic lyricism, lush harmonies, and ambient textures into songs that feel both intimate and expansive. Their 2024 album i know i know i know was named a Top 10 Album of the Year by The Boston Globe and praised for its emotional depth and genre-blurring sound. Currently back in the studio, the band is working on their much-anticipated sophomore album, due out in early 2026.			</p>			<p>				Special guest Remi Goode (duo)			</p>			<p>				Remi Goode is a trained classical guitarist and choral singer turned alternative folk singer-songwriter. In a continual search for the truth, her lyrics are filled with paradoxes, puzzles, and multiple perspectives, with Remi attempting to rid herself of black-and-white thinking and, instead, embrace the grey areas in her life. Things I've Said Before, the debut album from Remi Goode due September 26, is an introduction to the indie-folk artist who straddles the borders between different worlds. A nylon-string guitarist nodding to the classical training and contemporary influences of her past while pushing toward a wider sound, she creates her own version of modern-day American roots music: one that's intimate one minute and cinematic the next, making room for folky bedroom recordings, full-band studio performances, and all points in between.			</p>		</div>	</div>			<p>		Is there a band you really want to see here? <a href="mailto:harmoniehallmail@gmail.com">Let us know!</a> If you're interested in hosting a house concert, art show, film showing, etc. at Harmonie Hall, please <a href="mailto:harmoniehallmail@gmail.com">reach out!</a>	</p>	<p>		If you'd like to hear about our events directly you can sign up for our <a href="https://view.flodesk.com/pages/64318d7d15209fc178e09453">email list</a> or follow us on <a href="https://www.instagram.com/harmoniehall_1891/">instagram</a> or <a href="https://www.facebook.com/harmoniehallshows">facebook</a>	</p>	<h2 style="font-weight:bold;">		Past Events	</h2>	<div class="event">		<div class="date-box" id="date">			Fri<br>			Sep 26 		</div>		<div class="event-heading">			<span class="title">Syl Fisher (EP Release!) with Wherever You Are</span><br>			<span class="date">Pay what you wish, but please <a href="https://buytickets.at/harmoniehall/1854619">RSVP</a></span> 		</div>		<div class="about">		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Tue<br>			Aug 26 		</div>		<div class="event-heading">			<span class="title">VHS Night: Men in Black (1997)</span><br>			<span class="date">7:45 | Doors 7:30 | Free/Donation | BYOB | Snacks provided | <a href="https://www.eventbrite.com/e/men-in-black-vhs-movie-night-at-harmonie-hall-tickets-1602603342739?aff=ebdssbdestsearch">RSVP</a></span> 		</div>		<div class="about">			Join us for a free screening of "Men in Black" (1997) played on a VCR. 		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Sun<br>			May 25 		</div>		<div class="event-heading">			<span class="title">Julian Hartwell and Evolvlove</span><br>			<span class="date">Album release show! More info and reserve tickets <a href="https://www.tickettailor.com/events/harmoniehall/1684301">here</a></span> 		</div>		<div class="about">		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Sat<br>			May 24 		</div>		<div class="event-heading">			<span class="title">Karl Blau and Erisy Watt</span><br>			<span class="date">More info and reserve tickets <a href="https://www.tickettailor.com/events/harmoniehall/1679927">here</a></span> 		</div>		<div class="about">		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Fri<br>			Jun 6 		</div>		<div class="event-heading">			<span class="title">Anya Van Rose, Sarah Winston, Bel</span><br>			<span class="date">More info coming soon. Check for link on <a href="https://linktr.ee/harmoniehall">linktree</a></span> 		</div>		<div class="about">		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Thu<br>			May 15 		</div>		<div class="event-heading">			<span class="title">Silversmith, w/ High Fiction</span><br>			<span class="date">More info coming soon. Check for link on <a href="https://linktr.ee/harmoniehall">linktree</a></span> 		</div>		<div class="about">		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Fri<br>			May 9 		</div>		<div class="event-heading">			<span class="title">José Luiz Martins and Nicole Saphos</span><br>			<span class="date">7:30 | Doors 7pm | $10 advance/$15 day of show | BYOB | More info coming soon. Check for link on <a href="https://linktr.ee/harmoniehall">linktree</a></span> 		</div>		<div class="about">		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Sat<br>			May 3 		</div>		<div class="event-heading">			<span class="title">Adam Monaco, Mark Dignam, and Grainne Hunt: Songwriters in the Round</span><br>			<span class="date">7:30pm | Doors 7pm | $20 | BYOB | <a href="https://buytickets.at/harmoniehall/1619565">TICKETS</a></span> 		</div>		<div class="about">		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Tue<br>			Apr 29 		</div>		<div class="event-heading">			<span class="title">VHS Night Double Feature: The Karate Kid parts 1 & 2</span><br>			<span class="date">6:30pm-10:30pm | Doors 6pm | Free/Donation | BYOB</span> 		</div>		<div class="about">			Free screening on our projector! Some drinks and snacks provided. 		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Tue<br>			Apr 22 		</div>		<div class="event-heading">			<span class="title">Portrait Night: Everyone Draws Everyone!</span><br>			<span class="date">7:30pm | Doors 7pm | $5-10 Suggested donation | BYOB</span> 		</div>		<div class="about">			We will be drawing quick 4-minute portraits of everyone in attendance! Paper provided. BYOB and snacks. RSVP with 2 songs you'd like on the playlist (before 12pm Tuesday April 22) to harmoniehallmail@gmail.com. 		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Mon<br>			Apr 14 		</div>		<div class="event-heading">			<span class="title">Mindfulness Workshop with Brandon Everett</span><br>			<span class="date">7-8pm | Doors 6:30pm | pay what you can | <a href="https://www.eventbrite.com/e/mindfulness-meditation-tickets-1290515088369?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=ebdsshcopyurl">More info</a></span> 		</div>		<div class="about">		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Tue<br>			Mar 25 		</div>		<div class="event-heading">			<span class="title">VHS Movie Night: The Labyrinth</span><br>			<span class="date">8pm | Doors 7:30 | FREE | Snacks + drinks provided | <a href="https://www.eventbrite.com/e/labyrinth-vhs-movie-night-at-harmonie-hall-tickets-1291842729379?aff=ebdssbdestsearch">Please RSVP here</a></span> 		</div>		<div class="about">		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Mon<br>			Mar 24 		</div>		<div class="event-heading">			<span class="title">Circle Singing Workshop</span><br>			<span class="date">7-9pm | Doors 6:30 | $11-44 | <a href="https://www.eventcreate.com/e/vb-circlesinging-3-24">register</a></span> 		</div>		<div class="about">			Circle Singing - a facilitated improvisatory form of group singing; made popular in modern times by Bobby McFerrin. Two hours of creativity and connection through musical games and improvised musical flow, by you for you. Facilitated by Tracy LJ Robertson. 		</div>	</div>	<div class="event">		<div class="date-box" id="date">			MAR<br>			14 		</div>		<div class="event-heading">			<span class="title">Kristin Daelyn Record Release Show! with Reese Florence and Adeline Hotel</span><br>			<span class="date">8pm | Doors 7:30pm | $15 | BYOB | <a href="https://buytickets.at/harmoniehall/1529513">TICKETS</a></span> 		</div>		<div class="about">			Join us for Kristin Daelyn's record release show for Beyond the Break! With opening sets by Reese Florence and Adeline Hotel 			<p>				Beyond the Break, the second full-length album by Kristin Daelyn, is a statement of rare tranquility and wisdom, atmosphere and grace. In these eight compositions, the Philadelphia songwriter takes influence from solo guitarists like Leo Kottke and John Fahey as well as writers like Mary Oliver, whose poem “Patience” inspired the early single “Patience Comes to the Bones.” Through instrumental pieces that highlight her virtuosity as a player and elegant folk songs that showcase her gifts for tender pop melodies and emotionally incisive lyrics, Daelyn’s voice feels both urgent and timeless. Like a well-loved paperback passed between friends, her songs are open to reflection and personal annotation, designed to be of use. - Sam Sadomsky			</p>			<p>				Dan Knishkowy (Adeline Hotel) In the tender, surrealist world that Knishkowy has developed under the name Adeline Hotel, stories have been told through sprawling psych-rock epics (2020’s Solid Love), stark solo guitar performances (2021’s Good Timing), piano-led orchestral song cycles (2021’s The Cherries Are Speaking), and lush, jazzy compositions that felt like a genre unto themselves (2023’s Hot Fruit). Inspired by indie lifers and fellow world-builders like Jim O’Rourke and Phil Elverum, the Ruination Records co-founder has rewritten the rule book with each new project, inviting listeners to join as he discovers new channels for his singular voice. By now the sound of Adeline Hotel is equally identifiable through Knishkowy’s dextrous fingerpicking—the aural equivalent of tracing your fingers through cool sand at sunrise—as his low, whispered vocals and autumnal melodies.			</p>			<p>				Reese Florence is a Martinican American songwriter, vocalist, and guitarist based in Philadelphia. Combining stunning vocals and deft guitar playing, Florence's songs have a depth and power that will stay with you for a while after you've heard them.			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Sat<br>			Jan 25 		</div>		<div class="event-heading">			<span class="title">Peter Mulvey, with Ross Bellenoit</span><br>			<span class="date">8pm | Doors 7:30 | $20/$25 Day of Show | BYOB | <a href="https://buytickets.at/harmoniehall/1495332">TICKETS</a></span> 		</div>		<div class="about">			<strong>Peter Mulvey</strong> has been a songwriter, road-dog, raconteur, and almost-poet since before he can remember. In 1989 he spent a year in Ireland, busking on the streets of Dublin and hitchhiking to whatever gigs he could find. Back stateside, he spent a couple years gigging through the bars of his native Midwest before taking off for Boston, where he returned to subway busking and coffeehouses. Small shows led to larger shows, which eventually led to regional and then national touring. The wheels have not stopped since. 			<p>				Twenty albums, one illustrated book, thousands of live performances, a TEDx talk, a decades-long association with the National Youth Science Camp, opening tours and gigs for luminaries such as Ani DiFranco, Greg Brown, Emmylou Harris and Chuck Prophet, appearances on NPR, an annual autumn tour by bicycle, emceeing festivals, hosting his own Lamplighter Sessions for years in Boston and in Wisconsin... he has built his life's work on collaboration, on an instinct for the eclectic and the vital.			</p>			<p>				Check him out at <a href="http://petermulvey.com">petermulvey.com</a>			</p>			<p>				Singer, songwriter, guitarist, producer and bandleader, <strong>Ross Bellenoit</strong>’s latest full length offering, Where Does The Light Go? features eleven Americana tinged songs that were written and produced by Bellenoit. The album is a meditation on love, loss, secrets and the ways our interpersonal relationships affect our understanding of the world around us. It poses the question, what happens when you stay on a path when you feel that the odds are against you?			</p>			<p>				In March of 2020, Bellenoit embarked on a solo, acoustic fourteen-date tour of Germany to celebrate the release of Where Does The Light Go? However, his trip overseas was cut short at the onset of the COVID-19 global pandemic and he quickly decided to cancel the remaining dates in March to return to the United States rather than run the risk of being stuck in Europe and unable to fly home. “There was a harrowing moment when I had to cancel the last three dates of the solo tour, says Bellenoit. “I woke up in Dortmund at 6:00 AM on March 12th to the news that a travel ban was happening and I had to cancel the rest of tour and race back to Berlin to fly home.”			</p>			<p>				The eleven Americana tinged songs on Where Does The Light Go? were written and produced by Bellenoit and the album is a meditation on love, loss, secrets and the ways our interpersonal relationships affect our understanding of the world around us. It poses the question, what happens when you stay on a path when you feel that the odds are against you? The album was recorded at Bellenoit’s collective, Turtle Studios, where the artist has established himself as a vital component to the vibrant music community in Philadelphia. In addition to singing, playing guitar and producing, Bellenoit enlisted keyboardist Jaron Olevsky (Amos Lee), drummer Chuck Staab (Melody Gardot), upright bassist Charlie Muench (The Stray Birds), Jonathan Colman on electric bass and the aforementioned Sonja Sofya on backing vocals.			</p>			<p>				As a guitarist, he has toured with Amos Lee (supporting Bob Dylan and Elvis Costello in 2007), made an appearance on A Prairie Home Companion with The Sweetback Sisters, performs regularly with his funk fusion trio, Muscle Tough, and has collaborated with numerous singer-songwriters such as Brittany Ann, Birdie Busch, Lissa Schneckenburger, Chris Kasper, and many others. Bellenoit is an in demand producer via Turtle Studios and has produced albums for The Sweetback Sisters, Ginger Coyle, Eavesdrop, Sonja Sofya, and original content for the kids toy Toniebox.			</p>			<p>				“Ross Bellenoit's solo songs are full of tasteful pop melodies and solid guitar playing,” - Bill Frater, KRCB			</p>			<p>				“The softer, laid-back nature of his vocals creates a warm juxtaposition to his crisp string work” - Songwriter’s Monthly			</p>			<p>				“Sophisticated, poetic, sublime delivery” - Take Effect (8/23/2020)			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Tue<br>			Dec 10 		</div>		<div class="event-heading">			<span class="title">Mindfulness Workshop with Brandon Everett</span><br>			<span class="date">7-8pm | Doors 6:30pm | pay what you can | <a href="https://www.eventbrite.com/e/mindfulness-meditation-tickets-1089960454059?aff=erelexpmlt">More info</a></span> 		</div>		<div class="about">		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Mon<br>			Dec 9 		</div>		<div class="event-heading">			<span class="title">VHS Double Feature: The Muppet Christmas Carol & It's a Wonderful Life</span><br>			<span class="date">6pm doors | Movie at 6:30 | Free (donations appreciated)</span> 		</div>		<div class="about">			Snacks and beverages provided! 		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Sun<br>			Nov 24 		</div>		<div class="event-heading">			<span class="title">Will Reagan, Ivan Theva, Scott Apple</span><br>			<span class="date">8pm | Doors 7:30 | $25 | BYOB | <a href="https://www.eventbrite.com/e/will-reagan-ivan-theva-philadelphia-pa-tickets-1021921523787">TICKETS</a></span> 		</div>		<div class="about">			Join us for a contemplative, engaging set of old and new songs from Will and Ivan. 		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Thu<br>			Nov 21 		</div>		<div class="event-heading">			<span class="title">Windborne</span><br>			<span class="date">8pm | Doors 7:30pm | $25 suggested | BYOB<br>			<a href="https://buytickets.at/harmoniehall/1213992">TICKETS</a></span> 		</div>		<div class="about">			Windborne’s captivating show draws on the singers’ deep roots in traditions of vocal harmony, while the absolute uniqueness of their artistic approach brings old songs into the present. Known for the innovation of their arrangements, their harmonies are bold and anything but predictable. Instead of simply dazzling the audience with vocal fireworks; Windborne evokes a deep emotional response connecting their audience to the past, distant places and themselves, it's no wonder they have been crowd favorites since starting to tour in 2018. 		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Mon<br>			Nov 18 		</div>		<div class="event-heading">			<span class="title">VHS Double Feature: Jumanji & Hook</span><br>			<span class="date">6pm doors | Movie at 6:30 | Free/donation</span> 		</div>		<div class="about">			BYO floor cushion/blanket if you wish. (There will be folding chairs if you like). Snacks provided! 		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Fri<br>			Nov 15 		</div>		<div class="event-heading">			<span class="title">Evangeline Young with Prim</span><br>			<span class="date">8pm | Doors 7:30 | $12 adv/$15 dos | BYOB | <a href="https://buytickets.at/harmoniehall/1459434">TICKETS</a></span> 		</div>		<div class="about">			Evangeline Young (<a href="https://www.instagram.com/evangelinegraceyoung/">Instagram</a>) is a Brooklyn based indie singer-songwriter and actor originally from West Chester, PA (Go Birds). Growing up in a family of folk singers, Evangeline’s been singing and playing guitar since she was a kid. Her music moves between the bare, acoustic sounds of the folk songs she was raised on, and the harder edges of her indie-rock influences. Combined with lyrics that feature a kind of conversational poetry, her songs are aimed at personal revelation with a few laughs along the way. In 2022, Evangeline opened for Glen Hansard (The Swell Season) at the Beacon Theatre in New York City and The Anthem in Washington D.C. She is currently finishing her first full length record which will be released next year. 			<p>				Prim (<a href="https://www.instagram.com/priiimmrose/">Instagram</a>) is the acoustic project of songwriter Prim Pettine. The Philadelphia native writes sprawling kaleidoscopic stories delivered through lilting melodies and gentle guitar accompaniment.			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Sun<br>			Nov 3 		</div>		<div class="event-heading">			<span class="title">Gryphon Quartet with Ernesto's Club</span><br>			<span class="date">4pm | Doors 3:30pm | <a href="https://linktr.ee/harmoniehall">Tickets & more info</a></span> 			<p>				Program:<br>				Haydn String Quartet Op.74 no.4, "Sunrise" Quartet<br>				Mendelssohn String Quartet in E Flat Major, Op. 12<br>				and<br>				Movement I from Shostakovich String Quartet no.3			</p>		</div>		<div class="about">			<p>				<strong>The Gryphon String Quartet</strong> is made up of Natasha Colkett, Hannah Nicholas, Tess Varley, and Justin Yoder. They have known each other since they were teenagers, and debuted as a quartet this summer at Hannah's old stomping ground, the Gryphon Cafe. The four perform music from the baroque period to now - Justin is fresh off of Pig Iron Theatre’s “Poor Judge” and Hannah writes her own music. They play with a range of ensembles including the Philadelphia Orchestra, the Ballet, Opera, and Chamber Orchestra, and Grammy-winning singer-songwriters.			</p>			<p>				<strong>Ernesto’s Club</strong> is a piano and percussion duo which explores the samba and choro traditions of Brazil. Their name is a tribute to Ernesto Nazareth, the turn-of-the-century Brazilian composer who combined Western classical and Afro-Brazilian music to create choro, the roots of samba, bossa nova and Musica Popular Brasileira. Their music is animated, joyful, syncopated, and bubbling with spontaneity. Both pianist Rob Curto and percussionist Gregg Mervine are Americans who learned their craft in Brazil, where they have lived off-and-on since the early 2000s. Rob and Gregg connected in 2023, and have already performed at the Kimmel Center, Johnny Brenda’s and the Perkins Center. Their first EP, entitled Nazareth was released in March, 2024.			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Sat<br>			Nov 2 		</div>		<div class="event-heading">			<span class="title">Luke Francis, Kristin Daelyn, Your Jack</span><br>			<span class="date"><a href="https://linktr.ee/harmoniehall">Tickets & more info</a></span> 		</div>		<div class="about">			About the artists: 			<p>				<strong>Luke Francis</strong> is a Seattle-based singer-songwriter. Francis spent the years leading up to 2020 cutting his teeth with Americana band Fretland and living nomadically wherever allowed him to continue honing his songwriting craft – a tent on the Skykomish river, an 1800s log cabin, the spare bedrooms of benevolent lawyers. When Fretland’s touring schedule ground to a halt with the onset of the pandemic, the hiatus provided a silver lining, prompting Francis to begin work on the songs which would comprise a soul-searching solo project.			</p>			<p>				Philadelphia-based indie folk artist <strong>Kristin Daelyn</strong> combines intricate fingerstyle guitar with poetic storytelling to create a world of nostalgia and introspection. Her music explores themes of love, longing, and nature through vivid sonic canvases and deep emotional exploration. Grounded in the simplicity and warmth of folk tradition, her sound feels both familiar and unique, evoking quiet moments and a tender space for deep connection.			</p>			<p>				“<strong>Your Jack</strong> won’t make you stomp your boots, which is good because he probably already personified the soles. When you let him drive he might take some risks you wouldn’t, but he won’t lose your trust. Just like how one candle doesn’t lose anything by lighting another, Jack has the kind of luck that’ll spread to you if you get close enough. The best parking spot at a funeral kind of luck.			</p>			<p>				Your Jack plays songs that will have you calling loved ones on the walk home and texting your old mushroom dealer soon after they hang up. Anything but numb is Your Jack.”<br>				-Chase Leland			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Fri<br>			Nov 1 		</div>		<div class="event-heading">			<span class="title">Hurricane Helene Honky Tonk Relief</span><br>			<span class="date">7pm | Doors 6:30 | $15 | BYOB | <a href="https://linktr.ee/harmoniehall">Tickets & more info</a></span> 		</div>		<div class="about">			Featuring Olivia Ellen Lloyd, Roberta Faceplant, Red McAdam, and dance lessons by Donkey. Proceeds to be distributed among Western North Carolina mutual aid funds. 		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Thu<br>			Oct 31 		</div>		<div class="event-heading">			<span class="title">Not-So-Silent Cinema presents: Nosferatu</span><br>			<span class="date">8pm | Doors 7:30 | $15 adv/$20 day of show | BYOB | <a href="https://buytickets.at/harmoniehall/1415452">Tickets and more info</a></span> 		</div>		<div class="about">			It's Harmonie Hall-o-ween! <a href="https://www.notsosilentcinema.com/about">Not-So-Silent Cinema</a> is the project of Philadelphia composer Brendan Cooney. Cooney pulls together different groups for each of his film projects, creating diverse mash-ups of musical personalities from different music scenes to create lively new platforms for interaction and creativity. His scores are tightly composed, time-coded and thematic but also have plenty of room for improvisation and interaction between players. 		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Thu<br>			Oct 28 		</div>		<div class="event-heading">			<span class="title">VHS Movie Night: The Ring</span><br>			<span class="date">7pm | Movie at 7:30 | Free/donation</span> 		</div>		<div class="about">			BYO floor cushion/blanket if you wish. Snacks provided! 		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Sat<br>			Oct 5 		</div>		<div class="event-heading">			<span class="title">Covenhoven and Jake Klar</span><br>			<span class="date">7:30pm | Doors 7pm | cash/venmo donation | BYOB</span> 		</div>		<div class="about">			<a href="https://covenhoven.com">Covenhoven</a> is internationally recognized indie artist Joel Van Horne, a multi-instrumental singer-songwriter whose rich harmonies, reedy baritone and commanding falsetto have found a home with critics and fans since 2013. 			<p>				Through 4 full length albums and 2 EPs Covenhoven has forged a signature style; layered acoustic arrangements that roll with momentum into orchestral peaks, accompanied by lyrics that contrast hard-won wisdom with the inherent hope of the natural world—from Big Sur to his native Colorado.			</p>			<p>				Covenhoven’s latest album, IV (released in October 2021), is his most collaborative and rock forward to date—taking a producing partner in Ben Wysocki of the Fray, who also performs on the album. IV features over a dozen musicians including Grammy nominated singer-songwriter Gregory Alan Isakov, Luke Mossman of Nathaniel Rateliff & the Night Sweats, and Bluebook’s Julie Davis.			</p>			<p>				Covenhoven’s live performances capture the spirit of his recordings—whether its conjuring cascading loops in his solo shows or backed by a full band—Covenhoven’s sound fills the breadth of outdoor spaces, auditoriums and club stages.			</p>			<p>				Regularly touring the United States and Canada, Covenhoven has shared the stage with Grammy winners and nominees S.Carey (Bon Iver), Jose Gonzalez, Gregory Alan Isakov, and John Paul White (Civil Wars). Covenhoven has also performed with genre bending artists Lord Huron, Leif Vollebekk, Joshua James, Blind Pilot, Esme Patterson, Rayland Baxter, John Craigie, Elephant Revival, Daniel Rodriguez, Shook Twins, Reed Foehl, Rainbow Girls, Courtney Marie Andrews, Joan Shelley and host of others.			</p>			<p>				Jake Klar is an artist based in Turners Falls, MA. His songs showcase an ongoing collection of life’s lyric moments, both the eccentric and the daily. Klar rides on the Americana tradition of storytelling in his work, while bringing in the edge of modern folk/rock-inspired arrangements. Whether Jake is playing solo or with his band - you will leave his shows with his crooning voice and the poetry of his lyrics ringing through your head.			</p>			<p>				Klar is a veteran of Northeast Festivals such as Otis Mountain Get Down and FreshGrass. His latest release, Driving Home Through The Country, is a follow-up to his acclaimed 2021 & 2020 collection of songs, Witness, and Masquerade.			</p>			<p>				<a href="https://www.jakeklar.com/">Website</a> | <a href="https://www.instagram.com/jakeklar_/">Instagram</a> | <a href="https://www.facebook.com/jakeklar/">Facebook</a> | <a href="https://www.youtube.com/channel/UCRfGM-ePCdvdDoSiCvKZg4A">YouTube</a> | <a href="https://cmdshft.ffm.to/dhttc">Driving Home Through the Country - New single</a>			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Tue<br>			Oct 1 		</div>		<div class="event-heading">			<span class="title">Gemma Laurence, with Bren and Lars</span><br>			<span class="date">7pm | Doors 6:30pm | $10-20 cash/venmo | BYOB</span> 		</div>		<div class="about">			<a href="http://www.gemmalaurence.com/">Gemma Laurence</a> is a Brooklyn-based indie folk singer-songwriter from the coast of Maine. Categorizing herself as “Sapphic folk,” Laurence has been named an “up-and-comer” in the queer music scene by NPR Music and starred on The Tonight Show Starring Jimmy Fallon. Having grown up on the coast of Maine and the hills of Oxfordshire, Laurence’s time on both sides of the Atlantic influenced her unique sound: a fusion of foot-stomping Americana with a hint of English folk. Crafting a lush soundscape of rich acoustic textures, dreamy harmonies, and found sounds, Laurence’s timeless tracks call her listeners home to the people and places left behind for new beginnings. Her album <a href="https://open.spotify.com/album/7wsCQGR1NXmOR6isG6aiBE?si=aphl9fWZQwyz3Mbqumb_Ow">Lavender</a> is out now on Better Company Records. <a href="https://www.facebook.com/gemmalaurencemusic/">Facebook</a> | <a href="https://www.instagram.com/gemmalaurencemusic/">Instagram</a> | <a href="https://open.spotify.com/artist/2sNPTD3BelCCJaH18PmeKm?si=V_sqjrz5TTOCGvMn4O5nSQ">Spotify</a> 			<p>				<a href="https://www.lars-music.com/">Lars</a> is a singer-songwriter and musician from Philadelphia. Their music is a deeply personal journey through the realms of self-discovery and acceptance. Lars weaves together melodic loops that serve as a backdrop for narratives exploring the intricacies of their experience as a black trans person. Through soulful compositions and genre-defying exploration, they invite listeners into a world where themes of identity, spirituality, and resilience intersect. <a href="https://www.instagram.com/lars.is.me/">Instagram</a> | <a href="https://open.spotify.com/artist/5i3SkHEDbRPW57PFX8bzxG?si=JWRsS1N3TGi8BFeA6n5p1g">Spotify</a>			</p>			<p>				<a href="https://linktr.ee/whatthebren">Bren</a> is a freshly Philly-based singer/songwriter writing cathartic pop tunes from a punk heart. Having moved over 10 times in her life, dropping out of college, ending and starting new relationships, Bren knows a thing or two about unexpected change. Breaking through self-doubt is a common theme throughout her writing. Distilling influences ranging from Elliott Smith to Mitski to the Pixies, Bren’s music shares familiar sentiments of vulnerability and introspection, serving as your companion for feelings you may not have even realized you had. <a href="https://www.facebook.com/whatthebren">Facebook</a> | <a href="https://www.instagram.com/whatthebren/?hl=en">Instagram</a> | <a href="https://open.spotify.com/artist/0vP6MqFLOjMIH7vJchTrRn">Spotify</a>			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Sat<br>			Sept 21 		</div>		<div class="event-heading">			<span class="title">Soulforce Book Launch Party</span><br>			<span class="date">7pm | Free | <a href="https://www.eventbrite.com/e/soulforce-book-launch-party-tickets-936541820797?aff=ebdssbdestsearch&amp;keep_tld=1">Eventbrite info and RSVP</a></span> 		</div>		<div class="about">			<strong>SOULFORCE: How to Discover Your Artistic Purpose, Create More Freely, & Make Art That Matters</strong> with the author, Joseph Arnold. More info about Soulforce at <a href="https://soulforcearts.com/book/">Soul Force Arts</a>. 		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Thu<br>			Sept 19 		</div>		<div class="event-heading">			<span class="title">Eli Waltz and Zach Zaitlin</span><br>			<span class="date">8pm | Doors 7:30 | $10 advance/$12 day-of-show | BYOB | <a href="https://www.tickettailor.com/events/harmoniehall/1320541">TICKETS</a></span> 		</div>		<div class="about">			<strong>Eli Waltz</strong> (<a href="http://www.eliwaltz.com/">website</a>) is a world traveler and folk rock musician who focuses the sum of his experiences on the road into a soulful, singular sound. His music incorporates American Blues, rock ‘n’ roll, Chinese Guqin and European Baroque music; his lyrics draw upon the poetic traditions of the Beat Generation. 			<p>				He is known for whimsical lyricism, unconventional chord progressions and gut-punching harmonica solos. He weaves in traditional Chinese music–inspired by months and years living in Beijing and Yunnan as a working musician–and classical music to create his signature folk rock sound.			</p>			<p>				He is influenced by and identifies with musicians ranging from Ray Lamontagne to Pink Floyd to Shakey Graves to Gregory Alan Isakov. He builds upon and honors the legacies of all-time favorites Townes Van Zandt, John Lee Hooker, John Fahey, Beethoven and Guan Pinghu.			</p>			<p>				Waltz has shared the stage with nationally-recognized artists including Willie Carlise and Andrew Combs; Sir Paul McCartney and other musical heroes have heard and praised his music.			</p>			<p>				Waltz is part of a new wave of up-and-coming American Blues and folk artists in Washington, D.C., home of historic folk label Takoma Records, Skip James and other local artists who inspire Waltz’ work.			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Mon<br>			Sept 16 		</div>		<div class="event-heading">			<span class="title">Lonesome Heroes & Georgia Parker & Hunter Burgamy</span><br>			<span class="date">7:30pm | Doors 7 | $15 | BYOB <!-- | <a href="">TICKETS</a>-->			</span> 		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Fri<br>			Sept 13 		</div>		<div class="event-heading">			<span class="title">Dean Johnson</span><br>			<span class="date">8pm | Doors 7:30 | $25 | BYOB | <a href="https://www.tickettailor.com/events/harmoniehall/1316615">TICKETS</a></span> 		</div>		<div class="about">			Not long after crossing beyond the neon into Al’s Tavern, one might catch murmurs drifting up and down the bar during <strong>Dean Johnson</strong>’s bartending shifts – nudges and whispers that he might just be the best songwriter in town. “Wait ’til you hear him sing. Just don’t ask him to do it, because he won’t. He might do another show this year, but probably not.” Al’s regulars, howsoever biased, speak of his talent like a family secret – Seattle folklore. How many times, and for how many years, has Dean elusively replied to some variation of the question, “When will there be a record?” 			<p>				The phrase “hidden gem” would seem appropriate here, but it’s a misnomer when talking about Dean Johnson. He shines bright, in plain sight, and it was only a matter of time before people stopped to take a look. Dean’s gentle and passionate approach to songwriting has inspired many, and his work provides the listener the opportunity to believe once more that a song can be more than the sum of its parts. If you catch even a phrase of his melodies or the sobering tone of his voice, it waltzes its way into your heart like a letter written, signed, sealed, and delivered just for you.			</p>			<p>				His debut album Nothing for Me, Please was recorded at Mashed Potato Records in New Orleans with the help of Sam Gelband and Charlie Meyer, Dean’s bandmates in The Sons of Rainier; as well as Mashed Potato regulars Sam Doores, Duff Thompson and Steph Green. The record is a hazy, relaxed daydream – anthems for those who know the sweetness and coldness of quiet moments, the power and the pain of love. Whether you’ve been waiting patiently these many for Dean to release these songs, or you’re just now coming across his work for the first time, the name Dean Johnson, much like his songs, won’t soon leave your mind.			</p>			<p>				Nothing for Me, Please is out now on Mama Bird Recording Co.			</p>			<p>				<a href="https://www.deanjohnsongs.com/">Artist site</a> * <a href="https://www.instagram.com/deanjohnsongs/">Instagram</a> * <a href="https://deanjohnsongs.bandcamp.com/album/nothing-for-me-please">Bandcamp</a> * <a href="https://www.facebook.com/deanjohnsongs">Facebook</a> * <a href="https://open.spotify.com/artist/4EIdxKX5DkSd7DQhtmY5DN?si=fnXa5E93TY2Opo-FhFvmeg&amp;nd=1&amp;dlsi=8adf143b06684d20">Spotify</a>			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Thu<br>			Sept 12 		</div>		<div class="event-heading">			<span class="title">Hayden Arp and Nicole Saphos Band</span><br>			<span class="date">8pm | Doors 7:30 | BYOB | <a href="https://buytickets.at/harmoniehall/1368299">TICKETS</a></span> 		</div>		<div class="about">			<strong>NICOLE SAPHOS BAND</strong> <a href="https://nicolesaphosband.com/">Website</a> | <a href="https://www.instagram.com/nicolesaphosband/">Instagram</a> | <a href="https://open.spotify.com/artist/0AArU8kQuAaBB1f1kpDClR?si=mD74XKFbTtmqVbwaaDe98w&amp;nd=1&amp;dlsi=f8ba2cab3c9e4396">Spotify</a> 			<p>				Operating in the Fiona Apple / Dirty Projectors sphere of the alternative music spectrum, the Nicole Saphos Band is known for their harmonically bold and rhythmically driven original music. The LA-native, Philadelphia based artists' latest album ‘Figure Eights’ centers around Nicole's lifelong propensity for patterns. <a href="https://sinusoidalmusic.com/2023/01/13/nicole-saphos-band-keepin-eyes-shining-dials/">Sinusoidal Music</a> describes it as feeling "...much like a Wes Anderson movie, full of character, color, and charm rooted in bittersweet feelings.”			</p>			<p>				<strong>HAYDEN ARP:</strong> <a href="https://www.instagram.com/haydenarpmusic/">Instagram</a> | <a href="https://open.spotify.com/artist/71eMSu2sFmq5Q1wJ6H5WoG?si=4NuJEYz0RQKMmnuh0is1RQ">Spotify</a> | <a href="https://www.youtube.com/watch?v=9YEhCiLnZLE">To Be Lost, To Be Found (Live Video, 2023)</a>			</p>			<p>				Hayden Arp is an American songwriter, living in Vienna, Austria. In 2022, he released his debut LP, <a href="https://distrokid.com/hyperfollow/haydenarp/with-eliza">With Eliza</a>, an album about road trips, writing, and Virginia in the summertime. It was called “Wide open like a night sky. A debut that is as enchanting as it is free-spirited” by <a href="https://www.maz-online.de/kultur/maz-musiktipp-neues-von-neil-young-nadine-khouri-und-torgeir-vassvik-IBWET2UBOOD2D4ZE25PIUTPB5Q.html">Märkische Allgemeine Zeitung</a>. Also in 2022, he released <a href="https://distrokid.com/hyperfollow/haydenarp/the-ones-who-took-it-away-2">The Ones Who Took it Away</a>, a single about the climate crisis and <a href="https://distrokid.com/hyperfollow/theworldallaroundhaydenarpgriffinjennings/the-eighties">The Eighties</a>, a collaboration with New York based songwriter Griffin Jennings. He has toured extensively, performing in cities such as Los Angeles, New York, Nashville, Washington DC, Toronto, Montreal, and Vienna, and his music has been written about in publications such as <a href="https://www.thefader.com/2016/07/20/hayden-arp-in-the-fading-light">The FADER</a>, <a href="https://kulturnews.de/with-eliza-von-hayden-arp-harmloses-gekritzel/">Kulturnews</a>, and <a href="https://rockandrollglobe.com/folk/listen-hayden-arp-shares-new-lp-with-eliza/">the Rock and Roll Globe</a>. He attended the Oberlin Conservatory of Music, where he studied electronic music composition.			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Mon<br>			Aug 19 		</div>		<div class="event-heading">			<span class="title">Mindfulness Workshop with Brandon Everett</span><br>			<span class="date">7-8pm | Doors 6:30pm | pay what you can | <a href="https://www.facebook.com/share/kEibeZfG7XaBeHMw/">Event page on FB</a></span> 		</div>		<div class="about">		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Sat<br>			August 10 		</div>		<div class="event-heading">			<span class="title">Alek Barkats / Granddogs / Lizzy Dutton / Bright Kelly</span><br>			<span class="date">7pm | Doors 6:30 | $15 | BYOB</span> 		</div>	</div>	<div class="event">		<div class="date-box" id="date">			<span class="date">Sat<br>			July 20</span> 		</div>		<div class="event-heading">			<span class="date"><span class="title">Maria Mirenzi Single Release party! with Anya Van Rose and Sarah Winston</span><br>			<span class="date">7pm | Doors 6:30pm | $10-20 at the door | BYOB</span></span> 		</div>		<div class="about">			About the artists: 			<p>				An indie rock singer songwriter and multi-instrumentalist based in Philadelphia, <strong>Maria Mirenzi</strong> is coming on strong with her own band. Her debut single “Suburban Nightmare” is a song about resisting comfort and conformity akin to the suburban lifestyle. The song displays her unique songwriting, love for rich harmonies, and her indie rock influences, like Paramore and Madison Cunningham. After releasing music with her former band “Brother Martin” and being a side musician in many other Philly bands, her new self-titled project has been a long time coming. We hope you come to celebrate Maria Mirenzi’s debut single release at Harmonie Hall on July 20th! Did we mention it’s her birthday?			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Fri<br>			July 19 		</div>		<div class="event-heading">			<span class="title">Vine Collective presents: Mose and friends / cuddledrug / Precious Little Life (duo)</span><br>			<span class="date">7:30-10:30pm | Doors 7pm | $10-20 at the door | BYOB</span> 		</div>		<div class="about">		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Thu<br>			July 18 		</div>		<div class="event-heading">			<span class="title">Chris Pureka with Special Guest Nicole Reynolds</span><br>			<span class="date">7:30-9:45pm | Doors 6:45pm | $25 Advance/$30 Day of show | BYOB<br>			<a href="https://buytickets.at/harmoniehall/1231304">TICKETS</a></span> 		</div>		<div class="about">			<strong>Chris Pureka</strong> (<a href="https://chrispureka.com/">Website</a>) is an internationally acclaimed singer-songwriter based in Portland, Oregon. Their elegant emotionality as a vocalist and flair as a lyricist have garnered them favorable comparisons to Chan Marshall, Bruce Springsteen, and Patty Griffin. Over many years of touring on both sides of the Atlantic, they have shared the stage with such diverse and esteemed artists as The Lumineers, Gregory Alan Isakov, The Cowboy Junkies, Haley Heynderickx, and Ani DiFranco. They have had their songs featured on such television shows as Brothers and Sisters and Shameless, as well as a song featured in the Sundance featured indie film, The Royal Road. The Longest Year is Pureka’s 8th release. 			<p>				<strong>Nicole Reynolds</strong> (<a href="http://www.nicolereynoldsmusic.com">Website</a>) is a singer-songwriter originally from western PA, currently residing in Ithaca, NY. Their journey has been as diverse as their music, encompassing experiences from working on farms to building their own home, raising a couple of kids, and running a nonprofit providing community music programs. Inspired by artist-activists, poets, and the beauty of the natural world, Nicole’s music is a reflection of their varied life journey.With heartfelt melodies, introspective lyrics, and a uniquely captivating voice, their songs encompass universal truths in beautifully simple ways.			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Web<br>			July 17 		</div>		<div class="event-heading">			<span class="title">Live Channeling with Little Fawn</span><br>			<span class="date">7-9pm | Doors 6:30 | $30 | <a href="https://www.eventbrite.com/e/live-channeling-with-little-fawn-tickets-933210857797?aff=oddtdtcreator">More info and tickets</a></span> 		</div>		<div class="about">			Do you feel stuck, clouded, blocked? Fearful, worried, or overwhelmed? 			<p>				Or maybe you are curious about what resources for guidance and clarity you can connect with?			</p>			<p>				If so, this evening is for you!			</p>			<p>				Little Fawn is a gifted channeler and intuitive healer (using Integrative Quantum Healing).			</p>			<p>				During this rare and positively transformative evening Little Fawn will share her ability to channel the wisdom of higher frequency light beings. These beings span space and time, consciousness and the cosmos! Their perspective and insights are subtle and profound.			</p>			<p>				During the channeling portion, attendees will have the opportunity to ask questions, even seek personal guidance, from the beings channeled. This portion of the evening will be moderated by Little Fawn's long time friend Brandon Everett. Bring your curiosity. Leave with clarity.			</p>			<p>				The evening will begin with a short meditation (no prior experience with meditation necessary). Little Fawn will begin by channeling whatever guidance/wisdom her own guides feel is appropriate/necessary for the group at hand. Following this, attendees will have the opportunity to seek personal guidance and clarity, asking questions of Little Fawn while she channels. The evening will close with a short meditation, inviting the energy and wisdom received to be integrated for the highest personal and collective good.			</p>			<p>				ABOUT LITTLE FAWN: Little Fawn is a channeler, intuitive healer (using Integrative Quantum Healing), and singer-songwriter. In the beginning, music was the gateway through and to that sacred flow of frequency, story, and sound. During a reading by another channeler, her true channeling gifts and capabilities awakened. In addition to channeling, LF integrates Light Language, Sacred Toning, and the using of medicinal plants and herbs to bring healing, insight, and guidance to the students she works with. Visit https://www.littlefawnmusic.com/little-fawn-energy to learn more.			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Mon<br>			July 15 		</div>		<div class="event-heading">			<span class="title">Mindfulness Workshop with Brandon Everett</span><br>			<span class="date">7-8pm | Doors 6:30pm | pay what you can | <a href="https://www.facebook.com/events/680674497553109">Event page on FB</a></span> 		</div>		<div class="about">		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Tues<br>			July 2 		</div>		<div class="event-heading">			<span class="title">Bad Tiger, Syl Fisher, and Amelia Cry Til I Die</span><br>			<span class="date">7:30pm | Doors 7pm | $10-20 | BYOB |</span> 		</div>		<div class="about">		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Thu<br>			June 27 		</div>		<div class="event-heading">			<span class="title">Dustin Lowman, Adam Monaco, and Cecilia Ferneborg</span><br>			<span class="date">7:30pm | Doors 7pm | $10-20 at the door | BYOB</span> 		</div>		<div class="about">			Dustin Lowman (<a href="https://dustinlowman.com/">website</a>) is a folksinger residing in the greater New York City area. Inspired by the totemic powers of enduring masters like Bob Dylan & Leonard Cohen, Lowman seeks to establish himself as one of his generation's finest original voices. 			<p>				Dustin's set will be preceded by two local artists:			</p>			<p>				Cecilia Ferneborg (<a href="https://ceciliaferneborg.com/bio">web</a> | <a href="https://www.instagram.com/cecilia_sings/">insta</a>)			</p>			<p>				Adam Monaco (<a href="https://www.adammonaco.com/">web</a> | <a href="https://www.instagram.com/adammonacomusic/?hl=en">insta</a> | <a href="https://open.spotify.com/artist/4rkA8qpXDkNx8spew0CN3a?si=9DVlIyVJQOqMbMNODjc-lw">insta</a>) .			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Wed<br>			June 26 		</div>		<div class="event-heading">			<span class="title">Elizabeth LaPrelle and the Family Band</span><br>			<span class="date">7:00pm | Doors 6:30pm | $15-30 Notaflof | BYOB | <a href="https://buytickets.at/harmoniehall/1285734">TICKETS</a></span> 		</div>		<div class="about">			Presenting a dual concert and square dance! After the concert, we’ll push back the pews and the Family Band will play some good old dance tunes with Elizabeth teaching and calling square dances. 			<p>				Elizabeth LaPrelle and the Family Band have been performing and recording music together for over 20 years, sharing the music they love to make in their living rooms and kitchens. It’s a real family affair, consisting of Elizabeth LaPrelle as the frontwoman, sharing the stage with her mother, Sandy LaPrelle, uncle and aunt Jon Newlin and Amy Davis, their daughter Iris Newlin, and Elizabeth’s husband, Brian Dolphin. The group allows their eclectic tastes to be their guide through a repertoire of ancient mountain ballads, old-time tunes, novelty songs, and gospel harmonies.			</p>			<p>				<a href="https://youtu.be/Lb4pwHZQ638?feature=shared">Video</a>			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Sat<br>			June 22 		</div>		<div class="event-heading">			<span class="title">Haley Heynderickx</span><br>			<span class="date">8pm | Doors 7:30 | $30 | BYOB<br>			<a href="https://buytickets.at/harmoniehall/1207008">TICKETS</a></span> 		</div>		<div class="about">			<p>				It takes a mix of skill and luck to tend a garden well, but it’s impossible without a certain amount of kindness tended. While the cyclical nature of gardening seems inherent, in some ways, Heynderickx is just beginning. Her debut album, named I Need to Start a Garden out of a search for calm through these waves of uncertainty and upheaval, is out now via Mama Bird Recording Co.			</p>			<p>				For the empathetic singer/songwriter, the reasons for seeking such acceptance and understanding stem from a life of paradoxes. Heynderickx grew up in a religious household in Oregon, closely identifying with her Filipino roots, but also straddling multiple cultural identities. Now residing in Portland, her faith is not overt, but her introspection and continued struggle for self-actualization are easily accessible and relatable.			</p>			<p>				Likewise, the tracks on I Need to Start a Garden reflect these seemingly disparate elements. Through soft acoustic guitar picking and deftly accented trombone sighs, Heynderickx’s music immediately recalls folk music of the '60s and '70s mixed with a love of jazz radio. But Heynderickx’s singing—her vocals that range from sultry to operatic—belie a tenacity in her soul.			</p>			<p>				It’s a balance then, between exposing and protecting herself on I Need to Start a Garden. Heynderickx vacillates between powerlessness (opener “No Face”) and empowerment (lead single "Oom Sha La La"). But her generosity of spirit remains the constant throughout the whole album.			</p>			<p>				You can hear that exceptional care in “Jo”, as she whispers, “You tended your garden like heaven and hell / and you built the birds houses to see if it helped at all.” Aware of the birds, the garden, and anyone listening acutely, Heynderickx’s music serves as an invitation for all to join her. Because the beauty of a garden is that, while it’s often started for deeply personal reasons, its bounty is best consumed and shared with others.			</p>			<p>				I Need to Start a Garden was produced, engineered and mixed by Zak Kimball at Nomah Studios in Portland, Oregon. Haley Heynderickx co-produced the album. It was mastered by Timothy Stollenwerk at Stereophonic Mastering in Portland. The record features Lily Breshears (Bass, Keys, Backing Vocals), Denzel Mendoza (Trombone, Backing Vocals), Phillip Rogers (Drums, Percussion, Backing Vocals) and Tim Sweeney (Upright Bass).			</p>			<p>				<a href="https://www.haley-heynderickx.com/">www.haley-heynderickx.com</a>			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Wed<br>			June 19 		</div>		<div class="event-heading">			<span class="title">Jon Langford & the Bright Shiners</span><br>			<span class="date">7-8:30pm | Doors 6:30pm | $20<br>			<a href="https://www.tickettailor.com/events/lowdramallc/1207374">TICKETS</a></span> 		</div>		<div class="about">			Jon Langford's been in more bands than you have digits - and that's true even if you were born with a few extras! From his early days in Mekons, Delta 5, Three Johns and even Sisters Of Mercy (booted for not wearing black) to a veritable explosion of one-off recordings and performances with more names than we could ever hope to list in full. A Wikipedia description for this group, The Bright Shiners (described therein as 'circa 2022 through at least 2023, in Northern California') provides some sense of the complex taxonomy needed just to keep track of Jon's massive oeuvre. 			<p>				Happily, that's an understated description of a serious new outlet for his endless creativity, and The Bright Shiners' recording activities have produced a full album, Where It Really Starts, the first recording in a collaboration with Tamineh Gueramy, Alice Spencer, and Jon's frequent musical partner, John Szymanski.			</p>			<p>				Jon Langford & the Bright Shiners will tour mercilessly throughout 2024.			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Sun<br>			June 2 		</div>		<div class="event-heading">			<span class="title">Experiments in Opera, NYC and Alter Ego Chamber Opera, PHL Present: Crystal's Channel and Souls Unscreened</span><br>			<span class="date">6pm | Doors 5:30pm | Sliding scale $10-$20<br>			<a href="https://www.tickettailor.com/events/harmoniehall/1263711">TICKETS</a></span> 		</div>		<div class="about">			Program 			<p>				<strong>Crystal’s Channel by Jason Cady</strong>			</p>			<p>				An opera featuring a solo singer with a ventriloquist doll and guitar. She portrays a songwriter who uploads a new, original song everyday to Youtube. The singer and dummy, together, tell the funny and painful story of how she mastered ventriloquism in her adolescence—and how that obsession ended when her mother took her and the doll to an exorcist.			</p>			<p>				Libretto and Composition: Jason Cady<br>				Soprano and Electric Guitar: Sarah Daniels<br>				Direction: Shannon Sindelar			</p>			<p>				<strong>Souls Unscreened by Roger A. Martinez and Alize Francheska Rozsnyai</strong>			</p>			<p>				The first act of an installation opera about a computer scientist deepfaking herself during the Covid-19 pandemic and developing groundbreaking technology in AI and uploading her consciousness to the cloud.			</p>			<p>				Composition and Electronics: Roger A. Martinez<br>				Libretto and Soprano: Alize Francheska Rozsnyai<br>				Baritone: Tom Sitzler<br>				Mezzo-Soprano: Kaitlyn Tierney<br>				Conductor: Sepehr Pirasteh<br>				Flute: Chelsea Meynig<br>				Piano: Hannah Han<br>				Violin: Rachel Segal<br>				Viola: Veronica Jurkiewicz<br>				Cello: Leigh Brown			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Fri<br>			May 31 		</div>		<div class="event-heading">			<span class="title">Agrol Agra Hungarian Folk Choir | Tanjo & Crow</span><br>			<span class="date">8pm | Doors 7:30pm | Sliding Scale $15-30<br>			<a href="https://www.tickettailor.com/events/harmoniehall/1240539">TICKETS</a></span> 		</div>		<div class="about">			Ágról ágra is a program of traditional Hungarian folk music, and compositions by Béla Bartók for unaccompanied female voices. Ágról ágra features new arrangements of the traditional songs by Marisa Michelson, Sara Serpa, Guillermo Klein, and Jeon Song Yi. Kinga Cserjési leads this exploration into the music of her native country 			<p>				Tanjo & Crow is a no-holds-barred exploration of roots music through eclectic songwriting, Appalachian arrangements, and seemingly fearless improvisation. The project draws upon the diverse musical backgrounds of Tanner Bingaman (guitar, banjo, vocals) and Allan Combs II (guitar, vocals).			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Tues<br>			May 21 		</div>		<div class="event-heading">			<span class="title">Portrait Night: Everyone Draws Everyone</span><br>			<span class="date">7:45 sharp! | Doors 7:15 | $5-10 donation/NOTAFLOF</span> 		</div>		<div class="about">			Portrait night at Harmonie Hall! Bring your favorite art supplies and draw 4-minute, 4"x6" portraits of everyone in attendance, and go home with a stack of portraits of yourself! Open to all: RSVP required to harmoniehallmail@gmail.com 		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Sat<br>			May 11 		</div>		<div class="event-heading">			<span class="title">Donnie Coco | Camp Saint Helene | Erik Kramer Philharmonic</span><br>			<span class="date">7:30-10pm | Doors 7pm | Sliding scale $10-20 | BYOB<br>			<a href="https://buytickets.at/harmoniehall/1236031">TICKETS</a></span> 		</div>		<div class="about">			We'll have music by Camp Saint Helene (Catskill, NY) and two local acts - Donnie CoCo and Erik Kramer Philharmonic 			<p>				For <strong>Camp Saint Helene</strong> (<a href="http://www.campsainthelene.com/">website</a> | <a href="https://www.instagram.com/campsainthelene/">Instagram</a> | <a href="https://campsainthelene.bandcamp.com/">Bandcamp</a> | <a href="https://open.spotify.com/artist/1vpfRUhCqIsLTZyGVf5Gkr?si=W66dlpFSS6iH2e8VGjZgVg">Spotify</a>), the concept of otherworldliness is neither strange nor complex, but alluring and holy. Created by Elizabeth Celeste Ibarra, Dylan Nowik, Wesley Harper and Alex P. Wernquest, they approach their craft akin to a ritual, leaning into the notion that art and expression are sacred experiences on an overstimulated planet. Often informed by the spirit of a defunct Christian-summer camp turned arts-colony deep within the mountains of New York, their music searches for shimmers of hope amidst hints of doom.			</p>			<p>				“Farfisa Song”, off their debut record, Mother (2019), was named KEXP’s Song of the Day and added to KEXP Music that Matters Vol. 683 by Cheryl Waters. She describes Camp Saint Helene as “..call[ing] to mind the '60s California folk scene with their gentle, waltz-like pastoral sound”. Additionally, “Farfisa Song” was featured predominantly both in Amazon Prime’s teen horror drama, “I Know What You Did Last Summer” (2022) and Zoe Lister-Jones’ series SLIP on The Roku Channel (2023). Mother was named by Bandcamp as a New and Notable record of 2019, describing it as “Occult-folk in the 70’s U.K. tradition that further affirms the link between Appalachian and British folk songs”.			</p>			<p>				In 2023, they were commissioned by NADA x Foreland to present a live performance and installation piece titled “Into the Garden” for Upstate Art Weekend in Catskill, NY. They recorded their first album almost entirely live to 8-track, ½” tape, at Basement Floods Records in Catskill, New York. Their second album is currently in production.			</p>			<p>				<strong>Erik Kramer</strong> is a multi-instrumentalist, songwriter, and producer best known for his bass playing as a sideman in a plethora of local and touring acts. His ever rotating ensemble features many of Philadelphia's most exciting instrumentalists and songwriters and weaves together psychedelia, rock, funk, folk, and everywhere in between through the improvisational lense of a jazz combo. He put out his debut record "Missed the Boat" in 2017 and will be putting out the follow up in 2024. This show will feature the Erik Kramer Philharmonic which will be a 10 piece psychedelic acoustic ensemble full of horns, strings, vocal harmonies, and intriguing arrangements.			</p>		</div>	</div>	<div class="event">		<div class="date-box" id="date">			Fri<br>			May 3 		</div>		<div class="event-heading">			<span class="title">Vine Collective presents: Tyler Sensenig * Ethan Cain * Anthony Baldini</span><br>			<span class="date">7-10pm | doors at 6pm | $10-20 cash or venmo at the door</span> 		</div>		<div class="about">			Line up:<br>			Anthony Baldini 7 - 7:45<br>			Ethan Cain 8 - 8:45<br>			Tyler Sensenig 9 - 9:45 		</div>	</div>	<div class="event">		<span class="title"><a href="https://www.tickettailor.com/events/lowdramallc/1134509#">Sally Timms and Jon Langford (of the Mekons)</a></span><br>		<span class="date">Friday, April 19, 2024 | 7pm | Doors at 6:30pm</span><br>		<span class="about">Sally Timms and Jon Langford of The Mekons with John Szymanski and Martin Blueshammer. Langford is a founding member of the British punk band The Mekons which formed in Leeds in 1977. He is also an acclaimed visual artist and DJ. Timms has the voice of an angel and is the laziest woman in rock. She was forced to join The Mekons in the 1980s and has been trying to find the exit ever since.<br>		Tickets are $25 each. All sales are final. Doors @ 6:30pm/Show starts @ 7pm</span> 	</div>	<div class="event">		<span class="title"><a href="https://events.humanitix.com/brittany-ann-tranbaugh-blair-borax?c=eventspage">Brittany Ann Tranbaugh with Blair Borax</a></span><br>		<span class="date">Thu Apr 4, 2024 | 8pm | Doors at 7:30 | Suggested $20</span> <span class="about">Brittany Ann Tranbaugh (pronounced TRAN-baw) is a Philadelphia-based songwriter whose queer Americana heartbreaker “Kiss You” won Song of the Year in the 2021 John Lennon Songwriting Contest. Tranbaugh has been writing songs and playing shows as a side gig since she was a teenager, but in February 2023, at 31 years old, she finally quit her office job to pursue a full-time career in music. Her newest release is a self-titled EP produced by Grammy-winner Tyler Chester which showcases Tranbaugh in her new era: energetic, self-assured, surrounded by her beloved musical community, and more commanding as a vocalist and writer than ever before.<br>		With vocal stylings reminiscent of jazz classics, Blair Borax delivers a unique blend of unapologetic songwriting that fearlessly tackles the taboo and irresistibly catchy pop melodies that stay with you for days. She conjures a vocal charm somewhere in between Regina Spektor and Cat Clyde, wordsmithing inspired by folk songwriting greats like John Prine and Paul Simon, and tender timely vulnerability akin to Haley Heynderickx and Big Thief’s Adrienne Lenker.</span> 	</div>	<div class="event">		<span class="title">Gaia Raga, ft Karsyn and Jane</span><br>		<span class="date">Feb 25, 2024 | 6:30 | arrival at 6pm</span><br>		<span class="about">Gaia Raga is an orchestra, a universe. The sound is multi-instrumental and intuitive, borrowing elements from folk, jazz and Indian classical music. Their original music has a sometimes timeless, ancient feeling, borrowing themes from poets and artists through the ages (lots of Rumi!).</span> 		<p>			<span class="about">Their songs are threaded with twin-voiced harmonies, through Niki Arrowsmith and Karsyn Wagner on vocals. Andy Dreamos and Chris Smith share percussion, with Andy also doing triple duty on sitar and saxophone. Matthew Trice handles bass, and sometimes, the other saxophone. And RJ Testa brings a certain bluegrass flavor with his mandolin.</span>		</p>		<p>			<span class="about">Karsyn Wagner is a magical songstress passionate about social justice and the ecology of all life --- she is a part of Gaia Raga and will be enchanting us with a few original solo pieces as a pre-cursor to the full band.</span>		</p>		<p>			<span class="about">And to jumpstart the evening as a collective, we have Jane Wadsworth opening up the evening with a song circle. Jane is a catcher of songs inspired by the lessons we can learn from nature and from our interconnectedness to all life forms on planet earth. They are excited to come together in community to create a circle singing experience that will be colored by the these themes -- and hope you will join them with an open heart and joyful spirit! No singing experience needed 3</span>		</p>		<p>			<span class="about">ROUGH SCHEDULE</span>		</p>		<p>			<span class="about">6pm arrival, open Jaya Kava bar offering vegan, organic food and drink, herbal elixirs, mocktails, and hand-squeezed kava tea to #getloosewithoutthebooze.</span>		</p>		<p>			<span class="about">6:30pm - song circle led by Jane</span>		</p>		<p>			<span class="about">7:30pm - opening set by Karsyn</span>		</p>		<p>			<span class="about">8:30pm - GAIA RAGA!!!</span>		</p>	</div>	<div class="event">		<span class="title"><a href="https://www.bemindphl.com/swyl-2024">The Open Circle presents: Share What You Love</a></span><br>		<span class="date">Mon February 5, 2024 | 6:30pm-8:30pm | Suggested Donation</span><br>		<span class="about">In this two hour workshop/meet up you'll have the opportunity to reflect on and give voice to your deepest interests and loves -- and to share them with others.<br>		One of our deepest needs is to be seen and heard. But it's so rare, nowadays, to be asked what really inspires you or interests you -- or what you love and why.<br>		Be heard. Be seen. Be appreciated. And then experience what it's like to hold that supportive, witnessing space for others.<br>		Register <a href="https://docs.google.com/forms/d/e/1FAIpQLScIVSC_2nJx3k6jHjAJv3k6rSWa4yhuiBMQmq7f5HyVB_iB5g/viewform">here</a></span> 	</div>	<div class="event">		<span class="title">Paul Arendt | Raji Malik</span><br>		<span class="date">Sat Feb 3, 2024// 8pm | Doors at 7:30 | Suggested donation $20</span><br>		<span class="about">Paul Arendt's album release show for "Forty Years in Babylon." Opening set by Raji Malik.</span> 	</div>	<div class="event">		<span class="title">Everyone Draws Everyone</span><br>		<span class="date">Tuesday January 23, 2024 | 7:30pm | Free/Donation</span><br>		<span class="about">Portrait night at Harmonie Hall! Bring your favorite art supplies and draw 5 minute, 4"x6" portraits of everyone in attendance, and go home with a stack of portraits of yourself! Free and open to all: RSVP required to harmoniehallmail@gmail.com</span> 	</div>	<div class="event">		<span class="title"><a href="https://bethamisrael.org/learn-joyfully/lifelong-learning-for-adults/music-prayer-lab/">Music Prayer Lab</a></span><br>		<span class="date">January 21, 2024 | 8pm-10pm | Free</span><br>		<span class="about">Beth Am presents Music Prayer Lab: An openhearted, participatory, improvisational, co-creational music & prayer space. <a href="https://bethamisrael.org/learn-joyfully/lifelong-learning-for-adults/music-prayer-lab/">More info</a></span> 	</div>	<div class="event">		<span class="title"><a href="https://www.eventbrite.com/e/745684842437?aff=oddtdtcreator">Driftwood Soldier and Olivia Ellen Lloyd</a></span><br>		<span class="date">Sat, Dec 9, 2023 | Doors at 7pm | Music at 8pm | $20 Suggested</span><br>		<span class="about">Driftwood Soldier isn't your average mandolin-bass foot-stomping gutter-folk duo. Growling and crooning, muttering about lost love, brimstone, and the glorious view from the underside of a rusty world order, Owen holds the rhythm on mandolin and foot percussion. To his left, Bobby stretches bass notes into lyrical vines that vibrate somewhere north of your liver and flower unexpectedly at night. This is the kind of roots music that grows through the cracks in a West Philly sidewalk and drinks its rainwater laced with motor oil.<br>		Their second full-length album, Stay Ahead of the Wolf, arrived late in 2019. It was produced with Erin McKeown and mixed by Grammy winner Ted Hutt. Unfazed by a world in disarray, Stay Ahead of the Wolf crawled up onto its four legs and went barrelling through the digital ether, carrying with it this strange beast’s howl.<br>		Olivia Ellen Lloyd<br>		After releasing her debut album Loose Cannon in February 2021, Olivia Ellen Lloyd has been on a steady diet of writing, touring and honing her bandleading chops at every honky tonk from Nashville to New York.<br>		And it appears that hard work is paying off - her self-funded and independently released debut album Loose Cannon has been quietly winding its way into the hearts and minds of Country and Americana music lovers all over the world. Currently sitting pretty at over 1 million streams on Apple Music and Spotify, Loose Cannon was featured on numerous best-of lists (Ear to the Ground notably named it their Album of the Year), received praise from Nashville Lifestyles, Rolling Stone Country, Holler Country, and The Bluegrass Situation, and made it onto editorial playlists on Apple Music, Tidal, and Amazon Music. Her 2020 single “Shepherdstown'“ was named one of Tidal’s best songs of 2020 on their Rising Folk playlist.<br>		She was a 2021 NewSong Music Finalist, earning a slot in the top 3 , which won her a free vinyl pressing of Loose Cannon, and was recently named a 2023 Kerrville Newfolk Winner at the legendary Kerrville Folk Festival.<br>		Her 2022 release of a duo of Hazel Dickens songs received attention from Bluegrass Today, the Bluegrass Situation, and made Spotify’s GrassRoots and Women of Bluegrass editorial playlists. Her sophomore album is currently in production, produced once again by her dear friend and creative collaborator, Mike Robinson.<br>		Lloyd is a West Virginia native and proud of it. Raised by a musician and a public school educator in Shepherdstown, West Virginia, her sound is a combination of her deeply rooted past and her fly-by-the-seat-of-your-pants present. She's continuing to mine that divide as she tours the country full time in her 2010 Toyota Sienna.</span> 	</div>	<div class="event">		<span class="title"><a href="https://www.eventbrite.com/e/songwriters-in-the-round-tickets-742139006747?aff=oddtdtcreator">Songwriters in the Round</a></span><br>		<span class="date">November 18, 2023 | 8pm/doors at 7pm | $20 Suggested donation</span><br>		<span class="about">An intimate evening of original music featuring Tanner Bingaman, Julia Finegan, Ilan Isakov, and Mirabelle Skipworth.</span> 	</div>	<div class="event">		<span class="title"><a href="https://www.eventbrite.com/e/peter-stampfel-and-song-people-tickets-732002117037?aff=HHevents">Peter Stampfel and Song People</a></span><br>		<span class="date">November 4, 2023 | 7pm/doors at 6pm | Suggested donation $15-25</span><br>		<span class="about">Peter Stampfel, a luminary from the iconic psychedelic folk group The Holy Modal Rounders, will play two captivating sets that promise to be a melodious journey through time and space. Since the early 60’s, Peter has written genre-defying songs that encompass traditional folk and experimental music, with whimsical, thought-provoking lyrics. In addition to originals, his 6-person band (including his daughter, Zoe) will play semi-improvised tunes he lovingly calls "soul jingles,” and pre-rock pop songs from the early 20th century, reviving endangered songs teetering on the edge of obscurity. Music Critic Robert Christgau has asserted that “next to Bob Dylan, Stampfel is the closest thing to a genius" to come out of the New York folk revival scene of the 1960's.<br>		We'll start the night with a set from Philly dream-folk band Song People.</span> 	</div>	<div class="event">		<span class="title"><a href="https://www.eventbrite.com/e/dance-party-feat-mojo-dojo-casa-house-band-and-soft-world-tickets-721720995927?aff=oddtdtcreator">Harmonie Halloween Dance Party!</a></span><br>		<span class="date">October 28th, 2023// 8pm/doors at 7:15pm | Suggested donation $25</span><br>		<span class="about">Featuring 2 live-music sets of spooky hits by Mojo Dojo Casa House Band and a DJ set by Soft World.</span> 	</div>	<div class="event">		<span class="title"><a href="https://www.eventbrite.com/e/731981726047?aff=oddtdtcreator">Kendra McKinley and Dani & Joe</a></span><br>		<span class="date">October 26, 2023 | 7pm/doors at 6pm | Suggested donation $15-25 | RSVP to harmoniehallmail@gmail.com</span><br>		<span class="about"><a href="https://www.youtube.com/watch?v=ieTX18rEHBc">Kendra McKinley</a> is a singer-songwriter whose music bursts with vibrance, sensuality and wit. Her lush blend of chamber pop, jazz, and soul draws from a deep well of inspiration. Whether she’s performing solo or dancing with her live band Kendra’s confident, honeyed voice indulges all who hear it.<br>		Philadelphia-based <a href="https://linktr.ee/daniandjoe">Dani & Joe</a> are songwriting sweethearts who, after years as supporting members in other prominent Philly bands, hit the scene under their own names in 2021 with the release of 'All for You.' Their beginnings grew out of small intimate shows and the music carries that tradition compositionally. Joni-style folk collage storytelling meets experimental R&amp;B with a Black Keys makeup.</span> 	</div>	<div class="event">		<span class="title">Covenhoven</span><br>		<span class="date">September 23, 2023 | 8pm | $20 Suggested | <a href="https://covenhoven.com/house-concert-rsvp">RSVP</a></span><br>		<span class="about">Covenhoven is nationally recognized indie artist Joel Van Horne, a multi-instrumental singer-songwriter whose rich harmonies, reedy baritone and commanding falsetto have found a home with critics and fans since 2013.<br>		Through 4 full length albums and 2 EPs Covenhoven has forged a signature style; layered acoustic arrangements that roll with momentum into orchestral peaks, accompanied by lyrics that contrast hard-won wisdom with the inherent hope of the natural world—from Big Sur to his native Colorado.<br>		Covenhoven’s latest album, IV (released in October 2021), is his most collaborative and rock forward to date—taking a producing partner in Ben Wysocki of the Fray, who also performs on the album. IV features over a dozen musicians including Grammy nominated singer-songwriter Gregory Alan Isakov, Luke Mossman of Nathaniel Rateliff & the Night Sweats, and Bluebook’s Julie Davis.<br>		Covenhoven’s live performances capture the spirit of his recordings—whether its conjuring cascading loops in his solo shows or backed by a full band—Covenhoven’s sound fills the breadth of outdoor spaces, auditoriums and club stages.</span> 	</div>	<div class="event">		<span class="title"><a href="https://fb.me/e/Te3lkHze">Jug Carver (Solo Show): Fundraiser for The Chordoma Foundation</a></span><br>		<span class="date">Sunday, August 27 | Doors: 2:30pm | Show: 3-5pm</span><br>		<span class="about">This show is a fundraiser for The Chordoma Foundation, which funds clinical trials and cutting-edge research into chordoma, a type of spinal tumor.&nbsp; To donate, go to www.chordomafoundation.org, and use the "give now" or "donate" buttons. Proof of your donation to The Chordoma Foundation dated anywhere between 7/25/23 and 8/27/23 is your ticket in (or you can pay cash at the door).&nbsp; Please email a record of your donation to jugcarver@gmail.com to RSVP for the concert (feel free to redact your contact info on the receipt).&nbsp; If your donation is meant to cover anyone other than yourself, please say so in the email.<br>		Suggested donation is $10-20 per person to pre-register or $15-25 per person day-of-show. Feel free to be extra generous since 100% of ticket sales go to charity.</span> 	</div>	<div class="event">		<span class="title"><a href="https://www.eventbrite.com/e/printmaking-workshop-with-bex-tickets-680321960297?aff=oddtdtcreator">Printmaking Workshop</a></span><br>		<span class="date">Sunday, August 6th, 2023 | 2:30-4:30pm | $20</span><br>		<span class="about">Join Bex to learn about relief printmaking! She will share her work with linoleum block printing and then we will carve prints together using styrofoam. Everyone will have the opportunity to create a booklet as a collection of the prints made to take with them. Tickets for this event are $20. As always, no one will be turned away for lack of funds- feel free to email us at harmoniehallmail@gmail.com for a ticket price reduction. Tickets will be available at the door, but advance is preferred so we can be sure to have enough materials for all folks attending!<br>		Becky McIntyre (Bex) (<a href="https://www.instagram.com/sanaartista/">Instagram</a> | <a href="https://www.sanaartista.com/">Website</a>) is a visual artist living in Philadelphia. She has practiced various art mediums for much of her life, traveling around from Philadelphia to Los Angeles, the Philippines, Nicaragua, and Peru, finding spaces to create and build community with others through the creative process. Her work is inspired by nature, community, her spirituality, and the cultures she has traveled to, seeking to bring awareness to sociopolitical issues, the transformative and healing nature of art, and to activate and inspire new ways of being.</span> 	</div>	<div class="event">		<span class="title"><a href="https://www.eventbrite.com/e/sing-a-secret-a-mindbody-approach-to-voice-and-song-tickets-614360527877?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=escb">Sing A Secret: A Mindbody Approach to Voice and Song</a></span><br>		<span class="date">June 3, 2023 | 1:30-4pm</span><br>		<span class="about">A free two-hour introduction into an ecstatic 5-octave mindbody approach to your voice, for singers, "non-singers," and everyone in between.</span> 	</div>	<div class="event">		<span class="title"><a href="https://www.andrewlipke.com/albums">Andrew Lipke</a> w/ the Azrael String Quartet</span><br>		<span class="date">May 19, 2023 | 8:30pm</span><br>		<span class="about">The Azrael Quartet is Dana Allaband (Violin) Ruth Kiang (Violin) Petula Perdikis (Viola) and Krista Umile (Cello).</span> 	</div>	<div class="event">		<span class="title">112 Teeth: Songs in the Round</span><br>		<span class="date">April 28, 2023 | 8:00pm</span><br>		<span class="about">featuring <a href="https://linktr.ee/juliafinegan">Julia Finegan</a>, <a href="https://www.instagram.com/syl.fisher/">Syl Fisher</a>, <a href="https://www.adammonaco.com/">Adam Monaco</a>, and <a href="https://www.ilanisakov.com">Ilan Isakov</a></span> 	</div>	<div class="event">		<span class="title">Brave New Worm! feat. <a href="https://contentclown.bandcamp.com/album/brave-new-worm-part-live-part-death">Content Clown</a></span><br>		<span class="date">April 20, 2023</span><br>		<span class="about">with <a href="https://www.instagram.com/ohyouaremusic/">Ohyouare</a></span> 	</div>	<div class="event">		<span class="title"><a href="https://www.ljova.com/trio-fadolin/">Trio Fadolín</a></span><br>		<span class="date">March 24, 2022 | 8pm</span><br>		<span class="about">with <a href="https://gmervine.bandcamp.com">Gregg Mervine</a>, <a href="https://www.cooneymusic.com/">Brendan Cooney</a>, and Jordan Berger</span> 	</div>	<div class="event">		<span class="title"><a href="https://highfiction.com">High Fiction</a>, <a href="https://ilanisakov.com">Ilan Isakov</a>, <a href="https://silversmithmusic.com">Silversmith</a>, & Erica Terpening-Romeo</span><br>		<span class="date">November 19, 2022</span><br>	</div>	<div class="event">		<span class="title"><a href="https://www.covenhoven.com/home">Covenhoven</a></span><br>		<span class="date">September 17, 2022</span><br>	</div></div><p>	Is there a band you really want to see here? <a href="mailto:harmoniehallmail@gmail.com">Let us know!</a> If you're interested in hosting a house concert, art show, film showing, etc. at Harmonie Hall, please <a href="mailto:harmoniehallmail@gmail.com">reach out!</a></p><p>	If you'd like to hear about our events directly you can sign up for our <a href="https://view.flodesk.com/pages/64318d7d15209fc178e09453">email list</a> or follow us on <a href="https://www.instagram.com/harmoniehall_1891/">instagram</a> or <a href="https://www.facebook.com/harmoniehallshows">facebook</a></p></body></html>"#FFA8D4"
